@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10C01C40EBD832D6778013FE /* Pods_DrCRYPTO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89A6E49D0E90DDBCD4F39A7 /* Pods_DrCRYPTO.framework */; };
+		2CF84DFDF7707C0C1039C55A /* Pods_DrCRYPTOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */; };
+		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8B62119854200DF7391 /* AppDelegate.swift */; };
 		4CBBA8B92119854200DF7391 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8B82119854200DF7391 /* ViewController.swift */; };
 		4CBBA8BC2119854200DF7391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBA8BA2119854200DF7391 /* Main.storyboard */; };
@@ -15,6 +18,7 @@
 		4CBBA8C42119854600DF7391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBA8C22119854600DF7391 /* LaunchScreen.storyboard */; };
 		4CBBA8CF2119854600DF7391 /* DrCRYPTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8CE2119854600DF7391 /* DrCRYPTOTests.swift */; };
 		4CBBA8DA2119854600DF7391 /* DrCRYPTOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8D92119854600DF7391 /* DrCRYPTOUITests.swift */; };
+		C227A5A57A11DA6EBE5DFC07 /* Pods_DrCRYPTOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C5BA3CFE8CCAB2608D0BDE6 /* Pods-DrCRYPTO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO.debug.xcconfig"; sourceTree = "<group>"; };
+		438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4CBBA8B32119854200DF7391 /* DrCRYPTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrCRYPTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBA8B62119854200DF7391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBBA8B82119854200DF7391 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		4CBBA8D52119854600DF7391 /* DrCRYPTOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrCRYPTOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBA8D92119854600DF7391 /* DrCRYPTOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrCRYPTOUITests.swift; sourceTree = "<group>"; };
 		4CBBA8DB2119854600DF7391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0A5E6538D9969D9C7BF7AFE /* Pods-DrCRYPTO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTO.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO.release.xcconfig"; sourceTree = "<group>"; };
+		E4AC2AE6B47D0FE23F7A886A /* Pods-DrCRYPTOUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOUITests/Pods-DrCRYPTOUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E89A6E49D0E90DDBCD4F39A7 /* Pods_DrCRYPTO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0340A693111F2099B63B7A9 /* Pods-DrCRYPTOUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOUITests/Pods-DrCRYPTOUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C01C40EBD832D6778013FE /* Pods_DrCRYPTO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF84DFDF7707C0C1039C55A /* Pods_DrCRYPTOTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C227A5A57A11DA6EBE5DFC07 /* Pods_DrCRYPTOUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2472AE8CF34DEFF4459030AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C5BA3CFE8CCAB2608D0BDE6 /* Pods-DrCRYPTO.debug.xcconfig */,
+				E0A5E6538D9969D9C7BF7AFE /* Pods-DrCRYPTO.release.xcconfig */,
+				7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */,
+				438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */,
+				E4AC2AE6B47D0FE23F7A886A /* Pods-DrCRYPTOUITests.debug.xcconfig */,
+				F0340A693111F2099B63B7A9 /* Pods-DrCRYPTOUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4CBBA8AA2119854200DF7391 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 				4CBBA8CD2119854600DF7391 /* DrCRYPTOTests */,
 				4CBBA8D82119854600DF7391 /* DrCRYPTOUITests */,
 				4CBBA8B42119854200DF7391 /* Products */,
+				2472AE8CF34DEFF4459030AB /* Pods */,
+				E8E5EB2C7B2FA65704765A05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,10 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				4CBBA8B62119854200DF7391 /* AppDelegate.swift */,
-				4CBBA8B82119854200DF7391 /* ViewController.swift */,
-				4CBBA8BA2119854200DF7391 /* Main.storyboard */,
+				4CBBA8E821198AB000DF7391 /* Model */,
+				4CBBA8E721198AA600DF7391 /* View */,
+				4CBBA8E921198AB500DF7391 /* Controller */,
 				4CBBA8C02119854600DF7391 /* Assets.xcassets */,
-				4CBBA8C22119854600DF7391 /* LaunchScreen.storyboard */,
 				4CBBA8C52119854600DF7391 /* Info.plist */,
 				4CBBA8BD2119854200DF7391 /* DrCRYPTO.xcdatamodeld */,
 			);
@@ -128,6 +160,41 @@
 			path = DrCRYPTOUITests;
 			sourceTree = "<group>";
 		};
+		4CBBA8E721198AA600DF7391 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBA8C22119854600DF7391 /* LaunchScreen.storyboard */,
+				4C6F725021198D8F008BA508 /* Login.storyboard */,
+				4CBBA8BA2119854200DF7391 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CBBA8E821198AB000DF7391 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4CBBA8E921198AB500DF7391 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4CBBA8B82119854200DF7391 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8E5EB2C7B2FA65704765A05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E89A6E49D0E90DDBCD4F39A7 /* Pods_DrCRYPTO.framework */,
+				7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */,
+				787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CBBA8DE2119854600DF7391 /* Build configuration list for PBXNativeTarget "DrCRYPTO" */;
 			buildPhases = (
+				D7BDB8B5D813AE3B2F9D79E7 /* [CP] Check Pods Manifest.lock */,
 				4CBBA8AF2119854200DF7391 /* Sources */,
 				4CBBA8B02119854200DF7391 /* Frameworks */,
 				4CBBA8B12119854200DF7391 /* Resources */,
+				94DBBA5B0A592A31999D6264 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CBBA8E12119854600DF7391 /* Build configuration list for PBXNativeTarget "DrCRYPTOTests" */;
 			buildPhases = (
+				C47844AC3B7E5FA6D74799C5 /* [CP] Check Pods Manifest.lock */,
 				4CBBA8C62119854600DF7391 /* Sources */,
 				4CBBA8C72119854600DF7391 /* Frameworks */,
 				4CBBA8C82119854600DF7391 /* Resources */,
@@ -170,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CBBA8E42119854600DF7391 /* Build configuration list for PBXNativeTarget "DrCRYPTOUITests" */;
 			buildPhases = (
+				63F3758D035A70F6D39CFE62 /* [CP] Check Pods Manifest.lock */,
 				4CBBA8D12119854600DF7391 /* Sources */,
 				4CBBA8D22119854600DF7391 /* Frameworks */,
 				4CBBA8D32119854600DF7391 /* Resources */,
@@ -232,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6F725121198D8F008BA508 /* Login.storyboard in Resources */,
 				4CBBA8C42119854600DF7391 /* LaunchScreen.storyboard in Resources */,
 				4CBBA8C12119854600DF7391 /* Assets.xcassets in Resources */,
 				4CBBA8BC2119854200DF7391 /* Main.storyboard in Resources */,
@@ -253,6 +325,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63F3758D035A70F6D39CFE62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrCRYPTOUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94DBBA5B0A592A31999D6264 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/libsodium/libsodium.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
+				"${BUILT_PRODUCTS_DIR}/web3swift/web3swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libsodium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47844AC3B7E5FA6D74799C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrCRYPTOTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BDB8B5D813AE3B2F9D79E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrCRYPTO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CBBA8AF2119854200DF7391 /* Sources */ = {
@@ -432,11 +603,13 @@
 		};
 		4CBBA8DF2119854600DF7391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C5BA3CFE8CCAB2608D0BDE6 /* Pods-DrCRYPTO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86PPC52X64;
 				INFOPLIST_FILE = DrCRYPTO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,11 +623,13 @@
 		};
 		4CBBA8E02119854600DF7391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0A5E6538D9969D9C7BF7AFE /* Pods-DrCRYPTO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86PPC52X64;
 				INFOPLIST_FILE = DrCRYPTO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +643,7 @@
 		};
 		4CBBA8E22119854600DF7391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +665,7 @@
 		};
 		4CBBA8E32119854600DF7391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +687,7 @@
 		};
 		4CBBA8E52119854600DF7391 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4AC2AE6B47D0FE23F7A886A /* Pods-DrCRYPTOUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +708,7 @@
 		};
 		4CBBA8E62119854600DF7391 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0340A693111F2099B63B7A9 /* Pods-DrCRYPTOUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
