@@ -29,6 +29,7 @@ PODS:
     - PromiseKit (~> 6.3.0)
     - Result (~> 3.0.0)
     - secp256k1_ios (~> 0.1.3)
+  - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - ObjectMapper
   - SwiftyJSON
   - web3swift
+  - XLPagerTabStrip
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -53,6 +55,7 @@ SPEC REPOS:
     - SipHash
     - SwiftyJSON
     - web3swift
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -68,7 +71,8 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   web3swift: 4b4e4a0dd16e7081b7190bf8596c5638f313a498
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: a7e0a6f54c4f73a12541a6d45245620953ab0989
+PODFILE CHECKSUM: 809187656b244e64be24ffc6fe7bdb2ef9e002e6
 
 COCOAPODS: 1.5.3

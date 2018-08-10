@@ -16,6 +16,9 @@ target 'DrCRYPTO' do
 
     # DAPP Pods
     pod 'web3swift'
+    
+    # UI Pods
+    pod 'XLPagerTabStrip'
 
   target 'DrCRYPTOTests' do
     inherit! :search_paths
