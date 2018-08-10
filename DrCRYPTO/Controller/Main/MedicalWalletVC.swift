@@ -29,7 +29,6 @@ class MedicalWalletVC: ButtonBarPagerTabStripViewController {
         
         settings.style.buttonBarLeftContentInset = 20
         settings.style.buttonBarRightContentInset = 20
-        
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = UIColor(red: 138/255.0, green: 138/255.0, blue: 144/255.0, alpha: 1.0)
@@ -38,22 +37,16 @@ class MedicalWalletVC: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     // MARK: - PagerTabStripDataSource
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let medicalRecordTabVC = storyboard!.instantiateViewController(withIdentifier: "MedicalRecordTabVC") as! MedicalRecordTabVC
-        let visitHistoryTabVC = storyboard!.instantiateViewController(withIdentifier: "VisitHistoryTabVC") as! VisitHistoryTabVC
-//        let child_1 = TableChildExampleViewController(style: .plain, itemInfo: IndicatorInfo(title: "FRIENDS"))
-//        child_1.blackTheme = true
-//        let child_2 = TableChildExampleViewController(style: .plain, itemInfo: IndicatorInfo(title: "FEATURED"))
-//        child_2.blackTheme = true
+        let medicalRecordTabVC = self.storyboard?.instantiateViewController(withIdentifier: "MedicalRecordTabVC") as! MedicalRecordTabVC
+        let visitHistoryTabVC = self.storyboard?.instantiateViewController(withIdentifier: "VisitHistoryTabVC") as! VisitHistoryTabVC
         return [medicalRecordTabVC, visitHistoryTabVC]
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func closeAction(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
     }
 }
 
