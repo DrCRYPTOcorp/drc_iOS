@@ -12,5 +12,11 @@ class SplashVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+        }
     }
 }

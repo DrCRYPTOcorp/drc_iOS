@@ -9,14 +9,18 @@
 import UIKit
 import XLPagerTabStrip
 
-class MedicalRecordTabVC : UIViewController, IndicatorInfoProvider{
+class MedicalRecordTabVC : UIViewController, IndicatorInfoProvider, NetworkCallback{
     
     @IBOutlet var recordCollectionView: UICollectionView!
     
     var itemInfo = IndicatorInfo(title: "진료 기록")
     
+    var responseMessage : UserProfileVO?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let model = UserProfileModel(self)
+        model.test()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +33,17 @@ class MedicalRecordTabVC : UIViewController, IndicatorInfoProvider{
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
+    
+    func networkResult(resultData: Any, code: String) {
+        if code == "Success"{
+            responseMessage = resultData as? UserProfileVO
+            print(responseMessage?.detail)
+        }
+    }
+    
+    func networkFailed() {
+        print("네트워크 에러")
+    }
 
 }
 
@@ -40,7 +55,6 @@ extension MedicalRecordTabVC : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = recordCollectionView.dequeueReusableCell(withReuseIdentifier: "MedicalRecordCollectionViewCell", for: indexPath) as! MedicalRecordCollectionViewCell
         cell.test.text = "진료기록"
-        print("asdasdas")
         return cell
     }
     

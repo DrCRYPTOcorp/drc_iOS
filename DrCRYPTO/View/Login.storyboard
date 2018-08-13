@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NJU-mw-9MY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FO5-gs-h05">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothic.ttf">
+            <string>NanumBarunGothic</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--SplashVC-->
-        <scene sceneID="OFd-1Z-Xly">
-            <objects>
-                <viewController storyboardIdentifier="SplashVC" id="NJU-mw-9MY" customClass="SplashVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="n1s-7v-BRt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xYp-rF-8CP"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ta2-3f-vRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-670" y="33"/>
-        </scene>
         <!--LoginVC-->
         <scene sceneID="IcK-eu-UCs">
             <objects>
@@ -31,13 +22,90 @@
                     <view key="view" contentMode="scaleToFill" id="4KQ-gn-W0G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-Fj-17T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medCopy" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-gU-3cJ">
+                                <rect key="frame" x="99" y="141" width="177" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hx5-gU-3cJ" secondAttribute="height" multiplier="177:86" id="bZB-Za-odR"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-7U-DZh">
+                                <rect key="frame" x="44" y="340" width="287.5" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbs-dE-wUW">
+                                        <rect key="frame" x="0.0" y="0.0" width="287.5" height="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcl-Uu-dYI">
+                                        <rect key="frame" x="0.0" y="57" width="287.5" height="19"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="n8d-ey-lYV">
+                                <rect key="frame" x="67" y="482" width="241" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y23-ls-5t6">
+                                        <rect key="frame" x="0.0" y="0.0" width="241" height="42"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                        <state key="normal" title="로그인" backgroundImage="boxLogin">
+                                            <color key="titleColor" red="0.015686274509803921" green="0.62352941176470589" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOM-oX-xRO">
+                                        <rect key="frame" x="0.0" y="66" width="241" height="42"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="16"/>
+                                        <state key="normal" title="회원가입" backgroundImage="boxSignup">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.68000000000000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7fw-Fj-17T" firstAttribute="leading" secondItem="ywa-bN-mY1" secondAttribute="leading" id="0hO-Qi-uhC"/>
+                            <constraint firstItem="n8d-ey-lYV" firstAttribute="top" secondItem="P7n-7U-DZh" secondAttribute="bottom" constant="66" id="AM4-WH-3aM"/>
+                            <constraint firstItem="7fw-Fj-17T" firstAttribute="trailing" secondItem="ywa-bN-mY1" secondAttribute="trailing" id="Anh-5q-9qA"/>
+                            <constraint firstItem="P7n-7U-DZh" firstAttribute="centerY" secondItem="4KQ-gn-W0G" secondAttribute="centerY" constant="44.5" id="EcN-IO-OkD"/>
+                            <constraint firstItem="hx5-gU-3cJ" firstAttribute="centerY" secondItem="4KQ-gn-W0G" secondAttribute="centerY" constant="-149.5" id="ExY-Ae-UHd"/>
+                            <constraint firstItem="7fw-Fj-17T" firstAttribute="top" secondItem="4KQ-gn-W0G" secondAttribute="top" id="JBX-aN-WTg"/>
+                            <constraint firstItem="hx5-gU-3cJ" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="QWX-J1-o5U"/>
+                            <constraint firstItem="7fw-Fj-17T" firstAttribute="bottom" secondItem="ywa-bN-mY1" secondAttribute="bottom" id="TVR-ON-sev"/>
+                            <constraint firstItem="P7n-7U-DZh" firstAttribute="leading" secondItem="ywa-bN-mY1" secondAttribute="leading" constant="44" id="TeF-nC-vk9"/>
+                            <constraint firstItem="n8d-ey-lYV" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="aab-Ws-Isw"/>
+                            <constraint firstItem="P7n-7U-DZh" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="ypb-g7-l1q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ywa-bN-mY1"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonStackView" destination="n8d-ey-lYV" id="x7J-8e-foT"/>
+                        <outlet property="centerYConstraint" destination="EcN-IO-OkD" id="jKm-et-y9a"/>
+                        <outlet property="emailTextField" destination="nbs-dE-wUW" id="wkC-rX-Tc8"/>
+                        <outlet property="loginButton" destination="y23-ls-5t6" id="FcT-hg-37O"/>
+                        <outlet property="loginStackView" destination="P7n-7U-DZh" id="3mg-h3-6oJ"/>
+                        <outlet property="logoCenterYConstraint" destination="ExY-Ae-UHd" id="Ne4-fr-BXb"/>
+                        <outlet property="logoImageView" destination="hx5-gU-3cJ" id="4pN-TJ-Le7"/>
+                        <outlet property="passwordTextField" destination="mcl-Uu-dYI" id="MkZ-eS-q9y"/>
+                        <outlet property="signUpButton" destination="qOM-oX-xRO" id="mck-5H-61u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="it0-Zn-cBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="33"/>
+            <point key="canvasLocation" x="96.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+        <image name="boxLogin" width="241" height="42"/>
+        <image name="boxSignup" width="241" height="42"/>
+        <image name="medCopy" width="177" height="86"/>
+    </resources>
 </document>
