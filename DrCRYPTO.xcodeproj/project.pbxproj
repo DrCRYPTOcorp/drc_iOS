@@ -10,9 +10,7 @@
 		10C01C40EBD832D6778013FE /* Pods_DrCRYPTO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89A6E49D0E90DDBCD4F39A7 /* Pods_DrCRYPTO.framework */; };
 		2CF84DFDF7707C0C1039C55A /* Pods_DrCRYPTOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
-		4C6F7255211D6CB4008BA508 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7254211D6CB4008BA508 /* SplashVC.swift */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
-		4C6F7259211D6D11008BA508 /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F7258211D6D11008BA508 /* Join.storyboard */; };
 		4C6F7262211D6EA3008BA508 /* MedicalWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7261211D6EA3008BA508 /* MedicalWalletVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
 		4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7265211D6ED3008BA508 /* AccountVC.swift */; };
@@ -39,6 +37,7 @@
 		4CF915E1212159D200C451D7 /* NanumBarunGothicUltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915DD212159D100C451D7 /* NanumBarunGothicUltraLight.ttf */; };
 		4CF915E2212159D200C451D7 /* NanumBarunGothicBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915DE212159D100C451D7 /* NanumBarunGothicBold.ttf */; };
 		4CF915E42121812700C451D7 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E32121812700C451D7 /* JoinVC.swift */; };
+		4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E52121896B00C451D7 /* NavigaionVC.swift */; };
 		C227A5A57A11DA6EBE5DFC07 /* Pods_DrCRYPTOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,9 +62,7 @@
 		1C5BA3CFE8CCAB2608D0BDE6 /* Pods-DrCRYPTO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO.debug.xcconfig"; sourceTree = "<group>"; };
 		438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		4C6F7254211D6CB4008BA508 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4C6F7258211D6D11008BA508 /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		4C6F7261211D6EA3008BA508 /* MedicalWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalWalletVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
 		4C6F7265211D6ED3008BA508 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
@@ -98,6 +95,7 @@
 		4CF915DD212159D100C451D7 /* NanumBarunGothicUltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicUltraLight.ttf; sourceTree = "<group>"; };
 		4CF915DE212159D100C451D7 /* NanumBarunGothicBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicBold.ttf; sourceTree = "<group>"; };
 		4CF915E32121812700C451D7 /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
+		4CF915E52121896B00C451D7 /* NavigaionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaionVC.swift; sourceTree = "<group>"; };
 		7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,8 +149,8 @@
 		4C6F7252211D6C90008BA508 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4C6F7254211D6CB4008BA508 /* SplashVC.swift */,
 				4C6F7256211D6CC2008BA508 /* LoginVC.swift */,
+				4CF915E52121896B00C451D7 /* NavigaionVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -254,7 +252,6 @@
 			children = (
 				4CBBA8C22119854600DF7391 /* LaunchScreen.storyboard */,
 				4C6F725021198D8F008BA508 /* Login.storyboard */,
-				4C6F7258211D6D11008BA508 /* Join.storyboard */,
 				4CBBA8BA2119854200DF7391 /* Main.storyboard */,
 				4C6F7271211D7DDA008BA508 /* Transaction.storyboard */,
 				4C6F7273211D7DE1008BA508 /* Account.storyboard */,
@@ -430,7 +427,6 @@
 				4CBBA8C12119854600DF7391 /* Assets.xcassets in Resources */,
 				4CBBA8BC2119854200DF7391 /* Main.storyboard in Resources */,
 				4CF915E0212159D200C451D7 /* NanumBarunGothic.ttf in Resources */,
-				4C6F7259211D6D11008BA508 /* Join.storyboard in Resources */,
 				4C6F7272211D7DDA008BA508 /* Transaction.storyboard in Resources */,
 				4C6F7274211D7DE1008BA508 /* Account.storyboard in Resources */,
 			);
@@ -558,13 +554,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C6F7255211D6CB4008BA508 /* SplashVC.swift in Sources */,
 				4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */,
 				4C6F7262211D6EA3008BA508 /* MedicalWalletVC.swift in Sources */,
 				4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */,
 				4C6F7277211D85B4008BA508 /* MedicalRecordTabVC.swift in Sources */,
 				4CF915E42121812700C451D7 /* JoinVC.swift in Sources */,
 				4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */,
+				4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */,
 				4CF915D52121129200C451D7 /* NetworkCallback.swift in Sources */,
 				4C6F727D211D8B93008BA508 /* VisitHistoryTableViewCell.swift in Sources */,
 				4CF915D9212155C300C451D7 /* Extension.swift in Sources */,
@@ -759,7 +755,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.drcrypto.DrCRYPTO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -779,7 +775,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.drcrypto.DrCRYPTO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

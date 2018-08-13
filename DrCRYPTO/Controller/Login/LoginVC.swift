@@ -29,6 +29,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         self.view.addGestureRecognizer(tap)
         splashView()
         loginView()
+        initAddTarget()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
             self.logoAnimation()
         }
@@ -41,11 +42,17 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         registerForKeyboardNotifications()
-        
     }
 }
 
 extension LoginVC {
+    
+    func navigaionBarSetting(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.title = " "
+    }
     
     func splashView(){
         logoCenterYConstraint.constant = -30
@@ -82,8 +89,6 @@ extension LoginVC {
             attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.43)]
         )
         unableLoginBtn()
-        initAddTarget()
-        
     }
     
     //MARK: Outlet Add Action
@@ -95,8 +100,7 @@ extension LoginVC {
     }
     
     @objc func signupButtonAction(){
-        let signupStoryBoard: UIStoryboard = UIStoryboard(name: "Join", bundle: nil)
-        guard let joinVC = signupStoryBoard.instantiateViewController(
+        guard let joinVC = self.storyboard?.instantiateViewController(
             withIdentifier : "JoinVC"
             ) as? JoinVC
             else{return}
