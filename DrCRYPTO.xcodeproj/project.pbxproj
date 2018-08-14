@@ -11,15 +11,10 @@
 		2CF84DFDF7707C0C1039C55A /* Pods_DrCRYPTOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
-		4C6F7262211D6EA3008BA508 /* MedicalWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7261211D6EA3008BA508 /* MedicalWalletVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
 		4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7265211D6ED3008BA508 /* AccountVC.swift */; };
 		4C6F7272211D7DDA008BA508 /* Transaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F7271211D7DDA008BA508 /* Transaction.storyboard */; };
 		4C6F7274211D7DE1008BA508 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F7273211D7DE1008BA508 /* Account.storyboard */; };
-		4C6F7277211D85B4008BA508 /* MedicalRecordTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7276211D85B4008BA508 /* MedicalRecordTabVC.swift */; };
-		4C6F7279211D85CA008BA508 /* VisitHistoryTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7278211D85CA008BA508 /* VisitHistoryTabVC.swift */; };
-		4C6F727B211D8B81008BA508 /* MedicalRecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F727A211D8B81008BA508 /* MedicalRecordCollectionViewCell.swift */; };
-		4C6F727D211D8B93008BA508 /* VisitHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F727C211D8B93008BA508 /* VisitHistoryTableViewCell.swift */; };
 		4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8B62119854200DF7391 /* AppDelegate.swift */; };
 		4CBBA8BC2119854200DF7391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBA8BA2119854200DF7391 /* Main.storyboard */; };
 		4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8BD2119854200DF7391 /* DrCRYPTO.xcdatamodeld */; };
@@ -38,6 +33,10 @@
 		4CF915E2212159D200C451D7 /* NanumBarunGothicBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915DE212159D100C451D7 /* NanumBarunGothicBold.ttf */; };
 		4CF915E42121812700C451D7 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E32121812700C451D7 /* JoinVC.swift */; };
 		4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E52121896B00C451D7 /* NavigaionVC.swift */; };
+		4CF915E82122667200C451D7 /* MedicallWalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E72122667100C451D7 /* MedicallWalletVC.swift */; };
+		4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E921229D8E00C451D7 /* MedicalRecordCell.swift */; };
+		4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */; };
+		4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915ED21229F9600C451D7 /* TabBarVC.swift */; };
 		C227A5A57A11DA6EBE5DFC07 /* Pods_DrCRYPTOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,15 +62,10 @@
 		438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.release.xcconfig"; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4C6F7261211D6EA3008BA508 /* MedicalWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalWalletVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
 		4C6F7265211D6ED3008BA508 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		4C6F7271211D7DDA008BA508 /* Transaction.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transaction.storyboard; sourceTree = "<group>"; };
 		4C6F7273211D7DE1008BA508 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		4C6F7276211D85B4008BA508 /* MedicalRecordTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordTabVC.swift; sourceTree = "<group>"; };
-		4C6F7278211D85CA008BA508 /* VisitHistoryTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryTabVC.swift; sourceTree = "<group>"; };
-		4C6F727A211D8B81008BA508 /* MedicalRecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordCollectionViewCell.swift; sourceTree = "<group>"; };
-		4C6F727C211D8B93008BA508 /* VisitHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4CBBA8B32119854200DF7391 /* DrCRYPTO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrCRYPTO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBA8B62119854200DF7391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBBA8BB2119854200DF7391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +90,10 @@
 		4CF915DE212159D100C451D7 /* NanumBarunGothicBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicBold.ttf; sourceTree = "<group>"; };
 		4CF915E32121812700C451D7 /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 		4CF915E52121896B00C451D7 /* NavigaionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigaionVC.swift; sourceTree = "<group>"; };
+		4CF915E72122667100C451D7 /* MedicallWalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicallWalletVC.swift; sourceTree = "<group>"; };
+		4CF915E921229D8E00C451D7 /* MedicalRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordCell.swift; sourceTree = "<group>"; };
+		4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitRecordCell.swift; sourceTree = "<group>"; };
+		4CF915ED21229F9600C451D7 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,11 +156,10 @@
 		4C6F7253211D6C99008BA508 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4C6F7261211D6EA3008BA508 /* MedicalWalletVC.swift */,
-				4C6F7276211D85B4008BA508 /* MedicalRecordTabVC.swift */,
-				4C6F7278211D85CA008BA508 /* VisitHistoryTabVC.swift */,
-				4C6F727A211D8B81008BA508 /* MedicalRecordCollectionViewCell.swift */,
-				4C6F727C211D8B93008BA508 /* VisitHistoryTableViewCell.swift */,
+				4CF915E72122667100C451D7 /* MedicallWalletVC.swift */,
+				4CF915E921229D8E00C451D7 /* MedicalRecordCell.swift */,
+				4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */,
+				4CF915ED21229F9600C451D7 /* TabBarVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -554,23 +551,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF915E82122667200C451D7 /* MedicallWalletVC.swift in Sources */,
 				4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */,
-				4C6F7262211D6EA3008BA508 /* MedicalWalletVC.swift in Sources */,
 				4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */,
-				4C6F7277211D85B4008BA508 /* MedicalRecordTabVC.swift in Sources */,
 				4CF915E42121812700C451D7 /* JoinVC.swift in Sources */,
 				4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */,
 				4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */,
 				4CF915D52121129200C451D7 /* NetworkCallback.swift in Sources */,
-				4C6F727D211D8B93008BA508 /* VisitHistoryTableViewCell.swift in Sources */,
 				4CF915D9212155C300C451D7 /* Extension.swift in Sources */,
 				4CF915D7212112A300C451D7 /* UserProfileModel.swift in Sources */,
 				4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */,
-				4C6F727B211D8B81008BA508 /* MedicalRecordCollectionViewCell.swift in Sources */,
-				4C6F7279211D85CA008BA508 /* VisitHistoryTabVC.swift in Sources */,
+				4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */,
 				4CF915D3212111C600C451D7 /* UserProfileVO.swift in Sources */,
 				4CF915CF2121118900C451D7 /* NetworkModel.swift in Sources */,
 				4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */,
+				4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */,
+				4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

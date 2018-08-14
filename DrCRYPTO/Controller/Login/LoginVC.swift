@@ -47,6 +47,12 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
 
 extension LoginVC {
     
+    @objc func loginButtonAction(){
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
+    
     func navigaionBarSetting(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -93,7 +99,7 @@ extension LoginVC {
     
     //MARK: Outlet Add Action
     func initAddTarget(){
-//        loginButton.addTarget(self, action: #selector(loginNetworking), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signupButtonAction), for: .touchUpInside)
         emailTextField.addTarget(self, action: #selector(isValid), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(isValid), for: .editingChanged)
