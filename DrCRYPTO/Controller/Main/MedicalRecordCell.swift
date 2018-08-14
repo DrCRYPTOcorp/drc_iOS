@@ -10,6 +10,10 @@ import UIKit
 
 class MedicalRecordCell : UICollectionViewCell {
     
-    @IBOutlet var testCardImageView: UIImageView!
+    @IBOutlet var issuedDateLabel: UILabel!
+    @IBOutlet var documentImageView: UIImageView!
+    @IBOutlet var hospitalNameLabel: UILabel!
+    @IBOutlet var diseaseNameLabel: UILabel!
+    @IBOutlet var recordImageView: UIImageView!
     
 }

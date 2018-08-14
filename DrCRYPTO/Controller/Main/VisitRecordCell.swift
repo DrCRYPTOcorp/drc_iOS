@@ -10,6 +10,8 @@ import UIKit
 
 class VisitRecordCell : UICollectionViewCell {
     
-    @IBOutlet var testSmallCardImageView: UIImageView!
+    @IBOutlet var hospitalNameLabel: UILabel!
+    @IBOutlet var diseaseNameLabel: UILabel!
+    @IBOutlet var visitingDateLabel: UILabel!
     
 }

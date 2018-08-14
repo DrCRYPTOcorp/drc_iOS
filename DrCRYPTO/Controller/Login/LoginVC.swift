@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     
@@ -20,6 +21,8 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var centerYConstraint: NSLayoutConstraint!
     @IBOutlet var logoCenterYConstraint: NSLayoutConstraint!
     
+    @IBAction func unwindToSplash(segue:UIStoryboardSegue) { }
+    
     var check = true
     
     override func viewDidLoad() {
@@ -32,6 +35,13 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         initAddTarget()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
             self.logoAnimation()
+        }
+        
+        //MARK : Firebase Login 검증
+        if let user = Auth.auth().currentUser {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+            UIApplication.shared.keyWindow?.rootViewController = viewController
         }
     }
     
@@ -48,9 +58,17 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
 extension LoginVC {
     
     @objc func loginButtonAction(){
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-        UIApplication.shared.keyWindow?.rootViewController = viewController
+        //MARK: Firebase Login 인증
+        Auth.auth().signIn(withEmail: gsno(emailTextField.text), password: gsno(passwordTextField.text)) { (user, error) in
+            if user != nil{
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+            }
+            else{
+                self.simpleAlert(title: "로그인 오류", msg: "이메일 또는 비밀번호를 확인해주세요.")
+            }
+        }
     }
     
     func navigaionBarSetting(){

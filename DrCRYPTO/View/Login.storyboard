@@ -266,9 +266,11 @@
                         <outlet property="joinStackView" destination="NDU-ci-Zo0" id="95G-zd-g19"/>
                         <outlet property="nameTextField" destination="QsJ-Av-DtM" id="CZ5-hv-rEg"/>
                         <outlet property="passwordTextField" destination="sY7-qO-rbT" id="ReZ-r7-xPZ"/>
+                        <segue destination="dYB-Ar-bdO" kind="unwind" identifier="unwindToSplash" unwindAction="unwindToSplashWithSegue:" id="Sl1-Mh-pd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bP0-Gj-gkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dYB-Ar-bdO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1772" y="32.833583208395808"/>
         </scene>

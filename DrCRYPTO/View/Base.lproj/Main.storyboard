@@ -16,13 +16,16 @@
         <array key="NanumBarunGothicBold.ttf">
             <string>NanumBarunGothicBold</string>
         </array>
+        <array key="NanumBarunGothicLight.ttf">
+            <string>NanumBarunGothicLight</string>
+        </array>
     </customFonts>
     <scenes>
         <!--의료 지갑-->
         <scene sceneID="d7q-g2-6k3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V1l-Tc-N5g" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="의료 지갑" id="pKx-sw-sH7"/>
+                    <tabBarItem key="tabBarItem" title="의료 지갑" image="wallet_inactive" selectedImage="wallet_active" id="pKx-sw-sH7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="i7B-f4-CgJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -49,13 +52,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진료기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHG-zC-oyq">
-                                <rect key="frame" x="24" y="122" width="69.5" height="23.5"/>
+                                <rect key="frame" x="24" y="122" width="71.5" height="23"/>
                                 <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHq-xR-mQc">
+                                <rect key="frame" x="0.0" y="157" width="375" height="162"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-Cp-ewK">
+                                <rect key="frame" x="0.0" y="382" width="375" height="166"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8FZ-Gs-eMB">
-                                <rect key="frame" x="0.0" y="157.5" width="375" height="162"/>
+                                <rect key="frame" x="0.0" y="157" width="375" height="162"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8FZ-Gs-eMB" secondAttribute="height" multiplier="125:54" id="Kww-gd-32s"/>
@@ -74,25 +89,68 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="6Xb-N0-TVT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="162"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wi1-j7-8Zs">
+                                                    <rect key="frame" x="0.0" y="110" width="155" height="52"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fht-t2-xyr">
+                                                            <rect key="frame" x="11" y="9" width="133" height="37"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYg-Nn-LqO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXO-6h-N7A">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="133" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="fht-t2-xyr" firstAttribute="centerX" secondItem="Wi1-j7-8Zs" secondAttribute="centerX" id="2Qr-8y-uF2"/>
+                                                        <constraint firstItem="fht-t2-xyr" firstAttribute="leading" secondItem="Wi1-j7-8Zs" secondAttribute="leading" constant="11" id="JGy-b0-XOW"/>
+                                                        <constraint firstAttribute="height" constant="52" id="N3Z-WO-pCx"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fht-t2-xyr" secondAttribute="bottom" constant="6" id="nFW-1D-EYb"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yyyy-MM-dd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-gt-c7b">
+                                                    <rect key="frame" x="72" y="7" width="75" height="14"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icJindan" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-qU-ouO">
+                                                    <rect key="frame" x="53" y="35" width="49" height="67"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="6Xb-N0-TVT" secondAttribute="bottom" id="GKR-V6-tNZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="6Xb-N0-TVT" secondAttribute="trailing" id="Hae-hp-E8U"/>
-                                            <constraint firstItem="6Xb-N0-TVT" firstAttribute="leading" secondItem="CFs-cN-Pwm" secondAttribute="leading" id="RPM-EC-Tzt"/>
-                                            <constraint firstItem="6Xb-N0-TVT" firstAttribute="top" secondItem="CFs-cN-Pwm" secondAttribute="top" id="VmF-jU-ZQK"/>
+                                            <constraint firstItem="3gy-qU-ouO" firstAttribute="top" secondItem="Hx1-gt-c7b" secondAttribute="bottom" constant="14" id="2Wk-3G-Q8k"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wi1-j7-8Zs" secondAttribute="bottom" id="3Am-7T-Arj"/>
+                                            <constraint firstItem="3gy-qU-ouO" firstAttribute="centerX" secondItem="CFs-cN-Pwm" secondAttribute="centerX" id="ERD-xw-2nN"/>
+                                            <constraint firstItem="Hx1-gt-c7b" firstAttribute="top" secondItem="CFs-cN-Pwm" secondAttribute="top" constant="7" id="c9o-R3-Mpb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wi1-j7-8Zs" secondAttribute="trailing" id="tDg-wc-7U1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hx1-gt-c7b" secondAttribute="trailing" constant="8" id="wyC-jl-b1O"/>
+                                            <constraint firstItem="Wi1-j7-8Zs" firstAttribute="leading" secondItem="CFs-cN-Pwm" secondAttribute="leading" id="yqd-3v-3GI"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="testCardImageView" destination="6Xb-N0-TVT" id="X0J-Ha-WyP"/>
+                                            <outlet property="diseaseNameLabel" destination="PXO-6h-N7A" id="bVu-sV-b1z"/>
+                                            <outlet property="documentImageView" destination="3gy-qU-ouO" id="yZR-zf-dRp"/>
+                                            <outlet property="hospitalNameLabel" destination="JYg-Nn-LqO" id="5qV-ip-cps"/>
+                                            <outlet property="issuedDateLabel" destination="Hx1-gt-c7b" id="3oH-nZ-Vyi"/>
+                                            <outlet property="recordImageView" destination="3gy-qU-ouO" id="T63-US-ynS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pIV-n8-Fzw">
-                                <rect key="frame" x="0.0" y="383" width="375" height="166"/>
+                                <rect key="frame" x="0.0" y="382" width="375" height="166"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pIV-n8-Fzw" secondAttribute="height" multiplier="375:166" id="KhM-1w-yqu"/>
@@ -111,55 +169,80 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="invalidName" translatesAutoresizingMaskIntoConstraints="NO" id="Vt0-u9-yJn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="78"/>
-                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-eX-pXG">
+                                                    <rect key="frame" x="11" y="11" width="133" height="34.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9T-9a-g9n">
+                                                            <rect key="frame" x="0.0" y="0.0" width="133" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-RG-ipY">
+                                                            <rect key="frame" x="0.0" y="20.5" width="133" height="14"/>
+                                                            <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yyyy-MM-dd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-F9-ZOy">
+                                                    <rect key="frame" x="10" y="59" width="135" height="14"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothicLight" family="NanumBarunGothic" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Vt0-u9-yJn" secondAttribute="bottom" id="0fp-9K-zJS"/>
-                                            <constraint firstItem="Vt0-u9-yJn" firstAttribute="leading" secondItem="4Bb-8a-6so" secondAttribute="leading" id="EJl-W9-Obm"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vt0-u9-yJn" secondAttribute="trailing" id="RtO-7d-v6L"/>
-                                            <constraint firstItem="Vt0-u9-yJn" firstAttribute="top" secondItem="4Bb-8a-6so" secondAttribute="top" id="ZhH-eb-NUa"/>
+                                            <constraint firstAttribute="trailing" secondItem="cDC-F9-ZOy" secondAttribute="trailing" constant="10" id="Ane-J4-Y42"/>
+                                            <constraint firstItem="rg9-eX-pXG" firstAttribute="top" secondItem="4Bb-8a-6so" secondAttribute="top" constant="11" id="Bpj-jO-wbs"/>
+                                            <constraint firstItem="rg9-eX-pXG" firstAttribute="centerX" secondItem="4Bb-8a-6so" secondAttribute="centerX" id="JE5-IA-bh2"/>
+                                            <constraint firstItem="rg9-eX-pXG" firstAttribute="leading" secondItem="4Bb-8a-6so" secondAttribute="leading" constant="11" id="Mwm-Yr-Qd8"/>
+                                            <constraint firstAttribute="bottom" secondItem="cDC-F9-ZOy" secondAttribute="bottom" constant="5" id="f8x-wh-Wn9"/>
+                                            <constraint firstItem="cDC-F9-ZOy" firstAttribute="centerX" secondItem="4Bb-8a-6so" secondAttribute="centerX" id="kNQ-Ah-2Rv"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="testSmallCardImageView" destination="Vt0-u9-yJn" id="fi4-ie-kso"/>
+                                            <outlet property="diseaseNameLabel" destination="jaV-RG-ipY" id="QDc-5O-lqb"/>
+                                            <outlet property="hospitalNameLabel" destination="c9T-9a-g9n" id="n6G-td-Xhd"/>
+                                            <outlet property="visitingDateLabel" destination="cDC-F9-ZOy" id="fov-ui-cpp"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-tN-bPB">
-                                <rect key="frame" x="295" y="122" width="69" height="24"/>
+                                <rect key="frame" x="294" y="122" width="70" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYH-V8-6AJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="24"/>
                                         <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwo-sS-7fU">
-                                        <rect key="frame" x="45" y="0.0" width="24" height="24"/>
+                                        <rect key="frame" x="46" y="0.0" width="24" height="24"/>
                                         <state key="normal" image="chevron"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-ca-F3g">
-                                <rect key="frame" x="295" y="347.5" width="69" height="24"/>
+                                <rect key="frame" x="294" y="347" width="70" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-e9-UPz">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="24"/>
                                         <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-cJ-PNs">
-                                        <rect key="frame" x="45" y="0.0" width="24" height="24"/>
+                                        <rect key="frame" x="46" y="0.0" width="24" height="24"/>
                                         <state key="normal" image="chevron"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방문기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-3k-kxd">
-                                <rect key="frame" x="24" y="347.5" width="69.5" height="23.5"/>
+                                <rect key="frame" x="24" y="347" width="71.5" height="23"/>
                                 <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -169,21 +252,33 @@
                         <constraints>
                             <constraint firstItem="8FZ-Gs-eMB" firstAttribute="top" secondItem="VHG-zC-oyq" secondAttribute="bottom" constant="12" id="10V-KG-jjb"/>
                             <constraint firstItem="hLl-3k-kxd" firstAttribute="leading" secondItem="VHG-zC-oyq" secondAttribute="leading" id="1rq-6g-NU2"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="width" secondItem="8FZ-Gs-eMB" secondAttribute="width" id="4ny-iK-2Ks"/>
                             <constraint firstItem="9x5-YK-jDf" firstAttribute="leading" secondItem="1qi-lP-Bcc" secondAttribute="leading" id="5EL-CM-lIk"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="trailing" secondItem="ABX-Cp-ewK" secondAttribute="trailing" id="6Zp-2D-8eJ"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="width" secondItem="ABX-Cp-ewK" secondAttribute="width" id="7zF-ib-jGV"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="top" secondItem="8FZ-Gs-eMB" secondAttribute="top" id="9oC-Uk-Ard"/>
                             <constraint firstItem="hLl-3k-kxd" firstAttribute="top" secondItem="8FZ-Gs-eMB" secondAttribute="bottom" constant="28" id="9ua-BX-fJW"/>
                             <constraint firstItem="1qi-lP-Bcc" firstAttribute="trailing" secondItem="bGT-tN-bPB" secondAttribute="trailing" constant="11" id="Ddn-IB-tdu"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="leading" secondItem="8FZ-Gs-eMB" secondAttribute="leading" id="F05-1p-84l"/>
                             <constraint firstItem="VHG-zC-oyq" firstAttribute="top" secondItem="1qi-lP-Bcc" secondAttribute="top" constant="6" id="I8c-ts-L5I"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="leading" secondItem="ABX-Cp-ewK" secondAttribute="leading" id="JJ4-rv-6gU"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="bottom" secondItem="ABX-Cp-ewK" secondAttribute="bottom" id="NtC-Gk-6h9"/>
                             <constraint firstItem="bGT-tN-bPB" firstAttribute="centerY" secondItem="VHG-zC-oyq" secondAttribute="centerY" id="Ox4-BL-sDW"/>
                             <constraint firstItem="8FZ-Gs-eMB" firstAttribute="leading" secondItem="1qi-lP-Bcc" secondAttribute="leading" id="Qhh-RU-07b"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="top" secondItem="ABX-Cp-ewK" secondAttribute="top" id="SNW-kY-Bg9"/>
                             <constraint firstItem="pIV-n8-Fzw" firstAttribute="trailing" secondItem="1qi-lP-Bcc" secondAttribute="trailing" id="Ttk-Q8-lTl"/>
+                            <constraint firstItem="pIV-n8-Fzw" firstAttribute="height" secondItem="ABX-Cp-ewK" secondAttribute="height" id="X0O-gm-Vit"/>
                             <constraint firstItem="9x5-YK-jDf" firstAttribute="trailing" secondItem="1qi-lP-Bcc" secondAttribute="trailing" id="cM8-8D-7ss"/>
                             <constraint firstItem="OjS-ca-F3g" firstAttribute="centerY" secondItem="hLl-3k-kxd" secondAttribute="centerY" id="d9n-cM-5Yw"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="trailing" secondItem="8FZ-Gs-eMB" secondAttribute="trailing" id="dRm-ug-Evs"/>
                             <constraint firstItem="9x5-YK-jDf" firstAttribute="top" secondItem="gF1-SZ-YOt" secondAttribute="top" id="h0n-au-Ihd"/>
                             <constraint firstItem="8FZ-Gs-eMB" firstAttribute="trailing" secondItem="1qi-lP-Bcc" secondAttribute="trailing" id="iDI-jw-qii"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="bottom" secondItem="8FZ-Gs-eMB" secondAttribute="bottom" id="ixw-ZP-Dwt"/>
                             <constraint firstItem="pIV-n8-Fzw" firstAttribute="leading" secondItem="1qi-lP-Bcc" secondAttribute="leading" id="kRu-j6-svf"/>
                             <constraint firstItem="VHG-zC-oyq" firstAttribute="leading" secondItem="1qi-lP-Bcc" secondAttribute="leading" constant="24" id="pWh-48-hbF"/>
                             <constraint firstItem="pIV-n8-Fzw" firstAttribute="top" secondItem="hLl-3k-kxd" secondAttribute="bottom" constant="12" id="qsV-nI-zdN"/>
                             <constraint firstItem="OjS-ca-F3g" firstAttribute="trailing" secondItem="bGT-tN-bPB" secondAttribute="trailing" id="rYL-jP-Je6"/>
+                            <constraint firstItem="RHq-xR-mQc" firstAttribute="height" secondItem="8FZ-Gs-eMB" secondAttribute="height" id="vXs-VC-pJI"/>
                             <constraint firstAttribute="bottom" secondItem="9x5-YK-jDf" secondAttribute="bottom" id="yeI-4u-MDI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1qi-lP-Bcc"/>
@@ -191,12 +286,33 @@
                     <navigationItem key="navigationItem" title="박성준님" id="Xpb-FM-aC5"/>
                     <connections>
                         <outlet property="medicalRecordCollectionView" destination="8FZ-Gs-eMB" id="ThC-j7-OVg"/>
+                        <outlet property="medicalRecordSeeAllButton" destination="lwo-sS-7fU" id="B6q-qZ-CT6"/>
+                        <outlet property="medicalRecordSeeAllStackView" destination="bGT-tN-bPB" id="Apo-4z-bfO"/>
+                        <outlet property="noMedicalRecordLabel" destination="RHq-xR-mQc" id="mhT-32-W3J"/>
+                        <outlet property="noVisitRecordLabel" destination="ABX-Cp-ewK" id="8lR-GD-pFe"/>
                         <outlet property="visitRecordCollectionView" destination="pIV-n8-Fzw" id="wm2-oX-Aj1"/>
+                        <outlet property="visitRecordSeeAllButton" destination="TIc-cJ-PNs" id="rnm-tt-Me1"/>
+                        <outlet property="visitRecordSeeAllStackView" destination="OjS-ca-F3g" id="j5x-Xd-gEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUo-gn-j95" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C8C-Go-aVz">
+            <objects>
+                <viewController id="aOJ-7k-pq9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fe-JY-Oh4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8Z3-GH-lkU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69x-9l-kNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="107"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="AzS-KC-qsb">
@@ -206,9 +322,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uXA-xB-bip">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="V1l-Tc-N5g" kind="relationship" relationship="viewControllers" id="wak-aN-1Jo"/>
@@ -243,8 +360,9 @@
     </scenes>
     <resources>
         <image name="bg" width="375" height="667"/>
-        <image name="card" width="163" height="170"/>
         <image name="chevron" width="24" height="24"/>
-        <image name="invalidName" width="163" height="86"/>
+        <image name="icJindan" width="49" height="67"/>
+        <image name="wallet_active" width="21" height="23"/>
+        <image name="wallet_inactive" width="21" height="23"/>
     </resources>
 </document>

@@ -29,7 +29,7 @@
         <scene sceneID="VsQ-kz-fHF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ldb-HB-rCZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="거래" id="ZzR-l2-8ce"/>
+                    <tabBarItem key="tabBarItem" title="거래" image="transaction_inactive" selectedImage="transaction_active" id="ZzR-l2-8ce"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ows-C4-KBv">
@@ -46,4 +46,8 @@
             <point key="canvasLocation" x="636" y="72.413793103448285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="transaction_active" width="29" height="25"/>
+        <image name="transaction_inactive" width="29" height="25"/>
+    </resources>
 </document>

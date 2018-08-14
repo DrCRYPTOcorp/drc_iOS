@@ -28,9 +28,12 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-iY-uRE">
-                                                        <rect key="frame" x="68" y="34" width="46" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="logout:" destination="e8D-i5-L5T" eventType="touchUpInside" id="CsT-fs-YDJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +71,7 @@
         <scene sceneID="tTp-pN-ROs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2XJ-vF-CKz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="내 계정" id="s4P-OR-ZYJ"/>
+                    <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="account_active" id="s4P-OR-ZYJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pRO-Ly-xQl">
@@ -85,4 +88,8 @@
             <point key="canvasLocation" x="647.20000000000005" y="182.15892053973016"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="account_active" width="23" height="23"/>
+        <image name="account_inactive" width="23" height="23"/>
+    </resources>
 </document>

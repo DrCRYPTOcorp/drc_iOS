@@ -37,6 +37,7 @@
 		4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915E921229D8E00C451D7 /* MedicalRecordCell.swift */; };
 		4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */; };
 		4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915ED21229F9600C451D7 /* TabBarVC.swift */; };
+		4CF915F02122FFC500C451D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915EF2122FFC400C451D7 /* GoogleService-Info.plist */; };
 		C227A5A57A11DA6EBE5DFC07 /* Pods_DrCRYPTOUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		4CF915E921229D8E00C451D7 /* MedicalRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordCell.swift; sourceTree = "<group>"; };
 		4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitRecordCell.swift; sourceTree = "<group>"; };
 		4CF915ED21229F9600C451D7 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		4CF915EF2122FFC400C451D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		787430854B721E094FD3B032 /* Pods_DrCRYPTOUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrCRYPTOUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB7E696995E39B41BA433E4 /* Pods-DrCRYPTOTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBBA8B62119854200DF7391 /* AppDelegate.swift */,
+				4CF915EF2122FFC400C451D7 /* GoogleService-Info.plist */,
 				4CF915D8212155C300C451D7 /* Extension.swift */,
 				4CBBA8E821198AB000DF7391 /* Model */,
 				4CBBA8E721198AA600DF7391 /* View */,
@@ -424,6 +427,7 @@
 				4CBBA8C12119854600DF7391 /* Assets.xcassets in Resources */,
 				4CBBA8BC2119854200DF7391 /* Main.storyboard in Resources */,
 				4CF915E0212159D200C451D7 /* NanumBarunGothic.ttf in Resources */,
+				4CF915F02122FFC500C451D7 /* GoogleService-Info.plist in Resources */,
 				4C6F7272211D7DDA008BA508 /* Transaction.storyboard in Resources */,
 				4C6F7274211D7DE1008BA508 /* Account.storyboard in Resources */,
 			);
@@ -475,6 +479,8 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
@@ -482,7 +488,9 @@
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
-				"${BUILT_PRODUCTS_DIR}/libsodium/libsodium.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/web3swift/web3swift.framework",
 			);
@@ -492,6 +500,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
@@ -499,7 +509,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libsodium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3swift.framework",
 			);

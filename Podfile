@@ -13,6 +13,9 @@ target 'DrCRYPTO' do
     pod 'Kingfisher'
     pod 'ObjectMapper'
     pod 'AlamofireObjectMapper'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 
     # DAPP Pods
     pod 'web3swift'

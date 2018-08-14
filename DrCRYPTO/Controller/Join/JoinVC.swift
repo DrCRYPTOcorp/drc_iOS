@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class JoinVC : UIViewController, UIGestureRecognizerDelegate {
     
@@ -171,7 +173,25 @@ extension JoinVC : UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     @objc func doneButtonAction(){
-        
+        Auth.auth().createUser(withEmail: gsno(idTextField.text), password: gsno(confirmPasswordTextField.text)
+        ) { (user, error) in
+            if user !=  nil{
+                
+                //MARK: Firebase Database User Data Save - UID 구분
+                Database.database().reference().child("users/\(self.gsno(user?.user.uid))").setValue([
+                    "email" : self.gsno(self.idTextField.text),
+                    "uid": self.gsno(user?.user.uid),
+                    "name": self.gsno(self.nameTextField.text),
+                    "gender": self.gsno(self.genderTextField.text),
+                    "birth": self.gsno(self.birthTextField.text)
+                    ])
+                self.performSegue(withIdentifier: "unwindToSplash", sender: self)
+            }
+            else{
+                print("register failed")
+            }
+            
+        }
     }
     
     @objc func donePicker() {
