@@ -10,6 +10,7 @@ import UIKit
 
 class MedicalWalletVC : UIViewController {
     
+    @IBOutlet var whiteImageView: UIImageView!
     @IBOutlet var medicalRecordCollectionView: UICollectionView!
     @IBOutlet var visitRecordCollectionView: UICollectionView!
     @IBOutlet var medicalRecordSeeAllButton: UIButton!
@@ -24,6 +25,7 @@ class MedicalWalletVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        whiteImageView.isHidden = true
         medicalRecordCollectionView.delegate = self
         medicalRecordCollectionView.dataSource = self
         visitRecordCollectionView.delegate = self
@@ -38,7 +40,7 @@ class MedicalWalletVC : UIViewController {
     }
 }
 
-extension MedicalWalletVC {
+extension MedicalWalletVC : UISearchBarDelegate {
     
     func navigationBarSetting(){
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -50,11 +52,23 @@ extension MedicalWalletVC {
     }
     
     func searchBarSetting(){
-        let SearchController = UISearchController(searchResultsController: nil)
+        let SearchController = UISearchController(searchResultsController: SearchVC())
+        SearchController.searchBar.delegate = self
         SearchController.searchBar.clipsToBounds = true
         SearchController.searchBar.layer.cornerRadius = 16
         SearchController.searchBar.barTintColor = UIColor.white
         SearchController.searchBar.isTranslucent = false
+        
+        //MARK: SearchBar Scope Button Setting
+        SearchController.searchBar.scopeButtonTitles = ["진료기록", "방문기록"]
+        SearchController.searchBar.setScopeBarButtonTitleTextAttributes([NSAttributedStringKey.foregroundColor.rawValue: UIColor(red: 4/255.0, green: 197/255.0, blue: 188/255.0, alpha: 1.0)], for: .normal)
+        SearchController.searchBar.tintColor = #colorLiteral(red: 0, green: 0.7831496, blue: 0.7580105662, alpha: 1)
+        
+        //MARK : Cancel Button Setting
+        let cancelButtonAttributes: NSDictionary = [NSAttributedStringKey.foregroundColor.rawValue: UIColor(red: 4/255.0, green: 197/255.0, blue: 188/255.0, alpha: 1.0)]
+        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [NSAttributedStringKey : Any], for: UIControlState.normal)
+        
+        //MARK : SearchBar TextField Setting
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
         if let textfield = SearchController.searchBar.value(forKey: "searchField") as? UITextField {
             textfield.textColor = UIColor.white
@@ -68,6 +82,42 @@ extension MedicalWalletVC {
         }
         navigationItem.searchController = SearchController
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        whiteImageView.isHidden = false
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.black]
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.white
+            textfield.placeholder = ""
+            textfield.alpha = 1.0
+            if let backgroundview = textfield.subviews.first {
+                backgroundview.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+                backgroundview.layer.cornerRadius = 16
+                backgroundview.clipsToBounds = true
+            }
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        whiteImageView.isHidden = true
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.white
+            textfield.placeholder = ""
+            textfield.alpha = 1.0
+            if let backgroundview = textfield.subviews.first {
+                backgroundview.backgroundColor = #colorLiteral(red: 0, green: 0.7831496, blue: 0.7580105662, alpha: 1)
+                backgroundview.layer.cornerRadius = 16
+                backgroundview.clipsToBounds = true
+            }
+        }
+    }
+    
+
     
     func noData(){
         if medicalRecordData.count == 0{
