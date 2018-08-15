@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10C01C40EBD832D6778013FE /* Pods_DrCRYPTO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89A6E49D0E90DDBCD4F39A7 /* Pods_DrCRYPTO.framework */; };
 		2CF84DFDF7707C0C1039C55A /* Pods_DrCRYPTOTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7556C9540E4B899C3FFB7AC3 /* Pods_DrCRYPTOTests.framework */; };
+		4C638285212400CB0017E125 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C638284212400CB0017E125 /* TransactionCell.swift */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		1C5BA3CFE8CCAB2608D0BDE6 /* Pods-DrCRYPTO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO.debug.xcconfig"; sourceTree = "<group>"; };
 		438833D76954EA23782E97A0 /* Pods-DrCRYPTOTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrCRYPTOTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrCRYPTOTests/Pods-DrCRYPTOTests.release.xcconfig"; sourceTree = "<group>"; };
+		4C638284212400CB0017E125 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				4C6F7263211D6EC3008BA508 /* TransactionVC.swift */,
+				4C638284212400CB0017E125 /* TransactionCell.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 			files = (
 				4CF915E82122667200C451D7 /* MedicallWalletVC.swift in Sources */,
 				4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */,
+				4C638285212400CB0017E125 /* TransactionCell.swift in Sources */,
 				4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */,
 				4CF915E42121812700C451D7 /* JoinVC.swift in Sources */,
 				4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */,

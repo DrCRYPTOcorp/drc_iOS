@@ -8,18 +8,121 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothicBold.ttf">
+            <string>NanumBarunGothicBold</string>
+        </array>
+        <array key="NanumBarunGothicLight.ttf">
+            <string>NanumBarunGothicLight</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--TransactionVC-->
+        <!--거래내역-->
         <scene sceneID="IhG-zJ-R9r">
             <objects>
                 <viewController storyboardIdentifier="TransactionVC" id="aXN-iH-VMm" customClass="TransactionVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8hX-75-oSU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icNoTransact" translatesAutoresizingMaskIntoConstraints="NO" id="Pl6-Cp-20m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ch5-V6-vPc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionCell" rowHeight="71" id="vcR-sE-fl4" customClass="TransactionCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vcR-sE-fl4" id="PeK-eg-pSt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 DRC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTK-Rp-oeI">
+                                                    <rect key="frame" x="322.5" y="18.5" width="33.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-r0-fMZ">
+                                                    <rect key="frame" x="72" y="17" width="231" height="36.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-fF-xsL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cId-9f-dE9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="78.5" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwj-c4-yzL">
+                                                                    <rect key="frame" x="83.5" y="0.0" width="6.5" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYv-oF-Lat">
+                                                                    <rect key="frame" x="95" y="0.0" width="25" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 지갑 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-Pp-oDz">
+                                                            <rect key="frame" x="0.0" y="22.5" width="91.5" height="14"/>
+                                                            <fontDescription key="fontDescription" name="NanumBarunGothicLight" family="NanumBarunGothic" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSend" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-mv-K7g">
+                                                    <rect key="frame" x="24" y="9" width="36" height="52"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nUx-mv-K7g" firstAttribute="centerY" secondItem="PeK-eg-pSt" secondAttribute="centerY" id="3AX-6L-Fai"/>
+                                                <constraint firstItem="iTK-Rp-oeI" firstAttribute="centerY" secondItem="xrS-fF-xsL" secondAttribute="centerY" id="S0X-AQ-IlH"/>
+                                                <constraint firstItem="zTp-r0-fMZ" firstAttribute="centerY" secondItem="nUx-mv-K7g" secondAttribute="centerY" id="TGm-nM-Yzc"/>
+                                                <constraint firstItem="zTp-r0-fMZ" firstAttribute="centerX" secondItem="PeK-eg-pSt" secondAttribute="centerX" id="fgM-M7-oqp"/>
+                                                <constraint firstItem="nUx-mv-K7g" firstAttribute="leading" secondItem="PeK-eg-pSt" secondAttribute="leading" constant="24" id="o64-Xe-Nax"/>
+                                                <constraint firstItem="zTp-r0-fMZ" firstAttribute="leading" secondItem="nUx-mv-K7g" secondAttribute="trailing" constant="12" id="qNl-lX-9K2"/>
+                                                <constraint firstAttribute="trailing" secondItem="iTK-Rp-oeI" secondAttribute="trailing" constant="19" id="zqc-jU-TS1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="diseaseNameLabel" destination="kYv-oF-Lat" id="ygq-0D-e0J"/>
+                                            <outlet property="drcLabel" destination="iTK-Rp-oeI" id="zgV-TE-ZCw"/>
+                                            <outlet property="hospitalNameLabel" destination="cId-9f-dE9" id="Pq1-F6-Ulf"/>
+                                            <outlet property="hospitalWalletAddressLabel" destination="pSk-Pp-oDz" id="pDK-Ct-Nvu"/>
+                                            <outlet property="separationLabel" destination="Cwj-c4-yzL" id="fOO-0L-KmI"/>
+                                            <outlet property="statusImageView" destination="nUx-mv-K7g" id="2bb-6F-C56"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ch5-V6-vPc" firstAttribute="leading" secondItem="nmg-vF-d20" secondAttribute="leading" id="1Cw-Nx-pKy"/>
+                            <constraint firstAttribute="bottom" secondItem="Ch5-V6-vPc" secondAttribute="bottom" id="9AY-Gx-ZhC"/>
+                            <constraint firstItem="Pl6-Cp-20m" firstAttribute="top" secondItem="8hX-75-oSU" secondAttribute="top" id="Dea-hB-DzJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Pl6-Cp-20m" secondAttribute="bottom" id="VXe-jA-jUK"/>
+                            <constraint firstItem="Pl6-Cp-20m" firstAttribute="leading" secondItem="nmg-vF-d20" secondAttribute="leading" id="WRf-7Q-Fyr"/>
+                            <constraint firstItem="Pl6-Cp-20m" firstAttribute="trailing" secondItem="nmg-vF-d20" secondAttribute="trailing" id="dhZ-QX-CJv"/>
+                            <constraint firstItem="Ch5-V6-vPc" firstAttribute="top" secondItem="8hX-75-oSU" secondAttribute="top" id="gIi-ai-7m6"/>
+                            <constraint firstItem="Ch5-V6-vPc" firstAttribute="trailing" secondItem="nmg-vF-d20" secondAttribute="trailing" id="osi-fI-uZc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nmg-vF-d20"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3EZ-fJ-U2x"/>
+                    <navigationItem key="navigationItem" title="거래내역" id="3EZ-fJ-U2x"/>
+                    <connections>
+                        <outlet property="noTransactionImageView" destination="Pl6-Cp-20m" id="eJq-2a-ywg"/>
+                        <outlet property="transactionTableView" destination="Ch5-V6-vPc" id="NNB-PE-cOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfk-0N-g74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,6 +138,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ows-C4-KBv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.015686274509803921" green="0.74509803921568629" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -47,6 +151,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icNoTransact" width="116" height="81"/>
+        <image name="icSend" width="36" height="52"/>
         <image name="transaction_active" width="29" height="25"/>
         <image name="transaction_inactive" width="29" height="25"/>
     </resources>

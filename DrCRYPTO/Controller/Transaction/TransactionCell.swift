@@ -10,6 +10,14 @@ import UIKit
 
 class TransactionCell: UITableViewCell {
 
+    @IBOutlet var statusImageView: UIImageView!
+    @IBOutlet var hospitalWalletAddressLabel: UILabel!
+    @IBOutlet var hospitalNameLabel: UILabel!
+    @IBOutlet var separationLabel: UILabel!
+    @IBOutlet var diseaseNameLabel: UILabel!
+    @IBOutlet var drcLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
