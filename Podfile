@@ -8,11 +8,6 @@ target 'DrCRYPTO' do
   # Pods for DrCRYPTO
 
     # Networking Pods
-    pod 'Alamofire'
-    pod 'SwiftyJSON'
-    pod 'Kingfisher'
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
@@ -21,7 +16,7 @@ target 'DrCRYPTO' do
     pod 'web3swift'
     
     # UI Pods
-    pod 'XLPagerTabStrip'
+    pod 'Hero'
 
   target 'DrCRYPTOTests' do
     inherit! :search_paths

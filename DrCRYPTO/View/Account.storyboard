@@ -24,11 +24,11 @@
             <objects>
                 <viewController storyboardIdentifier="AccountVC" id="e8D-i5-L5T" customClass="AccountVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Sm-mU-XX7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udA-sj-b1N">
-                                <rect key="frame" x="0.0" y="-44" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserAccountCell" rowHeight="161" id="qD9-yj-Rrt" customClass="UserAccountCell" customModule="DrCRYPTO" customModuleProvider="target">
@@ -193,21 +193,414 @@
             </objects>
             <point key="canvasLocation" x="1597.5999999999999" y="181.25937031484258"/>
         </scene>
-        <!--View Controller-->
+        <!--개인정보 처리방침-->
         <scene sceneID="CGg-vr-paT">
             <objects>
-                <viewController id="grV-zj-IC6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalPrivacyVC" title="개인정보 처리방침" id="grV-zj-IC6" customClass="PersonalPrivacyVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bba-Rl-LLd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzN-W1-Uhc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Dr.CRYPTO는 이용자들의 개인정보를 소중히 다루고 있습니다.">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 1 조 (총칙)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. Dr.CRYPTO(이하 ‘회사’’)는 고객의 개인정보를 매우 중요시하며, 법령 및 방송통신위원회의 개인정보보호지침상 개인정보 보호규정을 준수하고 있습니다.
+B. 회사는 개인정보취급방침을 통하여 고객의 개인정보가 어떤 용도와 방식으로 이용되고 있으며 개인정보 보호를 위하여 어떤 조치가 취해지고 있는지 알려드립니다.
+C. 회사는 개인정보취급방침을 서비스 화면에 공개함으로써 고객이 언제나 쉽게 보고 확인할 수 있도록 조치하고 있습니다.
+D. 회사는 개인정보취급방침을 관련 법령 및 방송통신위원회의 개인정보보호지침의 변경 또는 내부 운영규정의 변경에 따라 개정할 수 있으며, 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 고객이 쉽게 알아볼 수 있도록 하고 있습니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 2 조 (수집하는 개인정보 항목 및 수집방법)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. 회사는 고객의 개인정보를 수집하는 경우 관련 법령에 따라 가입신청서 또는 이용약관 등을 통하여 그 수집범위 및 수집 이용 목적을 사전에 고지합니다.
+B. 회사가 수집하는 고객의 개인정보는 다음과 같습니다.
+1. 서비스 이용시 수집하는 개인정보
+이름, 성별, 나이, 휴대전화번호, 이메일, 프로필 사진, 서비스 이용내역, 성별, 스마트폰 고유번호, 통계데이터, 서비스 설정정보, 접속로그 등
+2. 유료서비스 이용 관련 수집하는 개인정보(복구 및 환불 등)
+이메일, 구매내역 확인내용(구매일, 주문번호, 주문 내역 등), 본인이 아닌 타인에 의한 결제사실 확인을 위한 실명 및 가족관계 증명
+C. 회사는 다음과 같은 방법으로 개인정보를 수집합니다.
+- 서비스 내 입력, 서면양식, 전화, 팩스를 통한 회원가입, 상담게시판, 경품 행사 응모, 배송 요청, 생성정보수집 툴 등
+D. 회사는 법령의 규정 또는 고객의 동의 없이는 사상, 신념, 과거의 병력 등 고객의 권리 또는 이익이나 사생활을 뚜렷하게 침해할 우려가 있는 개인정보를 수집하지 않습니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 3 조 (개인정보의 수집 및 이용목적)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">회사가 고객의 개인정보를 수집 및 이용하는 목적은 다음과 같습니다.
+A. 서비스 제공에 관한 계약 이행 및 유료 서비스 제공에 따른 요금정산
+콘텐츠 제공, 유료 서비스 이용에 대한 과금, 본인인증
+B. 이용자관리
+개인식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 중복가입확인, 가입의사 확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달
+C. 마케팅 및 광고에 활용
+신규 서비스 개발 및 맞춤 서비스 제공, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스 유효성 확인, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 및 광고성 정보와 참여기회 제공</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+IAoKA
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 4 조 (개인정보의 이용 및 제공)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. 회사는 고객의 개인정보를 이용약관, 개인정보취급방침의 “개인정보 수집 및 이용 목적상 고지한 범위 내에서 이용 및 제공하며, 그 범위를 넘어서 이용하거나 제공하지 않습니다. 특히, 다음의 경우는 주의를 기울여 개인정보를 이용 및 제공할 것입니다.
+1. 서비스 내에서 본인의 프로필 정보 및 본인이 선택한 이성 평가는 다른 회원에게 공유됩니다.
+2. 매각•인수합병 등 회사의 서비스제공자로서의 권리와 의무가 완전 승계 또는 이전되는 경우 사전에 개인정보를 이전하려는 사실, 개인정보의 이전을 받는 자(이하 “영업양수자등”)의 성명(법인인 경우 법인의 명칭)•주소•전화번호 그 밖에 연락처, 고객이 개인정보의 이전을 원하지 아니하는 경우 그 동의를 철회할 수 있는 방법과 절차에 대해 상세하게 고지할 것이며 고객의 개인정보에 대한 동의 철회의 선택권을 부여합니다.
+B. 고객의 동의가 있거나, 고객의 동의가 없더라도 요금정산을 위하여 필요한 경우, 국세기본법, 지방세법, 통신비밀보호법, 금융실명거래 및 비밀보장에 관한 법률, 신용정보의 이용 및 보호에 관한 법률, 전기통신기본법, 전기통신사업법, 소비자기본법, 한국은행법, 형사소송법 등 관련 법령에 특별한 규정이 있는 경우에는, 제(1)항의 규정에도 불구하고 회사는 고객의 개인정보 수집 시에 고객에게 고지한 범위 또는 이용약관에 명시한 범위를 넘어서 이용하거나 제3자에게 제공할 수 있습니다. 다만, 관련 법령에 의한 경우에도 고객의 개인정보를 무조건 제공하는 것은 아니며 법령에 정해진 절차와 방법에 따라 제공합니다.
+C. 회사는 서비스의 제공에 관한 계약을 이행하기 위하여 필요한 개인정보로서 경제적•기술적인 사유로 통상적인 동의를 받는 것이 뚜렷하게 곤란한 경우에는 고객의 동의가 없더라도 개인정보를 수집•이용할 수 있습니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 5 조 (수집한 개인정보의 보유 및 이용기간)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. 회사는 이용자가 회사가 제공하는 서비스를 이용하는 동안 이용자의 개인정보를 보유합니다.
+B. 이용자의 개인정보는 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 이용자가 회원탈퇴를 하거나 개인정보 허위기재로 인해 회원 ID 삭제 처분을 받은 경우 수집된 개인정보는 삭제되며 어떠한 용도로도 이용할 수 없도록 처리됩니다. 다만, 이용 해지 후 도용 등의 피해가 발생할 우려가 있으므로 개인정보를 7일간 임시 보관하게 됩니다. 7일 후에는 회원 DB에서 완전히 삭제됩니다.
+C. 또한 명의도용 분쟁 발생시 본인확인을 위해 제출 받은 신분증 사본은 본인확인 후 즉각 폐기됩니다.
+D. 이용자의 개인정보는 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기되나, 다음 각호의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존하며, 그 외 다른 목적으로는 사용하지 않습니다.
+1. 불건전한 서비스 이용으로 서비스에 물의를 일으킨 이용자의 경우 사법기관 수사의뢰를 하거나 다른 이용자를 보호할 목적으로 1년간 해당 개인정보를 보관할 수 있습니다
+2. 전자상거래 등에서의 소비자보호에 관한 법률, 통신비밀보호법, 정보통신망 이용촉진 및 관계법령에서 정한 일정 기간 동안 이용자의 개인정보를 보관할 수 있습니다.
+가. 계약 또는 청약철회 등에 관한 기록 : 5년
+나. 대금결제 및 재화의 공급에 관한 기록 : 5년
+다. 소비자의 불만 또는 분쟁 처리에 관한 기록 : 3년
+라. 표시, 광고에 관한 기록 : 6개월
+마. 접속로그, 서비스 이용기록 : 3개월
+바. 본인확인에 관한 기록 : 6개월</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 6 조 (개인정보의 파기)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">A. 회사는 수집한 개인정보의 수집 및 이용 목적이 달성되거나 그 보유•이용기간이 종료되는 경우 고객의 동의, 이용약관, 관련 법령에 따라 보관이 필요한 경우를 제외하고 해당 정보를 지체 없이 파기합니다.
+B. 회사는 서면에 기재된 개인정보의 경우에는 분쇄기로 분쇄하거나 소각하며 전자적 방법으로 저장된 개인정보의 경우에는 그 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 7 조 (고객의 권리와 그 행사방법)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. 고객은 언제든지 회사가 보유하는 개인정보, 개인정보의 이용•제공내역, 수집•이용•제공에 대한 동의내역을 열람하거나 정정할 수 있습니다. 해당 개인정보에 오류가 있거나 보존기간이 경과한 것으로 판명되는 등 정정•삭제를 할 필요가 있다고 인정되는 경우에는 회사는 지체 없이 이를 수정합니다.
+B. 온라인 가입정보의 열람 및 정정을 하고자 하는 고객의 경우에는 사이버 고객센터 온라인 문의 또는 웹마스터에게 이메일로 연락하는 경우에도 회사는 지체 없이 필요한 조치를 취합니다.
+C. 회사는 대리인이 방문하여 열람증명을 요구하는 경우에는 적법한 위임을 받았는지 확인할 수 있는 위임장 및 본인의 인감증명서와 대리인의 신분증 등을 제출 받아 정확히 대리인 여부를 확인합니다.
+D. 고객이 개인정보의 오류에 대한 정정을 요청한 경우, 정정이 완료되기 전까지 개인정보를 이용 또는 제공하지 않습니다.
+E. 회사는 잘못된 개인정보를 이미 제3자에게 제공한 경우 그 정정 처리결과를 제3자에게 지체 없이 통지하여 정정하도록 합니다.
+F. 고객은 개인정보를 최신의 상태로 정확하게 입력하고 변동 사항이 있는 경우, 이를 회사에 통보하여야 하며, 스스로 부정확한 정보를 입력하거나, 회사에 통보하지 않아서 회사가 알 수 없는 고객정보의 변동으로 인한 책임은 고객 자신에게 귀속됩니다.
+G. 고객이 타인 정보의 도용이나 침해, 허위정보를 입력하는 경우 서비스 해지 및 회원자격이 상실될 수 있으며 법 등 관련 법령에 따라 처벌받을 수 있습니다.
+H. 고객이 개인정보의 열람•제공을 반복적으로 요구하는 등 업무에 지장을 줄 우려가 있거나 그 분량이 상당하여 비용이 드는 경우, 회사는 고객의 요구를 연기 또는 거절하거나 업무처리에 따른 실비(복사비 등)를 고객에게 청구할 수 있습니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 8 조 (개인정보 수집•이용•제공에 대한 동의철회)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">A. 개인정보의 수집•이용•제공에 대해 고객은 동의한 내용을 언제든지 철회할 수 있습니다. 개인정보관리책임자 및 담당자에게 서면, 전화, 이메일 등으로 연락하면 하실 수 있으며 회사는 지체 없이 개인정보의 삭제 등 필요한 조치를 합니다.
+B, 회사는 고객이 동의철회를 하여 개인정보를 파기하는 등의 조치를 취한 경우 고객의 요청에 따라 그 사실을 고객에게 통지합니다.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 9 조 (개인정보보호를 위한 기술적/관리적 대책)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">A. 기술적 대책 회사는 개인정보를 취급함에 있어 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적 대책을 강구하고 있습니다.
+1. 접속기록의 위/변조 방지 조치를 취하고 있습니다.
+2. 개인정보는 그 종류에 따라 관련 법령이 요구하는 수준의 암호화 저장 또는 전송 시 암호화 기술의 적용하여 관리합니다.
+3. 백신프로그램을 이용하여 컴퓨터 바이러스에 의한 피해를 방지하기 위한 조치를 취하고 있으며, 백신프로그램을 주기적으로 업데이트하고 갑작스러운 바이러스 출현 시에 백신이 나오는 즉시 이를 제공함으로써 개인정보가 침해되는 것을 방지하고 있습니다.
+4. 암호알고리즘을 이용하여 네트워크상 개인정보를 안전하게 전송하는 보안장치를 채택하고 있습니다.
+5. 해킹 등 외부 침입에 대비하여 각 서버마다 침입차단시스템 및 취약점분석시스템을 이용하여 보안에 최선을 다하고 있습니다.
+B. 관리적 대책
+1. 회사는 개인정보 보호에 관한 내부관리계획을 수립, 시행하고 있습니다. 
+2. 회사는 개인정보에 대한 접근권한을 필요 최소한의 인원으로 제한하고 있습니다.
+3. 회사는 개인정보를 취급하는 직원을 대상으로 새로운 보안기술 습득 및 개인정보 보호의무 등에 관해 정기적인 사내 교육 및 외부 위탁 교육을 실시합니다.
+4. 회사는 직원 입사 시 보안서약서를 통하여 사람에 의한 정보유출을 사전에 방지하고 개인정보취급방침에 대한 이행사항 및 직원의 준수 여부를 감사하기 위한 내부절차를 마련하고 있습니다.
+5. 개인정보 취급자의 업무 인수인계는 보안이 유지된 상태에서 철저하게 이루어지도록 하며 입사 및 퇴사 후 개인정보 사고에 관한 책임을 명확히 합니다.
+6. 개인정보와 일반 데이터는 혼합하여 보관하지 않고 분리하여 보관합니다.
+7. 전산실 및 자료 보관실 등을 특별 보호구역으로 설정하여 출입을 통제합니다.
+8. 회사는 고객의 실수나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다. 고객 스스로가 본인의 개인정보를 보호하기 위해서 자신의 아이디와 패스워드를 적절하게 관리하고 스스로 책임을 져야 합니다.
+9. 회사는 내부 관리자의 실수나 기술관리상 사고로 인하여 개인정보의 도난, 유출, 변조, 훼손이 유발될 경우 적절한 대책과 보상을 강구합니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="제 10 조 (개인정보 관리책임자 및 상담신고)">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">A. 고객의 개인정보를 보호하고 개인정보와 관련된 불만을 처리하기 위하여 당사는 개인정보 관리책임자를 두고 있습니다.고객의 개인정보와 관련한 문의사항이 있으시면 아래의 개인정보 관리책임자 또는 개인정보 관리담당자에게 연락 주시기 바랍니다.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+CgogA
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">[개인정보관리 책임자/담당자]
+이름 : 박성준
+연락처 : 010-8804-0578
+이메일 : taylored@naver.com
+
+B. 기타 개인정보에 관한 상담이 필요한 경우에는 아래 기관으로 문의하실 수 있습니다.
+– 개인정보침해신고센터: 전화 118 / 이메일 118@kisa.or.kr / 홈페이지 http://www.118.or.kr
+– 정보보호마크 인증위원회: 전화 02-580-0533 / 홈페이지 http://www.privacymark.or.kr
+– 대검찰청 인터넷범죄수사센터: 전화 02-3480-3600 / 홈페이지 http://icic.sppo.go.kr
+– 경찰청 사이버테러 대응센터: 전화 02-392-0330 / 홈페이지 http://www.police.go.kr
+
+부칙
+제1조 시행일
+본 취급방침은 2018년 8월 24일부터 시행합니다.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="width" secondItem="Bba-Rl-LLd" secondAttribute="width" id="F7S-dx-1nE"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="top" secondItem="Bba-Rl-LLd" secondAttribute="top" constant="64" id="FN1-Zv-yVz"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="leading" secondItem="PrX-vJ-wKV" secondAttribute="leading" id="aa8-cy-gdq"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="height" secondItem="Bba-Rl-LLd" secondAttribute="height" id="hf5-Iv-d0H"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="trailing" secondItem="PrX-vJ-wKV" secondAttribute="trailing" id="uFu-5S-Qa0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PrX-vJ-wKV"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-5B-KcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="181"/>
+            <point key="canvasLocation" x="2396" y="182"/>
         </scene>
         <!--내 계정-->
         <scene sceneID="tTp-pN-ROs">
@@ -216,7 +609,7 @@
                     <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="account_active" id="s4P-OR-ZYJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pRO-Ly-xQl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pRO-Ly-xQl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.015686274509803921" green="0.74509803921568629" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -16,6 +16,9 @@
 		4C63828D21251BBF0017E125 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63828C21251BBF0017E125 /* HeaderCell.swift */; };
 		4C63828F21253C2B0017E125 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63828E21253C2B0017E125 /* LogoutCell.swift */; };
 		4C638291212596F30017E125 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C638290212596F30017E125 /* UserData.swift */; };
+		4C6382932126F98F0017E125 /* DetailMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */; };
+		4C638295212725BA0017E125 /* DetailMedicalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */; };
+		4C63829821272B8D0017E125 /* PersonalPrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
@@ -29,10 +32,6 @@
 		4CBBA8C42119854600DF7391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBBA8C22119854600DF7391 /* LaunchScreen.storyboard */; };
 		4CBBA8CF2119854600DF7391 /* DrCRYPTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8CE2119854600DF7391 /* DrCRYPTOTests.swift */; };
 		4CBBA8DA2119854600DF7391 /* DrCRYPTOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBA8D92119854600DF7391 /* DrCRYPTOUITests.swift */; };
-		4CF915CF2121118900C451D7 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915CE2121118900C451D7 /* NetworkModel.swift */; };
-		4CF915D3212111C600C451D7 /* UserProfileVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915D2212111C600C451D7 /* UserProfileVO.swift */; };
-		4CF915D52121129200C451D7 /* NetworkCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915D42121129200C451D7 /* NetworkCallback.swift */; };
-		4CF915D7212112A300C451D7 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915D6212112A300C451D7 /* UserProfileModel.swift */; };
 		4CF915D9212155C300C451D7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF915D8212155C300C451D7 /* Extension.swift */; };
 		4CF915DF212159D200C451D7 /* NanumBarunGothicLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915DB212159D100C451D7 /* NanumBarunGothicLight.ttf */; };
 		4CF915E0212159D200C451D7 /* NanumBarunGothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF915DC212159D100C451D7 /* NanumBarunGothic.ttf */; };
@@ -75,6 +74,9 @@
 		4C63828C21251BBF0017E125 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		4C63828E21253C2B0017E125 /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
 		4C638290212596F30017E125 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicalRecordVC.swift; sourceTree = "<group>"; };
+		4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicalRecordCell.swift; sourceTree = "<group>"; };
+		4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPrivacyVC.swift; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
@@ -94,10 +96,6 @@
 		4CBBA8D52119854600DF7391 /* DrCRYPTOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrCRYPTOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBA8D92119854600DF7391 /* DrCRYPTOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrCRYPTOUITests.swift; sourceTree = "<group>"; };
 		4CBBA8DB2119854600DF7391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CF915CE2121118900C451D7 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
-		4CF915D2212111C600C451D7 /* UserProfileVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVO.swift; sourceTree = "<group>"; };
-		4CF915D42121129200C451D7 /* NetworkCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallback.swift; sourceTree = "<group>"; };
-		4CF915D6212112A300C451D7 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
 		4CF915D8212155C300C451D7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4CF915DB212159D100C451D7 /* NanumBarunGothicLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothicLight.ttf; sourceTree = "<group>"; };
 		4CF915DC212159D100C451D7 /* NanumBarunGothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumBarunGothic.ttf; sourceTree = "<group>"; };
@@ -160,6 +158,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4C63829621272B580017E125 /* CellDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */,
+			);
+			path = CellDetail;
+			sourceTree = "<group>";
+		};
 		4C6F7252211D6C90008BA508 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +183,8 @@
 				4CF915EB21229D9900C451D7 /* VisitRecordCell.swift */,
 				4CF915ED21229F9600C451D7 /* TabBarVC.swift */,
 				4C638286212436FE0017E125 /* SearchVC.swift */,
+				4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */,
+				4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				4C63828C21251BBF0017E125 /* HeaderCell.swift */,
 				4C63828E21253C2B0017E125 /* LogoutCell.swift */,
 				4C638290212596F30017E125 /* UserData.swift */,
+				4C63829621272B580017E125 /* CellDetail */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -283,9 +292,6 @@
 		4CBBA8E821198AB000DF7391 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4CF915D0212111AD00C451D7 /* UserProfile */,
-				4CF915CE2121118900C451D7 /* NetworkModel.swift */,
-				4CF915D42121129200C451D7 /* NetworkCallback.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,15 +306,6 @@
 				4C6F7260211D6E8A008BA508 /* Account */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4CF915D0212111AD00C451D7 /* UserProfile */ = {
-			isa = PBXGroup;
-			children = (
-				4CF915D2212111C600C451D7 /* UserProfileVO.swift */,
-				4CF915D6212112A300C451D7 /* UserProfileModel.swift */,
-			);
-			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		4CF915DA212159D100C451D7 /* NanumBarunGothic */ = {
@@ -496,19 +493,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DrCRYPTO/Pods-DrCRYPTO-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
@@ -517,19 +509,14 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
@@ -584,26 +571,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6382932126F98F0017E125 /* DetailMedicalRecordVC.swift in Sources */,
 				4CF915E82122667200C451D7 /* MedicallWalletVC.swift in Sources */,
 				4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */,
 				4C638285212400CB0017E125 /* TransactionCell.swift in Sources */,
 				4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */,
+				4C63829821272B8D0017E125 /* PersonalPrivacyVC.swift in Sources */,
 				4C63828B21250B8A0017E125 /* UserAccountCell.swift in Sources */,
 				4CF915E42121812700C451D7 /* JoinVC.swift in Sources */,
 				4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */,
 				4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */,
-				4CF915D52121129200C451D7 /* NetworkCallback.swift in Sources */,
 				4CF915D9212155C300C451D7 /* Extension.swift in Sources */,
-				4CF915D7212112A300C451D7 /* UserProfileModel.swift in Sources */,
 				4C63828F21253C2B0017E125 /* LogoutCell.swift in Sources */,
 				4C638291212596F30017E125 /* UserData.swift in Sources */,
 				4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */,
 				4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */,
+				4C638295212725BA0017E125 /* DetailMedicalRecordCell.swift in Sources */,
 				4C63828D21251BBF0017E125 /* HeaderCell.swift in Sources */,
 				4C63828921250B6E0017E125 /* AccountCell.swift in Sources */,
 				4C638287212436FE0017E125 /* SearchVC.swift in Sources */,
-				4CF915D3212111C600C451D7 /* UserProfileVO.swift in Sources */,
-				4CF915CF2121118900C451D7 /* NetworkModel.swift in Sources */,
 				4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */,
 				4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */,
 				4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */,

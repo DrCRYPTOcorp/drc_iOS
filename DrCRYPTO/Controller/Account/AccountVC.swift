@@ -14,7 +14,7 @@ class AccountVC : UIViewController {
     @IBOutlet var accountTableView: UITableView!
     
     let userCellNameArray : [String] = ["지갑주소", "내 정보 변경"]
-    let supportCellNameArray : [String] =  ["공지사항", "개인정보처리방침", "오픈소스 라이센스"]
+    let supportCellNameArray : [String] =  ["공지사항", "개인정보 처리방침", "오픈소스 라이센스"]
     
     var userUid : String?
     var userEmail : String?
@@ -35,7 +35,6 @@ extension AccountVC {
     func tableViewSetting(){
         accountTableView.delegate = self
         accountTableView.dataSource = self
-        accountTableView.allowsSelection = false
         accountTableView.tableFooterView = UIView.init(frame: CGRect.zero)
         accountTableView.tableHeaderView = UIView.init(frame: CGRect.zero)
         accountTableView.estimatedRowHeight = 66
@@ -130,11 +129,27 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 36
-//    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var selectedCell : UITableViewCell = accountTableView.cellForRow(at: indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.clear
+        
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            break
+        case 2:
+            guard let privacyVC = storyboard?.instantiateViewController(
+                withIdentifier : "PersonalPrivacyVC"
+                ) as? PersonalPrivacyVC
+                else{return}
+            self.navigationController?.pushViewController(privacyVC, animated: true)
+        default:
+            break
+        }
     }
 }

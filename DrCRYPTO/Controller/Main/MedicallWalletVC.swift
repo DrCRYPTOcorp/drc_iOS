@@ -43,13 +43,13 @@ class MedicalWalletVC : UIViewController {
         super.viewWillAppear(true)
         //noData()
     }
+    
 }
 
 extension MedicalWalletVC : UISearchBarDelegate {
     
     func navigationBarSetting(){
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.01568627451, green: 0.7725490196, blue: 0.737254902, alpha: 1)
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -192,6 +192,14 @@ extension MedicalWalletVC : UICollectionViewDelegate, UICollectionViewDataSource
             cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailVC = storyboard?.instantiateViewController(
+            withIdentifier : "DetailMedicalRecordVC"
+            ) as? DetailMedicalRecordVC
+            else{return}
+        self.present(detailVC, animated: true, completion: nil)
     }
     
 
