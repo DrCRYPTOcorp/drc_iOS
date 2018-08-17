@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     
@@ -24,6 +25,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     @IBAction func unwindToSplash(segue:UIStoryboardSegue) { }
     
     var check = true
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,8 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         
         //MARK : Firebase Login 검증
         if let user = Auth.auth().currentUser {
+            let uid = Auth.auth().currentUser?.uid
+            userDataSave(uid: gsno(uid))
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
             UIApplication.shared.keyWindow?.rootViewController = viewController
@@ -57,10 +61,36 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
 
 extension LoginVC {
     
+    func userDataSave(uid: String){
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        ref.child("users").child(uid).observeSingleEvent(of: .value, with: { snapShot in
+            let userDic = snapShot.value as? Dictionary<String,String>
+            
+            for (key, value) in userDic!{
+                if key == "name"{
+                    self.ud.setValue(value, forKey: "name")
+                } else if key == "gender"{
+                    self.ud.setValue(value, forKey: "gender")
+                } else if key == "birth"{
+                    self.ud.setValue(value, forKey: "birth")
+                } else if key == "email"{
+                    self.ud.setValue(value, forKey: "email")
+                } else if key == "uid"{
+                    self.ud.setValue(value, forKey: "uid")
+                }
+                self.ud.synchronize()
+            }
+        })
+    }
+    
     @objc func loginButtonAction(){
         //MARK: Firebase Login 인증
         Auth.auth().signIn(withEmail: gsno(emailTextField.text), password: gsno(passwordTextField.text)) { (user, error) in
             if user != nil{
+                let uid = Auth.auth().currentUser?.uid
+                self.userDataSave(uid: self.gsno(uid))
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
                 UIApplication.shared.keyWindow?.rootViewController = viewController

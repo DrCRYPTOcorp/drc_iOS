@@ -5,67 +5,209 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumBarunGothic.ttf">
+            <string>NanumBarunGothic</string>
+        </array>
+        <array key="NanumBarunGothicBold.ttf">
+            <string>NanumBarunGothicBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--AccountVC-->
+        <!--내 계정-->
         <scene sceneID="1ub-Xe-i7J">
             <objects>
                 <viewController storyboardIdentifier="AccountVC" id="e8D-i5-L5T" customClass="AccountVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Sm-mU-XX7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEz-VV-Wip">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDf-Yz-2rt">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sem-Mk-Y4u">
-                                                <rect key="frame" x="30" y="124" width="240" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-iY-uRE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <action selector="logout:" destination="e8D-i5-L5T" eventType="touchUpInside" id="CsT-fs-YDJ"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="WDf-Yz-2rt" firstAttribute="height" secondItem="TEz-VV-Wip" secondAttribute="height" id="Dg1-RT-4hg"/>
-                                    <constraint firstAttribute="trailing" secondItem="WDf-Yz-2rt" secondAttribute="trailing" id="QFl-Ud-eue"/>
-                                    <constraint firstItem="WDf-Yz-2rt" firstAttribute="top" secondItem="TEz-VV-Wip" secondAttribute="top" id="aN8-lu-z0Z"/>
-                                    <constraint firstItem="WDf-Yz-2rt" firstAttribute="leading" secondItem="TEz-VV-Wip" secondAttribute="leading" id="msM-Fb-wk8"/>
-                                    <constraint firstItem="WDf-Yz-2rt" firstAttribute="width" secondItem="TEz-VV-Wip" secondAttribute="width" id="xJZ-0U-A1g"/>
-                                    <constraint firstAttribute="bottom" secondItem="WDf-Yz-2rt" secondAttribute="bottom" id="zXy-cG-jiL"/>
-                                </constraints>
-                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udA-sj-b1N">
+                                <rect key="frame" x="0.0" y="-44" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserAccountCell" rowHeight="161" id="qD9-yj-Rrt" customClass="UserAccountCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="161"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qD9-yj-Rrt" id="8RP-6B-8qw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-JZ-TQn">
+                                                    <rect key="frame" x="15" y="116" width="345" height="39.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박성준" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-lE-gR8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="21"/>
+                                                            <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="taylored@naver.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMR-Ah-c0t">
+                                                            <rect key="frame" x="0.0" y="23" width="345" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-Au-Jd5">
+                                                    <rect key="frame" x="148" y="29" width="78" height="78"/>
+                                                    <color key="backgroundColor" red="0.68064947388498909" green="0.67934272781724869" blue="0.67450700023185761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="UsG-Au-Jd5" secondAttribute="height" multiplier="1:1" id="PYR-GS-Fyu"/>
+                                                        <constraint firstAttribute="height" constant="78" id="dh7-dn-x3O"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6cj-JZ-TQn" firstAttribute="centerX" secondItem="8RP-6B-8qw" secondAttribute="centerX" id="C8x-lh-bV2"/>
+                                                <constraint firstItem="UsG-Au-Jd5" firstAttribute="centerX" secondItem="8RP-6B-8qw" secondAttribute="centerX" id="ZjT-g7-fyd"/>
+                                                <constraint firstItem="6cj-JZ-TQn" firstAttribute="top" secondItem="UsG-Au-Jd5" secondAttribute="bottom" constant="9" id="gBP-AO-Kf9"/>
+                                                <constraint firstItem="6cj-JZ-TQn" firstAttribute="leading" secondItem="8RP-6B-8qw" secondAttribute="leadingMargin" id="ijD-PV-Wka"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6cj-JZ-TQn" secondAttribute="trailing" id="nzN-jn-xKU"/>
+                                                <constraint firstItem="UsG-Au-Jd5" firstAttribute="top" secondItem="8RP-6B-8qw" secondAttribute="top" constant="29" id="oBG-3u-eeb"/>
+                                                <constraint firstAttribute="bottom" secondItem="6cj-JZ-TQn" secondAttribute="bottom" constant="5" id="xXl-at-N0D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="profileEmailLabel" destination="YMR-Ah-c0t" id="V4W-to-Ce0"/>
+                                            <outlet property="profileImageView" destination="UsG-Au-Jd5" id="28d-df-o50"/>
+                                            <outlet property="profileNameLabel" destination="ID7-lE-gR8" id="64s-6y-DpP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="36" id="ewn-GU-PWi" customClass="HeaderCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="189" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ewn-GU-PWi" id="5dn-dZ-I4K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWn-wZ-jpO">
+                                                    <rect key="frame" x="28" y="10" width="319" height="16.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16.5" id="sVg-7F-EgO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SWn-wZ-jpO" firstAttribute="centerX" secondItem="5dn-dZ-I4K" secondAttribute="centerX" id="Ktg-zR-zI1"/>
+                                                <constraint firstItem="SWn-wZ-jpO" firstAttribute="centerY" secondItem="5dn-dZ-I4K" secondAttribute="centerY" id="OD9-gP-Pmc"/>
+                                                <constraint firstItem="SWn-wZ-jpO" firstAttribute="leading" secondItem="5dn-dZ-I4K" secondAttribute="leading" constant="28" id="ub4-Z5-g2A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="headerLabel" destination="SWn-wZ-jpO" id="RHu-WY-KNL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="44" id="iSp-gk-2BX" customClass="AccountCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="225" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iSp-gk-2BX" id="mHZ-YD-lYE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x9807142B04b0C378e2F750762cd238404050" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5d-66-bMc">
+                                                    <rect key="frame" x="28" y="14" width="287" height="17"/>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs2-O8-Ac2">
+                                                    <rect key="frame" x="325" y="7" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zs2-O8-Ac2" secondAttribute="height" multiplier="1:1" id="n4a-3V-Yof"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icCopy"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zs2-O8-Ac2" firstAttribute="centerY" secondItem="mHZ-YD-lYE" secondAttribute="centerY" id="Dnh-HB-Khl"/>
+                                                <constraint firstItem="w5d-66-bMc" firstAttribute="centerY" secondItem="mHZ-YD-lYE" secondAttribute="centerY" id="Hje-Qp-o7p"/>
+                                                <constraint firstAttribute="trailing" secondItem="zs2-O8-Ac2" secondAttribute="trailing" constant="20" id="hxs-7E-SUh"/>
+                                                <constraint firstItem="zs2-O8-Ac2" firstAttribute="trailing" secondItem="w5d-66-bMc" secondAttribute="trailing" constant="40" id="k4c-Sv-lXB"/>
+                                                <constraint firstItem="w5d-66-bMc" firstAttribute="leading" secondItem="mHZ-YD-lYE" secondAttribute="leading" constant="28" id="o7w-7d-e4f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accountObjectLabel" destination="w5d-66-bMc" id="4IM-Kq-xHd"/>
+                                            <outlet property="rightActionButton" destination="zs2-O8-Ac2" id="aQh-Bl-EmC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogoutCell" rowHeight="44" id="r2m-uP-0z2" customClass="LogoutCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="269" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2m-uP-0z2" id="mq2-Ti-6c9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLZ-dw-1Kv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="h8e-Vs-oRr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                                    <state key="normal" title="로그아웃">
+                                                        <color key="titleColor" red="1" green="0.40784313725490196" blue="0.36862745098039218" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="yLZ-dw-1Kv" secondAttribute="trailing" id="3TK-FO-rqm"/>
+                                                <constraint firstAttribute="bottom" secondItem="yLZ-dw-1Kv" secondAttribute="bottom" id="Mre-gh-Yyv"/>
+                                                <constraint firstItem="yLZ-dw-1Kv" firstAttribute="top" secondItem="mq2-Ti-6c9" secondAttribute="top" id="WZT-Yl-MDj"/>
+                                                <constraint firstItem="yLZ-dw-1Kv" firstAttribute="leading" secondItem="mq2-Ti-6c9" secondAttribute="leading" id="kJD-2R-wnr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logoutButton" destination="yLZ-dw-1Kv" id="IxD-rB-8fe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="trailing" secondItem="TEz-VV-Wip" secondAttribute="trailing" id="0ni-Zk-whS"/>
-                            <constraint firstItem="TEz-VV-Wip" firstAttribute="leading" secondItem="4EZ-gG-FTH" secondAttribute="leading" id="bh5-rj-qed"/>
-                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="bottom" secondItem="TEz-VV-Wip" secondAttribute="bottom" id="eNa-2R-nIx"/>
-                            <constraint firstItem="TEz-VV-Wip" firstAttribute="top" secondItem="4EZ-gG-FTH" secondAttribute="top" id="iSE-cP-RmS"/>
+                            <constraint firstItem="udA-sj-b1N" firstAttribute="trailing" secondItem="4EZ-gG-FTH" secondAttribute="trailing" id="7Qp-Ks-xdW"/>
+                            <constraint firstAttribute="bottom" secondItem="udA-sj-b1N" secondAttribute="bottom" id="FIY-z4-jdx"/>
+                            <constraint firstItem="udA-sj-b1N" firstAttribute="top" secondItem="2Sm-mU-XX7" secondAttribute="top" constant="-44" id="Mgq-FR-6x0"/>
+                            <constraint firstItem="udA-sj-b1N" firstAttribute="leading" secondItem="4EZ-gG-FTH" secondAttribute="leading" id="b18-Ig-Aw2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4EZ-gG-FTH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WSt-vo-kwy"/>
+                    <navigationItem key="navigationItem" title="내 계정" id="WSt-vo-kwy"/>
+                    <connections>
+                        <outlet property="accountTableView" destination="udA-sj-b1N" id="3Tp-Mw-Tqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hf-C6-0Oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586.4000000000001" y="182.15892053973016"/>
+            <point key="canvasLocation" x="1597.5999999999999" y="181.25937031484258"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CGg-vr-paT">
+            <objects>
+                <viewController id="grV-zj-IC6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bba-Rl-LLd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PrX-vJ-wKV"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-5B-KcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364" y="181"/>
         </scene>
         <!--내 계정-->
         <scene sceneID="tTp-pN-ROs">
@@ -74,9 +216,10 @@
                     <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="account_active" id="s4P-OR-ZYJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pRO-Ly-xQl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pRO-Ly-xQl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.015686274509803921" green="0.74509803921568629" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -91,5 +234,6 @@
     <resources>
         <image name="account_active" width="23" height="23"/>
         <image name="account_inactive" width="23" height="23"/>
+        <image name="icCopy" width="30" height="30"/>
     </resources>
 </document>

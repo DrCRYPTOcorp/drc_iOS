@@ -16,4 +16,9 @@ class MedicalRecordCell : UICollectionViewCell {
     @IBOutlet var diseaseNameLabel: UILabel!
     @IBOutlet var recordImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
 }
