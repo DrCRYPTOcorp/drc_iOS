@@ -214,31 +214,31 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGT-tN-bPB">
-                                <rect key="frame" x="294" y="66.5" width="70" height="24"/>
+                                <rect key="frame" x="294" y="65.5" width="70" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYH-V8-6AJ">
-                                        <rect key="frame" x="0.0" y="0.5" width="46" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="24"/>
                                         <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwo-sS-7fU">
-                                        <rect key="frame" x="46" y="0.5" width="24" height="24"/>
+                                        <rect key="frame" x="46" y="0.0" width="24" height="24"/>
                                         <state key="normal" image="chevron"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-ca-F3g">
-                                <rect key="frame" x="294" y="291.5" width="70" height="24"/>
+                                <rect key="frame" x="294" y="290.5" width="70" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFP-e9-UPz">
-                                        <rect key="frame" x="0.0" y="0.5" width="46" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="24"/>
                                         <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIc-cJ-PNs">
-                                        <rect key="frame" x="46" y="0.5" width="24" height="24"/>
+                                        <rect key="frame" x="46" y="0.0" width="24" height="24"/>
                                         <state key="normal" image="chevron"/>
                                     </button>
                                 </subviews>
@@ -361,6 +361,9 @@
                                 <state key="normal" title="보내기">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendButtonAction:" destination="PeR-n7-FFF" eventType="touchUpInside" id="cpU-nX-ERa"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yal-9D-lTh">
                                 <rect key="frame" x="109" y="78" width="148.5" height="76"/>
@@ -437,7 +440,186 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBB-ad-JPO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917.5999999999999" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1918" y="117"/>
+        </scene>
+        <!--보내기-->
+        <scene sceneID="eR6-PB-H1V">
+            <objects>
+                <viewController storyboardIdentifier="SendMedicalRecordVC" title="보내기" id="WTF-Rv-sVC" customClass="SendMedicalRecordVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rg8-je-nRc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-OM-0Jw">
+                                <rect key="frame" x="10.5" y="190" width="354.5" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-jK-xLX">
+                                        <rect key="frame" x="0.0" y="0.0" width="354.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병 명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSt-tW-rEo">
+                                        <rect key="frame" x="0.0" y="22.5" width="354.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icMedformEnlarged" translatesAutoresizingMaskIntoConstraints="NO" id="Rjp-0w-Lc0">
+                                <rect key="frame" x="153" y="81" width="69" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rjp-0w-Lc0" secondAttribute="height" multiplier="23:32" id="4Gc-E8-IuJ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-nx-cbf">
+                                <rect key="frame" x="0.0" y="243" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Evo-Bj-ple"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jmE-uc-exd">
+                                <rect key="frame" x="16" y="271" width="301" height="17.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보낼 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpN-pT-SZm">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-c0-CQW">
+                                        <rect key="frame" x="67" y="0.0" width="234" height="17.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1h-RG-anC">
+                                <rect key="frame" x="16" y="406" width="27" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.00 DRC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYl-Dc-WDq">
+                                <rect key="frame" x="24" y="406.5" width="327" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                <color key="textColor" red="0.015686274509803921" green="0.77254901960784317" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4f9-20-oMh">
+                                <rect key="frame" x="334" y="269.5" width="23" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4f9-20-oMh" secondAttribute="height" multiplier="23:22" id="KMT-le-fxJ"/>
+                                </constraints>
+                                <state key="normal" image="icScan"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zB-vF-70c">
+                                <rect key="frame" x="0.0" y="310.5" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Zb2-PJ-WMm"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-JP-OEy">
+                                <rect key="frame" x="16" y="337.5" width="343" height="17.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-KK-Knt">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x7fe30d6881a344e6d3baafb2143" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwI-f6-QMs">
+                                        <rect key="frame" x="67" y="0.0" width="276" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="15"/>
+                                        <color key="textColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg2-3j-cPP">
+                                <rect key="frame" x="0.0" y="378" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lHf-Ck-XkB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peG-fp-qlL">
+                                <rect key="frame" x="0.0" y="446" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zi9-E2-SxU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGE-qm-ZL4">
+                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <color key="backgroundColor" red="0.015686274509803921" green="0.77254901960784317" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VGE-qm-ZL4" secondAttribute="height" multiplier="125:18" id="bvZ-u5-9Qi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="18"/>
+                                <state key="normal" title="결제">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pg2-3j-cPP" secondAttribute="trailing" id="3gn-9H-YBD"/>
+                            <constraint firstItem="jmE-uc-exd" firstAttribute="top" secondItem="GYg-nx-cbf" secondAttribute="bottom" constant="27" id="4A4-Sl-ME9"/>
+                            <constraint firstItem="Pg2-3j-cPP" firstAttribute="leading" secondItem="rg8-je-nRc" secondAttribute="leading" id="4n4-mL-ZW3"/>
+                            <constraint firstAttribute="trailing" secondItem="GYg-nx-cbf" secondAttribute="trailing" id="4n5-t1-gmf"/>
+                            <constraint firstItem="Rjp-0w-Lc0" firstAttribute="top" secondItem="V1f-0k-wv7" secondAttribute="top" constant="17" id="5mU-5K-vR9"/>
+                            <constraint firstItem="yBV-OM-0Jw" firstAttribute="top" secondItem="Rjp-0w-Lc0" secondAttribute="bottom" constant="13" id="7h5-6c-qvG"/>
+                            <constraint firstItem="zYl-Dc-WDq" firstAttribute="centerX" secondItem="rg8-je-nRc" secondAttribute="centerX" id="8qy-pb-wbe"/>
+                            <constraint firstItem="7I3-JP-OEy" firstAttribute="leading" secondItem="jmE-uc-exd" secondAttribute="leading" id="AZ6-gg-pcd"/>
+                            <constraint firstItem="V1f-0k-wv7" firstAttribute="trailing" secondItem="zYl-Dc-WDq" secondAttribute="trailing" constant="24" id="CI5-rB-RWc"/>
+                            <constraint firstItem="zYl-Dc-WDq" firstAttribute="centerY" secondItem="p1h-RG-anC" secondAttribute="centerY" id="CmS-is-E8z"/>
+                            <constraint firstItem="peG-fp-qlL" firstAttribute="leading" secondItem="rg8-je-nRc" secondAttribute="leading" id="Diw-lO-BLA"/>
+                            <constraint firstAttribute="bottom" secondItem="VGE-qm-ZL4" secondAttribute="bottom" id="F7j-em-dm1"/>
+                            <constraint firstItem="GYg-nx-cbf" firstAttribute="top" secondItem="yBV-OM-0Jw" secondAttribute="bottom" constant="14" id="GBv-u9-KIm"/>
+                            <constraint firstItem="Pg2-3j-cPP" firstAttribute="top" secondItem="7I3-JP-OEy" secondAttribute="bottom" constant="23" id="J12-dx-NFe"/>
+                            <constraint firstItem="9zB-vF-70c" firstAttribute="top" secondItem="jmE-uc-exd" secondAttribute="bottom" constant="22" id="LQM-WN-WlX"/>
+                            <constraint firstAttribute="trailing" secondItem="peG-fp-qlL" secondAttribute="trailing" id="LuF-tx-LeD"/>
+                            <constraint firstItem="V1f-0k-wv7" firstAttribute="trailing" secondItem="yBV-OM-0Jw" secondAttribute="trailing" constant="10" id="OgT-gF-198"/>
+                            <constraint firstItem="7I3-JP-OEy" firstAttribute="centerX" secondItem="rg8-je-nRc" secondAttribute="centerX" id="TDB-pe-S5A"/>
+                            <constraint firstItem="yBV-OM-0Jw" firstAttribute="centerX" secondItem="Rjp-0w-Lc0" secondAttribute="centerX" id="TSR-qQ-Uty"/>
+                            <constraint firstItem="jmE-uc-exd" firstAttribute="leading" secondItem="V1f-0k-wv7" secondAttribute="leading" constant="16" id="Ule-LF-vfg"/>
+                            <constraint firstItem="p1h-RG-anC" firstAttribute="leading" secondItem="7I3-JP-OEy" secondAttribute="leading" id="VVH-e1-x4r"/>
+                            <constraint firstItem="4f9-20-oMh" firstAttribute="trailing" secondItem="jmE-uc-exd" secondAttribute="trailing" constant="40" id="X5i-GP-58x"/>
+                            <constraint firstItem="7I3-JP-OEy" firstAttribute="top" secondItem="9zB-vF-70c" secondAttribute="bottom" constant="26" id="bVP-ax-t82"/>
+                            <constraint firstItem="p1h-RG-anC" firstAttribute="top" secondItem="Pg2-3j-cPP" secondAttribute="bottom" constant="27" id="eG6-Yg-BtL"/>
+                            <constraint firstItem="VGE-qm-ZL4" firstAttribute="trailing" secondItem="V1f-0k-wv7" secondAttribute="trailing" id="fp9-MA-8wt"/>
+                            <constraint firstAttribute="trailing" secondItem="9zB-vF-70c" secondAttribute="trailing" id="gmh-cc-x05"/>
+                            <constraint firstItem="GYg-nx-cbf" firstAttribute="leading" secondItem="rg8-je-nRc" secondAttribute="leading" id="mMR-81-kkE"/>
+                            <constraint firstItem="9zB-vF-70c" firstAttribute="leading" secondItem="rg8-je-nRc" secondAttribute="leading" id="odQ-4j-Mn2"/>
+                            <constraint firstItem="V1f-0k-wv7" firstAttribute="trailing" secondItem="7I3-JP-OEy" secondAttribute="trailing" constant="16" id="qhM-E5-3uu"/>
+                            <constraint firstItem="peG-fp-qlL" firstAttribute="top" secondItem="zYl-Dc-WDq" secondAttribute="bottom" constant="22" id="rJK-ny-9cg"/>
+                            <constraint firstItem="Rjp-0w-Lc0" firstAttribute="centerX" secondItem="rg8-je-nRc" secondAttribute="centerX" id="s69-JD-WBe"/>
+                            <constraint firstItem="gWa-KK-Knt" firstAttribute="trailing" secondItem="QpN-pT-SZm" secondAttribute="trailing" id="syw-9f-Bkk"/>
+                            <constraint firstItem="V1f-0k-wv7" firstAttribute="trailing" secondItem="4f9-20-oMh" secondAttribute="trailing" constant="18" id="vkw-PO-5dz"/>
+                            <constraint firstItem="4f9-20-oMh" firstAttribute="centerY" secondItem="jmE-uc-exd" secondAttribute="centerY" id="wY1-CB-Xuh"/>
+                            <constraint firstItem="VGE-qm-ZL4" firstAttribute="leading" secondItem="V1f-0k-wv7" secondAttribute="leading" id="zaU-ql-zO2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V1f-0k-wv7"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="costLabel" destination="zYl-Dc-WDq" id="XMv-K9-146"/>
+                        <outlet property="diseaseNameLabel" destination="pSt-tW-rEo" id="lLk-i5-XuD"/>
+                        <outlet property="hospitalNameLabel" destination="PWT-jK-xLX" id="Amk-yd-mmS"/>
+                        <outlet property="myAddressLabel" destination="QwI-f6-QMs" id="iiG-ea-ueg"/>
+                        <outlet property="payButton" destination="VGE-qm-ZL4" id="b0R-Nm-cjs"/>
+                        <outlet property="qrCodeButton" destination="4f9-20-oMh" id="yJc-9x-K6s"/>
+                        <outlet property="toAddressTextfield" destination="h1Z-c0-CQW" id="lvm-3e-xg4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7X-b0-6mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631" y="116"/>
         </scene>
         <!--SearchVC-->
         <scene sceneID="Yub-cN-vHe">
@@ -511,12 +693,150 @@
             </objects>
             <point key="canvasLocation" x="195" y="797"/>
         </scene>
+        <!--발급-->
+        <scene sceneID="9TR-3f-C16">
+            <objects>
+                <viewController storyboardIdentifier="IssueMedicalRecordVC" title="발급" id="QoY-J2-1Ej" customClass="IssueMedicalRecordVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gyP-ZG-SCK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Eav-TX-eoB">
+                                <rect key="frame" x="10.5" y="190" width="354.5" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="병원 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="045-gD-Zyr">
+                                        <rect key="frame" x="0.0" y="0.0" width="354.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병 명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-fR-4ue">
+                                        <rect key="frame" x="0.0" y="22.5" width="354.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icMedformEnlarged" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-dS-HMy">
+                                <rect key="frame" x="153" y="81" width="69" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qk2-dS-HMy" secondAttribute="height" multiplier="23:32" id="KcD-hM-Rpx"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-Cb-Ldy">
+                                <rect key="frame" x="0.0" y="243" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="kNF-25-Lrl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKO-ld-Xc9">
+                                <rect key="frame" x="0.0" y="310.5" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="LUj-wd-dz2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUS-Cb-Trc">
+                                <rect key="frame" x="0.0" y="378" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="kTi-59-Wh2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-xN-ezF">
+                                <rect key="frame" x="0.0" y="613" width="375" height="54"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.7725490196" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tg8-xN-ezF" secondAttribute="height" multiplier="125:18" id="fkE-pX-Mbx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="18"/>
+                                <state key="normal" title="결제">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.00 DRC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz1-9q-HVO">
+                                <rect key="frame" x="24" y="338" width="327" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                <color key="textColor" red="0.015686274510000001" green="0.7725490196" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sG5-rw-K1P">
+                                <rect key="frame" x="14" y="270" width="347" height="17.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2L-j7-l5I">
+                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x7fe30d6881a344e6d3baafb2143" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-8c-UVg">
+                                        <rect key="frame" x="60.5" y="0.0" width="286.5" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="15"/>
+                                        <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eK6-ZG-gnt">
+                                <rect key="frame" x="14" y="338" width="27" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tg8-xN-ezF" secondAttribute="bottom" id="05F-N6-HIj"/>
+                            <constraint firstItem="M6I-Cb-Ldy" firstAttribute="top" secondItem="Eav-TX-eoB" secondAttribute="bottom" constant="14" id="0Rz-2h-S5A"/>
+                            <constraint firstItem="xz1-9q-HVO" firstAttribute="centerY" secondItem="eK6-ZG-gnt" secondAttribute="centerY" id="12R-pm-mpS"/>
+                            <constraint firstItem="bKO-ld-Xc9" firstAttribute="top" secondItem="t2L-j7-l5I" secondAttribute="bottom" constant="23" id="30M-u2-u6s"/>
+                            <constraint firstItem="jUS-Cb-Trc" firstAttribute="leading" secondItem="gyP-ZG-SCK" secondAttribute="leading" id="7ve-Ly-bpk"/>
+                            <constraint firstItem="sG5-rw-K1P" firstAttribute="leading" secondItem="Zxq-bC-1jm" secondAttribute="leading" constant="14" id="A7U-fE-0c2"/>
+                            <constraint firstItem="eK6-ZG-gnt" firstAttribute="leading" secondItem="sG5-rw-K1P" secondAttribute="leading" id="G8Z-6B-Chq"/>
+                            <constraint firstItem="eK6-ZG-gnt" firstAttribute="top" secondItem="bKO-ld-Xc9" secondAttribute="bottom" constant="26.5" id="JYM-4I-Qp6"/>
+                            <constraint firstAttribute="trailing" secondItem="M6I-Cb-Ldy" secondAttribute="trailing" id="KDR-Mj-qIb"/>
+                            <constraint firstItem="bKO-ld-Xc9" firstAttribute="leading" secondItem="gyP-ZG-SCK" secondAttribute="leading" id="RFU-vG-yBI"/>
+                            <constraint firstAttribute="trailing" secondItem="jUS-Cb-Trc" secondAttribute="trailing" id="Rum-v7-b1t"/>
+                            <constraint firstItem="jUS-Cb-Trc" firstAttribute="top" secondItem="xz1-9q-HVO" secondAttribute="bottom" constant="22.5" id="VzJ-Qh-k96"/>
+                            <constraint firstItem="Zxq-bC-1jm" firstAttribute="trailing" secondItem="Eav-TX-eoB" secondAttribute="trailing" constant="10" id="c6e-qH-7TI"/>
+                            <constraint firstItem="Qk2-dS-HMy" firstAttribute="top" secondItem="Zxq-bC-1jm" secondAttribute="top" constant="17" id="cRp-VV-RSx"/>
+                            <constraint firstItem="Zxq-bC-1jm" firstAttribute="trailing" secondItem="sG5-rw-K1P" secondAttribute="trailing" constant="14" id="f2o-Av-GgZ"/>
+                            <constraint firstItem="tg8-xN-ezF" firstAttribute="trailing" secondItem="Zxq-bC-1jm" secondAttribute="trailing" id="fzT-7v-yVC"/>
+                            <constraint firstAttribute="trailing" secondItem="bKO-ld-Xc9" secondAttribute="trailing" id="lYT-oI-5vE"/>
+                            <constraint firstItem="sG5-rw-K1P" firstAttribute="centerX" secondItem="gyP-ZG-SCK" secondAttribute="centerX" id="nao-uC-Llf"/>
+                            <constraint firstItem="Eav-TX-eoB" firstAttribute="centerX" secondItem="Qk2-dS-HMy" secondAttribute="centerX" id="r9X-av-sKi"/>
+                            <constraint firstItem="sG5-rw-K1P" firstAttribute="top" secondItem="M6I-Cb-Ldy" secondAttribute="bottom" constant="26" id="ux4-pR-Zgm"/>
+                            <constraint firstItem="tg8-xN-ezF" firstAttribute="leading" secondItem="Zxq-bC-1jm" secondAttribute="leading" id="vVT-3i-LO4"/>
+                            <constraint firstItem="xz1-9q-HVO" firstAttribute="centerX" secondItem="gyP-ZG-SCK" secondAttribute="centerX" id="vgm-mK-zug"/>
+                            <constraint firstItem="M6I-Cb-Ldy" firstAttribute="leading" secondItem="gyP-ZG-SCK" secondAttribute="leading" id="w3a-Xt-wFw"/>
+                            <constraint firstItem="Qk2-dS-HMy" firstAttribute="centerX" secondItem="gyP-ZG-SCK" secondAttribute="centerX" id="yV7-Mi-vH0"/>
+                            <constraint firstItem="Eav-TX-eoB" firstAttribute="top" secondItem="Qk2-dS-HMy" secondAttribute="bottom" constant="13" id="ylj-uC-On2"/>
+                            <constraint firstItem="Zxq-bC-1jm" firstAttribute="trailing" secondItem="xz1-9q-HVO" secondAttribute="trailing" constant="24" id="zwJ-9Z-Pkk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zxq-bC-1jm"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="costLabel" destination="xz1-9q-HVO" id="Rfh-ge-bw1"/>
+                        <outlet property="diseaseNameLabel" destination="zlt-fR-4ue" id="Ivj-zE-Xmo"/>
+                        <outlet property="hospitalNameLabel" destination="045-gD-Zyr" id="nFc-Iy-3jF"/>
+                        <outlet property="myAddressLabel" destination="Itx-8c-UVg" id="rUi-jd-k1F"/>
+                        <outlet property="payButton" destination="tg8-xN-ezF" id="3Zg-aU-cs5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5en-cM-pBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3340" y="117"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron" width="24" height="24"/>
         <image name="icClose" width="28" height="28"/>
         <image name="icJindan" width="49" height="67"/>
         <image name="icMedformEnlarged" width="69" height="96"/>
+        <image name="icScan" width="23" height="21"/>
         <image name="wallet_active" width="21" height="23"/>
         <image name="wallet_inactive" width="21" height="23"/>
     </resources>

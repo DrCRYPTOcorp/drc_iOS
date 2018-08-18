@@ -23,6 +23,8 @@
 		4C63829E2127EAE90017E125 /* NoticeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829D2127EAE90017E125 /* NoticeTitleCell.swift */; };
 		4C6382A02127EB880017E125 /* NoticeExpansionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829F2127EB880017E125 /* NoticeExpansionCell.swift */; };
 		4C6382A32127EE720017E125 /* NoticeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A22127EE720017E125 /* NoticeData.swift */; };
+		4C6382A7212801FC0017E125 /* SendMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A6212801FC0017E125 /* SendMedicalRecordVC.swift */; };
+		4C6382A92128155B0017E125 /* IssueMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A82128155B0017E125 /* IssueMedicalRecordVC.swift */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
@@ -85,6 +87,8 @@
 		4C63829D2127EAE90017E125 /* NoticeTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTitleCell.swift; sourceTree = "<group>"; };
 		4C63829F2127EB880017E125 /* NoticeExpansionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeExpansionCell.swift; sourceTree = "<group>"; };
 		4C6382A22127EE720017E125 /* NoticeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeData.swift; sourceTree = "<group>"; };
+		4C6382A6212801FC0017E125 /* SendMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMedicalRecordVC.swift; sourceTree = "<group>"; };
+		4C6382A82128155B0017E125 /* IssueMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueMedicalRecordVC.swift; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 				4C638286212436FE0017E125 /* SearchVC.swift */,
 				4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */,
 				4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */,
+				4C6382A6212801FC0017E125 /* SendMedicalRecordVC.swift */,
+				4C6382A82128155B0017E125 /* IssueMedicalRecordVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -606,12 +612,14 @@
 				4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */,
 				4CF915D9212155C300C451D7 /* Extension.swift in Sources */,
 				4C63828F21253C2B0017E125 /* LogoutCell.swift in Sources */,
+				4C6382A92128155B0017E125 /* IssueMedicalRecordVC.swift in Sources */,
 				4C63829E2127EAE90017E125 /* NoticeTitleCell.swift in Sources */,
 				4C638291212596F30017E125 /* UserData.swift in Sources */,
 				4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */,
 				4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */,
 				4C638295212725BA0017E125 /* DetailMedicalRecordCell.swift in Sources */,
 				4C63828D21251BBF0017E125 /* HeaderCell.swift in Sources */,
+				4C6382A7212801FC0017E125 /* SendMedicalRecordVC.swift in Sources */,
 				4C63828921250B6E0017E125 /* AccountCell.swift in Sources */,
 				4C638287212436FE0017E125 /* SearchVC.swift in Sources */,
 				4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */,

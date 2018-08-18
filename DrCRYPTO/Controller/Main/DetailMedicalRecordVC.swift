@@ -28,6 +28,11 @@ class DetailMedicalRecordVC : UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func sendButtonAction(_ sender: Any) {
+        let sendVC = self.storyboard!.instantiateViewController(withIdentifier: "SendMedicalRecordVC") as! SendMedicalRecordVC
+        let navController = UINavigationController(rootViewController: sendVC)
+        navController.pushViewController(sendVC, animated: true)
+    }
 }
 
 extension DetailMedicalRecordVC {
