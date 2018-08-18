@@ -12,7 +12,14 @@ class PersonalPrivacyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        navigationBarSetting()
+    }
+}
+
+extension PersonalPrivacyVC {
+    
+    func navigationBarSetting(){
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumBarunGothicBold", size: 16)!]
     }
 }

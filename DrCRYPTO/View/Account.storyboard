@@ -24,22 +24,22 @@
             <objects>
                 <viewController storyboardIdentifier="AccountVC" id="e8D-i5-L5T" customClass="AccountVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Sm-mU-XX7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="udA-sj-b1N">
-                                <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserAccountCell" rowHeight="161" id="qD9-yj-Rrt" customClass="UserAccountCell" customModule="DrCRYPTO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="161"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserAccountCell" rowHeight="137" id="qD9-yj-Rrt" customClass="UserAccountCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qD9-yj-Rrt" id="8RP-6B-8qw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="160.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="136.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-JZ-TQn">
-                                                    <rect key="frame" x="15" y="116" width="345" height="39.5"/>
+                                                    <rect key="frame" x="15" y="87" width="345" height="39.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박성준" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-lE-gR8">
                                                             <rect key="frame" x="0.0" y="0.0" width="345" height="21"/>
@@ -56,7 +56,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-Au-Jd5">
-                                                    <rect key="frame" x="148" y="29" width="78" height="78"/>
+                                                    <rect key="frame" x="148" y="0.0" width="78" height="78"/>
                                                     <color key="backgroundColor" red="0.68064947388498909" green="0.67934272781724869" blue="0.67450700023185761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="UsG-Au-Jd5" secondAttribute="height" multiplier="1:1" id="PYR-GS-Fyu"/>
@@ -65,13 +65,13 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="6cj-JZ-TQn" secondAttribute="bottom" constant="10" id="34a-pM-kfD"/>
                                                 <constraint firstItem="6cj-JZ-TQn" firstAttribute="centerX" secondItem="8RP-6B-8qw" secondAttribute="centerX" id="C8x-lh-bV2"/>
                                                 <constraint firstItem="UsG-Au-Jd5" firstAttribute="centerX" secondItem="8RP-6B-8qw" secondAttribute="centerX" id="ZjT-g7-fyd"/>
                                                 <constraint firstItem="6cj-JZ-TQn" firstAttribute="top" secondItem="UsG-Au-Jd5" secondAttribute="bottom" constant="9" id="gBP-AO-Kf9"/>
                                                 <constraint firstItem="6cj-JZ-TQn" firstAttribute="leading" secondItem="8RP-6B-8qw" secondAttribute="leadingMargin" id="ijD-PV-Wka"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="6cj-JZ-TQn" secondAttribute="trailing" id="nzN-jn-xKU"/>
-                                                <constraint firstItem="UsG-Au-Jd5" firstAttribute="top" secondItem="8RP-6B-8qw" secondAttribute="top" constant="29" id="oBG-3u-eeb"/>
-                                                <constraint firstAttribute="bottom" secondItem="6cj-JZ-TQn" secondAttribute="bottom" constant="5" id="xXl-at-N0D"/>
+                                                <constraint firstItem="UsG-Au-Jd5" firstAttribute="top" secondItem="8RP-6B-8qw" secondAttribute="top" id="oBG-3u-eeb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +82,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="36" id="ewn-GU-PWi" customClass="HeaderCell" customModule="DrCRYPTO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="189" width="375" height="36"/>
+                                        <rect key="frame" x="0.0" y="165" width="375" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ewn-GU-PWi" id="5dn-dZ-I4K">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="35.5"/>
@@ -110,7 +110,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="44" id="iSp-gk-2BX" customClass="AccountCell" customModule="DrCRYPTO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="225" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iSp-gk-2BX" id="mHZ-YD-lYE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -144,7 +144,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogoutCell" rowHeight="44" id="r2m-uP-0z2" customClass="LogoutCell" customModule="DrCRYPTO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="269" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="245" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r2m-uP-0z2" id="mq2-Ti-6c9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -177,10 +177,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="udA-sj-b1N" firstAttribute="trailing" secondItem="4EZ-gG-FTH" secondAttribute="trailing" id="7Qp-Ks-xdW"/>
-                            <constraint firstAttribute="bottom" secondItem="udA-sj-b1N" secondAttribute="bottom" id="FIY-z4-jdx"/>
-                            <constraint firstItem="udA-sj-b1N" firstAttribute="top" secondItem="2Sm-mU-XX7" secondAttribute="top" constant="-44" id="Mgq-FR-6x0"/>
-                            <constraint firstItem="udA-sj-b1N" firstAttribute="leading" secondItem="4EZ-gG-FTH" secondAttribute="leading" id="b18-Ig-Aw2"/>
+                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="top" secondItem="udA-sj-b1N" secondAttribute="top" id="7eC-Kk-Rf4"/>
+                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="bottom" secondItem="udA-sj-b1N" secondAttribute="bottom" id="Jo5-rW-CBk"/>
+                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="leading" secondItem="udA-sj-b1N" secondAttribute="leading" id="Nio-sc-UZh"/>
+                            <constraint firstItem="4EZ-gG-FTH" firstAttribute="trailing" secondItem="udA-sj-b1N" secondAttribute="trailing" id="Wr9-gq-lcA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4EZ-gG-FTH"/>
                     </view>
@@ -193,6 +193,84 @@
             </objects>
             <point key="canvasLocation" x="1597.5999999999999" y="181.25937031484258"/>
         </scene>
+        <!--공지사항-->
+        <scene sceneID="Rq7-kD-AFq">
+            <objects>
+                <tableViewController storyboardIdentifier="NoticeTVC" title="공지사항" id="jfp-2K-drB" customClass="NoticeTVC" customModule="DrCRYPTO" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ran-fy-daq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeTitleCell" id="xrC-Zm-n0X" customClass="NoticeTitleCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xrC-Zm-n0X" id="KJp-4l-QTd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr.CRYPTO 출시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-gC-Ydx">
+                                            <rect key="frame" x="20" y="12" width="335" height="18"/>
+                                            <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chevron" translatesAutoresizingMaskIntoConstraints="NO" id="hQm-9x-BDy">
+                                            <rect key="frame" x="346" y="16.5" width="14" height="9"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="hQm-9x-BDy" secondAttribute="trailing" constant="15" id="4mp-uL-I8x"/>
+                                        <constraint firstAttribute="bottom" secondItem="vF5-gC-Ydx" secondAttribute="bottom" constant="13.5" id="W4q-Xj-6HO"/>
+                                        <constraint firstItem="vF5-gC-Ydx" firstAttribute="centerX" secondItem="KJp-4l-QTd" secondAttribute="centerX" id="bgQ-O4-Dd8"/>
+                                        <constraint firstItem="vF5-gC-Ydx" firstAttribute="leading" secondItem="KJp-4l-QTd" secondAttribute="leading" constant="20" id="dyq-n9-Q0e"/>
+                                        <constraint firstItem="vF5-gC-Ydx" firstAttribute="centerY" secondItem="KJp-4l-QTd" secondAttribute="centerY" id="pWD-RJ-d3a"/>
+                                        <constraint firstItem="hQm-9x-BDy" firstAttribute="centerY" secondItem="KJp-4l-QTd" secondAttribute="centerY" id="vIv-77-Alc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downArrowImageView" destination="hQm-9x-BDy" id="pig-bq-hwl"/>
+                                    <outlet property="noticeTitleLabel" destination="vF5-gC-Ydx" id="JY5-Fe-Fsj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeExpansionCell" rowHeight="60" id="Um4-4b-Gnd" customClass="NoticeExpansionCell" customModule="DrCRYPTO" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Um4-4b-Gnd" id="suf-Kx-Oit">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018년 8월 24일 전격 출시" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoy-yz-cm3">
+                                            <rect key="frame" x="30" y="8.5" width="315" height="41"/>
+                                            <fontDescription key="fontDescription" name="NanumBarunGothic" family="NanumBarunGothic" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qoy-yz-cm3" firstAttribute="centerX" secondItem="suf-Kx-Oit" secondAttribute="centerX" id="CGo-pu-CAk"/>
+                                        <constraint firstItem="qoy-yz-cm3" firstAttribute="leading" secondItem="suf-Kx-Oit" secondAttribute="leading" constant="30" id="HBX-ys-vox"/>
+                                        <constraint firstItem="qoy-yz-cm3" firstAttribute="centerY" secondItem="suf-Kx-Oit" secondAttribute="centerY" id="dGc-66-g88"/>
+                                        <constraint firstAttribute="bottom" secondItem="qoy-yz-cm3" secondAttribute="bottom" constant="10" id="vCk-gF-Ufn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.96078431372549022" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="noticeDescriptionLabel" destination="qoy-yz-cm3" id="0vL-1q-vkc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jfp-2K-drB" id="Jk1-BX-qnP"/>
+                            <outlet property="delegate" destination="jfp-2K-drB" id="IUJ-aq-GOW"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVL-N8-FvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2365.5999999999999" y="180.35982008995504"/>
+        </scene>
         <!--개인정보 처리방침-->
         <scene sceneID="CGg-vr-paT">
             <objects>
@@ -202,35 +280,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzN-W1-Uhc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Dr.CRYPTO는 이용자들의 개인정보를 소중히 다루고 있습니다.">
                                         <attributes>
-                                            <font key="NSFont" size="23" name="NanumBarunGothicBold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" size="22" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
+Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 1 조 (총칙)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -239,6 +310,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -248,6 +320,7 @@ C. 회사는 개인정보취급방침을 서비스 화면에 공개함으로써 
 D. 회사는 개인정보취급방침을 관련 법령 및 방송통신위원회의 개인정보보호지침의 변경 또는 내부 운영규정의 변경에 따라 개정할 수 있으며, 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 고객이 쉽게 알아볼 수 있도록 하고 있습니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -256,11 +329,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 2 조 (수집하는 개인정보 항목 및 수집방법)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -269,6 +344,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -283,6 +359,7 @@ C. 회사는 다음과 같은 방법으로 개인정보를 수집합니다.
 D. 회사는 법령의 규정 또는 고객의 동의 없이는 사상, 신념, 과거의 병력 등 고객의 권리 또는 이익이나 사생활을 뚜렷하게 침해할 우려가 있는 개인정보를 수집하지 않습니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -291,11 +368,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 3 조 (개인정보의 수집 및 이용목적)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -304,6 +383,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -316,6 +396,7 @@ C. 마케팅 및 광고에 활용
 신규 서비스 개발 및 맞춤 서비스 제공, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스 유효성 확인, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 및 광고성 정보와 참여기회 제공</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -324,11 +405,13 @@ IAoKA
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 4 조 (개인정보의 이용 및 제공)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -337,6 +420,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -347,6 +431,7 @@ B. 고객의 동의가 있거나, 고객의 동의가 없더라도 요금정산�
 C. 회사는 서비스의 제공에 관한 계약을 이행하기 위하여 필요한 개인정보로서 경제적•기술적인 사유로 통상적인 동의를 받는 것이 뚜렷하게 곤란한 경우에는 고객의 동의가 없더라도 개인정보를 수집•이용할 수 있습니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -355,11 +440,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 5 조 (수집한 개인정보의 보유 및 이용기간)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -368,6 +455,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -385,6 +473,7 @@ D. 이용자의 개인정보는 개인정보의 수집 및 이용목적이 달�
 바. 본인확인에 관한 기록 : 6개월</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -393,11 +482,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 6 조 (개인정보의 파기)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -406,6 +497,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -413,6 +505,7 @@ Cg
 B. 회사는 서면에 기재된 개인정보의 경우에는 분쇄기로 분쇄하거나 소각하며 전자적 방법으로 저장된 개인정보의 경우에는 그 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -421,11 +514,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 7 조 (고객의 권리와 그 행사방법)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -434,6 +529,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -447,6 +543,7 @@ G. 고객이 타인 정보의 도용이나 침해, 허위정보를 입력하는 
 H. 고객이 개인정보의 열람•제공을 반복적으로 요구하는 등 업무에 지장을 줄 우려가 있거나 그 분량이 상당하여 비용이 드는 경우, 회사는 고객의 요구를 연기 또는 거절하거나 업무처리에 따른 실비(복사비 등)를 고객에게 청구할 수 있습니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -455,11 +552,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 8 조 (개인정보 수집•이용•제공에 대한 동의철회)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -468,6 +567,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -476,6 +576,7 @@ B, 회사는 고객이 동의철회를 하여 개인정보를 파기하는 등�
 </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -484,11 +585,13 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 9 조 (개인정보보호를 위한 기술적/관리적 대책)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -497,6 +600,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -518,6 +622,7 @@ B. 관리적 대책
 9. 회사는 내부 관리자의 실수나 기술관리상 사고로 인하여 개인정보의 도난, 유출, 변조, 훼손이 유발될 경우 적절한 대책과 보상을 강구합니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -526,11 +631,13 @@ Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="제 10 조 (개인정보 관리책임자 및 상담신고)">
                                         <attributes>
                                             <font key="NSFont" size="20" name="NanumBarunGothicBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -539,12 +646,14 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">A. 고객의 개인정보를 보호하고 개인정보와 관련된 불만을 처리하기 위하여 당사는 개인정보 관리책임자를 두고 있습니다.고객의 개인정보와 관련한 문의사항이 있으시면 아래의 개인정보 관리책임자 또는 개인정보 관리담당자에게 연락 주시기 바랍니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -553,6 +662,7 @@ CgogA
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -572,6 +682,7 @@ B. 기타 개인정보에 관한 상담이 필요한 경우에는 아래 기관�
 본 취급방침은 2018년 8월 24일부터 시행합니다.</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -580,6 +691,7 @@ Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="17" name="NanumBarunGothic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -588,11 +700,10 @@ Cg
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="width" secondItem="Bba-Rl-LLd" secondAttribute="width" id="F7S-dx-1nE"/>
-                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="top" secondItem="Bba-Rl-LLd" secondAttribute="top" constant="64" id="FN1-Zv-yVz"/>
-                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="leading" secondItem="PrX-vJ-wKV" secondAttribute="leading" id="aa8-cy-gdq"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="top" secondItem="Bba-Rl-LLd" secondAttribute="top" id="FN1-Zv-yVz"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="leading" secondItem="PrX-vJ-wKV" secondAttribute="leading" constant="10" id="aa8-cy-gdq"/>
                             <constraint firstItem="AzN-W1-Uhc" firstAttribute="height" secondItem="Bba-Rl-LLd" secondAttribute="height" id="hf5-Iv-d0H"/>
-                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="trailing" secondItem="PrX-vJ-wKV" secondAttribute="trailing" id="uFu-5S-Qa0"/>
+                            <constraint firstItem="AzN-W1-Uhc" firstAttribute="trailing" secondItem="PrX-vJ-wKV" secondAttribute="trailing" constant="-10" id="uFu-5S-Qa0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PrX-vJ-wKV"/>
                     </view>
@@ -600,7 +711,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-5B-KcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="182"/>
+            <point key="canvasLocation" x="2367" y="840"/>
         </scene>
         <!--내 계정-->
         <scene sceneID="tTp-pN-ROs">
@@ -609,10 +720,11 @@ Cg
                     <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="account_active" id="s4P-OR-ZYJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pRO-Ly-xQl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pRO-Ly-xQl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.015686274509803921" green="0.74509803921568629" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.015686274509803921" green="0.77254901960784317" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -625,6 +737,7 @@ Cg
         </scene>
     </scenes>
     <resources>
+        <image name="Chevron" width="14" height="9"/>
         <image name="account_active" width="23" height="23"/>
         <image name="account_inactive" width="23" height="23"/>
         <image name="icCopy" width="30" height="30"/>

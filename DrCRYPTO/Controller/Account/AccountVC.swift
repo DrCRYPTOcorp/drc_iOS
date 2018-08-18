@@ -26,11 +26,16 @@ class AccountVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationBarSetting()
         tableViewSetting()
     }
 }
 
 extension AccountVC {
+    
+    func navigationBarSetting(){
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumBarunGothicBold", size: 16)!]
+    }
     
     func tableViewSetting(){
         accountTableView.delegate = self
@@ -143,11 +148,23 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             break
         case 2:
-            guard let privacyVC = storyboard?.instantiateViewController(
-                withIdentifier : "PersonalPrivacyVC"
-                ) as? PersonalPrivacyVC
-                else{return}
-            self.navigationController?.pushViewController(privacyVC, animated: true)
+            //MARK: 공지사항
+            if indexPath.row == 0{
+                guard let noticeVC = storyboard?.instantiateViewController(
+                    withIdentifier : "NoticeTVC"
+                    ) as? NoticeTVC
+                    else{return}
+                self.navigationController?.pushViewController(noticeVC, animated: true)
+            }
+            
+            //MARK: 개인정보 처리방침
+            if indexPath.row == 1{
+                guard let privacyVC = storyboard?.instantiateViewController(
+                    withIdentifier : "PersonalPrivacyVC"
+                    ) as? PersonalPrivacyVC
+                    else{return}
+                self.navigationController?.pushViewController(privacyVC, animated: true)
+            }
         default:
             break
         }

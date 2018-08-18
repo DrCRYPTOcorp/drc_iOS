@@ -19,6 +19,10 @@
 		4C6382932126F98F0017E125 /* DetailMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */; };
 		4C638295212725BA0017E125 /* DetailMedicalRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */; };
 		4C63829821272B8D0017E125 /* PersonalPrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */; };
+		4C63829C2127EAB90017E125 /* NoticeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829B2127EAB90017E125 /* NoticeTVC.swift */; };
+		4C63829E2127EAE90017E125 /* NoticeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829D2127EAE90017E125 /* NoticeTitleCell.swift */; };
+		4C6382A02127EB880017E125 /* NoticeExpansionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63829F2127EB880017E125 /* NoticeExpansionCell.swift */; };
+		4C6382A32127EE720017E125 /* NoticeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A22127EE720017E125 /* NoticeData.swift */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
@@ -77,6 +81,10 @@
 		4C6382922126F98F0017E125 /* DetailMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicalRecordVC.swift; sourceTree = "<group>"; };
 		4C638294212725BA0017E125 /* DetailMedicalRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMedicalRecordCell.swift; sourceTree = "<group>"; };
 		4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPrivacyVC.swift; sourceTree = "<group>"; };
+		4C63829B2127EAB90017E125 /* NoticeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTVC.swift; sourceTree = "<group>"; };
+		4C63829D2127EAE90017E125 /* NoticeTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTitleCell.swift; sourceTree = "<group>"; };
+		4C63829F2127EB880017E125 /* NoticeExpansionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeExpansionCell.swift; sourceTree = "<group>"; };
+		4C6382A22127EE720017E125 /* NoticeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeData.swift; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
@@ -161,9 +169,21 @@
 		4C63829621272B580017E125 /* CellDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4C6382A12127EE620017E125 /* Notice */,
 				4C63829721272B8D0017E125 /* PersonalPrivacyVC.swift */,
 			);
 			path = CellDetail;
+			sourceTree = "<group>";
+		};
+		4C6382A12127EE620017E125 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				4C63829B2127EAB90017E125 /* NoticeTVC.swift */,
+				4C63829D2127EAE90017E125 /* NoticeTitleCell.swift */,
+				4C63829F2127EB880017E125 /* NoticeExpansionCell.swift */,
+				4C6382A22127EE720017E125 /* NoticeData.swift */,
+			);
+			path = Notice;
 			sourceTree = "<group>";
 		};
 		4C6F7252211D6C90008BA508 /* Login */ = {
@@ -576,6 +596,7 @@
 				4CBBA8B72119854200DF7391 /* AppDelegate.swift in Sources */,
 				4C638285212400CB0017E125 /* TransactionCell.swift in Sources */,
 				4CBBA8BF2119854200DF7391 /* DrCRYPTO.xcdatamodeld in Sources */,
+				4C6382A02127EB880017E125 /* NoticeExpansionCell.swift in Sources */,
 				4C63829821272B8D0017E125 /* PersonalPrivacyVC.swift in Sources */,
 				4C63828B21250B8A0017E125 /* UserAccountCell.swift in Sources */,
 				4CF915E42121812700C451D7 /* JoinVC.swift in Sources */,
@@ -583,6 +604,7 @@
 				4CF915E62121896B00C451D7 /* NavigaionVC.swift in Sources */,
 				4CF915D9212155C300C451D7 /* Extension.swift in Sources */,
 				4C63828F21253C2B0017E125 /* LogoutCell.swift in Sources */,
+				4C63829E2127EAE90017E125 /* NoticeTitleCell.swift in Sources */,
 				4C638291212596F30017E125 /* UserData.swift in Sources */,
 				4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */,
 				4CF915EA21229D8E00C451D7 /* MedicalRecordCell.swift in Sources */,
@@ -592,6 +614,8 @@
 				4C638287212436FE0017E125 /* SearchVC.swift in Sources */,
 				4C6F7266211D6ED3008BA508 /* AccountVC.swift in Sources */,
 				4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */,
+				4C6382A32127EE720017E125 /* NoticeData.swift in Sources */,
+				4C63829C2127EAB90017E125 /* NoticeTVC.swift in Sources */,
 				4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
