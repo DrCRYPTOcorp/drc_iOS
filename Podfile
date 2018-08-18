@@ -17,6 +17,7 @@ target 'DrCRYPTO' do
     
     # UI Pods
     pod 'Hero'
+    pod 'IGIdenticon'
 
   target 'DrCRYPTOTests' do
     inherit! :search_paths

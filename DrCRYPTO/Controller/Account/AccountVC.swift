@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import IGIdenticon
 
 class AccountVC : UIViewController {
     
@@ -107,13 +108,16 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "UserAccountCell", for: indexPath) as! UserAccountCell
+            cell.selectionStyle = .none
+            cell.profileImageView.image = Identicon().icon(from: "0x9807142B04b0C378e2F750762cd2384040509a5A", size: CGSize(width: cell.profileImageView.frame.size.width, height: cell.profileImageView.frame.size.height))
             cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.width / 2
-            cell.profileImageView.backgroundColor = UIColor.gray
+            cell.profileImageView.layer.masksToBounds = true
             cell.profileNameLabel.text = gsno(userName)
             cell.profileEmailLabel.text = gsno(userEmail)
             return cell
         case 1:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
+            cell.selectionStyle = .none
             cell.accountObjectLabel.text = userCellNameArray[indexPath.row]
             if indexPath.row == 0{
                 cell.rightActionButton.setImage(#imageLiteral(resourceName: "icCopy"), for: .normal)
@@ -124,12 +128,14 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
             
         case 2:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
+            cell.selectionStyle = .none
             cell.accountObjectLabel.text = supportCellNameArray[indexPath.row]
             cell.rightActionButton.setImage(#imageLiteral(resourceName: "chevron"), for: .normal)
             return cell
         default:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "LogoutCell", for: indexPath) as! LogoutCell
             cell.logoutButton.addTarget(self, action: #selector(logoutButtonAction(_:)), for: .touchUpInside)
+            cell.selectionStyle = .none
             return cell
         }
     }

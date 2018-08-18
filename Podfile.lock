@@ -60,6 +60,7 @@ PODS:
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.0)
   - Hero (1.3.0)
+  - IGIdenticon (0.5)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -93,6 +94,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Hero
+  - IGIdenticon
   - web3swift
 
 SPEC REPOS:
@@ -110,6 +112,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - Hero
+    - IGIdenticon
     - leveldb-library
     - nanopb
     - PromiseKit
@@ -133,6 +136,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   Hero: 3eecd3fd62dd2425cbc7e35505c557b86d5a379e
+  IGIdenticon: 0f8fa2c776e35d4cb204bedbc5005ef748b263d8
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
@@ -142,6 +146,6 @@ SPEC CHECKSUMS:
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   web3swift: 03f9c64f8597a8167d32f87cbc282cf1b300f7e5
 
-PODFILE CHECKSUM: 753f68a99bdddbb567a352b6af838587e730e40b
+PODFILE CHECKSUM: bda79614580094c12abf8ea03419aec037cfba02
 
 COCOAPODS: 1.5.3
