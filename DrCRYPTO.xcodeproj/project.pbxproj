@@ -25,6 +25,7 @@
 		4C6382A32127EE720017E125 /* NoticeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A22127EE720017E125 /* NoticeData.swift */; };
 		4C6382A7212801FC0017E125 /* SendMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A6212801FC0017E125 /* SendMedicalRecordVC.swift */; };
 		4C6382A92128155B0017E125 /* IssueMedicalRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382A82128155B0017E125 /* IssueMedicalRecordVC.swift */; };
+		4C6382AB2128949F0017E125 /* ABI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6382AA2128949F0017E125 /* ABI.swift */; };
 		4C6F725121198D8F008BA508 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F725021198D8F008BA508 /* Login.storyboard */; };
 		4C6F7257211D6CC2008BA508 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7256211D6CC2008BA508 /* LoginVC.swift */; };
 		4C6F7264211D6EC3008BA508 /* TransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6F7263211D6EC3008BA508 /* TransactionVC.swift */; };
@@ -89,6 +90,7 @@
 		4C6382A22127EE720017E125 /* NoticeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeData.swift; sourceTree = "<group>"; };
 		4C6382A6212801FC0017E125 /* SendMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMedicalRecordVC.swift; sourceTree = "<group>"; };
 		4C6382A82128155B0017E125 /* IssueMedicalRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueMedicalRecordVC.swift; sourceTree = "<group>"; };
+		4C6382AA2128949F0017E125 /* ABI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABI.swift; sourceTree = "<group>"; };
 		4C6F725021198D8F008BA508 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4C6F7256211D6CC2008BA508 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4C6F7263211D6EC3008BA508 /* TransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionVC.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		4CBBA8B52119854200DF7391 /* DrCRYPTO */ = {
 			isa = PBXGroup;
 			children = (
+				4C6382AA2128949F0017E125 /* ABI.swift */,
 				4CBBA8B62119854200DF7391 /* AppDelegate.swift */,
 				4CF915EF2122FFC400C451D7 /* GoogleService-Info.plist */,
 				4CF915D8212155C300C451D7 /* Extension.swift */,
@@ -528,6 +531,7 @@
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/scrypt/scrypt.framework",
@@ -545,6 +549,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/scrypt.framework",
@@ -626,6 +631,7 @@
 				4CF915EE21229F9600C451D7 /* TabBarVC.swift in Sources */,
 				4C6382A32127EE720017E125 /* NoticeData.swift in Sources */,
 				4C63829C2127EAB90017E125 /* NoticeTVC.swift in Sources */,
+				4C6382AB2128949F0017E125 /* ABI.swift in Sources */,
 				4CF915EC21229D9900C451D7 /* VisitRecordCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

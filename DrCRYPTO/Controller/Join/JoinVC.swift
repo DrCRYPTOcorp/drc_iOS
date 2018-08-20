@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseDatabase
+import web3swift
 
 class JoinVC : UIViewController, UIGestureRecognizerDelegate {
     
@@ -173,24 +174,51 @@ extension JoinVC : UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     @objc func doneButtonAction(){
-        Auth.auth().createUser(withEmail: gsno(idTextField.text), password: gsno(confirmPasswordTextField.text)
-        ) { (user, error) in
-            if user !=  nil{
+        //MARK: Wallet Create
+        do{
+            let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let keystoreManager = KeystoreManager.managerForPath(userDir + "/keystore")
+            var ks: BIP32Keystore?
+            if (keystoreManager?.addresses?.count == 0) {
+                let password = gsno(confirmPasswordTextField.text)
+                let mnemonic = try! BIP39.generateMnemonics(bitsOfEntropy: 256)!
+                let keystore = try! BIP32Keystore(mnemonics: mnemonic, password: password, mnemonicsPassword: String((password).reversed()))
+                print("keystore",keystore!)
+                ks = keystore
+                //   ks = try EthereumKeystoreV3(password: pass ?? "")
+                let keydata = try JSONEncoder().encode(ks?.keystoreParams)
+                FileManager.default.createFile(atPath: userDir + "/keystore"+"/key.json", contents: keydata, attributes: nil)
+                print(userDir)
                 
-                //MARK: Firebase Database User Data Save - UID 구분
-                Database.database().reference().child("users/\(self.gsno(user?.user.uid))").setValue([
-                    "email" : self.gsno(self.idTextField.text),
-                    "uid": self.gsno(user?.user.uid),
-                    "name": self.gsno(self.nameTextField.text),
-                    "gender": self.gsno(self.genderTextField.text),
-                    "birth": self.gsno(self.birthTextField.text)
-                    ])
-                self.performSegue(withIdentifier: "unwindToSplash", sender: self)
+            } else {
+                ks = keystoreManager?.walletForAddress((keystoreManager?.addresses![0])!) as? BIP32Keystore
             }
-            else{
-                print("register failed")
+            guard let sender = ks?.addresses?.first else {return}
+            
+            //MARK: Sign Up
+            Auth.auth().createUser(withEmail: gsno(idTextField.text), password: gsno(confirmPasswordTextField.text)
+            ) { (user, error) in
+                if user !=  nil{
+                    
+                    //MARK: Firebase Database User Data Save - UID 구분
+                    Database.database().reference().child("users/\(self.gsno(user?.user.uid))").setValue([
+                        "email" : self.gsno(self.idTextField.text),
+                        "uid": self.gsno(user?.user.uid),
+                        "name": self.gsno(self.nameTextField.text),
+                        "gender": self.gsno(self.genderTextField.text),
+                        "birth": self.gsno(self.birthTextField.text),
+                        "address": self.gsno(sender.address)
+                        ])
+                    self.performSegue(withIdentifier: "unwindToSplash", sender: self)
+                }
+                else{
+                    print("register failed")
+                }
+                
             }
             
+        }catch{
+            print(error.localizedDescription)
         }
     }
     

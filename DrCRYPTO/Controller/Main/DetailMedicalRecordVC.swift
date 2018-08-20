@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class DetailMedicalRecordVC : UIViewController {
     
@@ -20,9 +21,9 @@ class DetailMedicalRecordVC : UIViewController {
         tableViewSetting()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     
     @IBAction func dismissButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -30,8 +31,8 @@ class DetailMedicalRecordVC : UIViewController {
     
     @IBAction func sendButtonAction(_ sender: Any) {
         let sendVC = self.storyboard!.instantiateViewController(withIdentifier: "SendMedicalRecordVC") as! SendMedicalRecordVC
-        let navController = UINavigationController(rootViewController: sendVC)
-        navController.pushViewController(sendVC, animated: true)
+        sendVC.hero.modalAnimationType = .fade
+        hero.replaceViewController(with: sendVC)
     }
 }
 

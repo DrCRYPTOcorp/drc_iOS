@@ -43,9 +43,13 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         if let user = Auth.auth().currentUser {
             let uid = Auth.auth().currentUser?.uid
             userDataSave(uid: gsno(uid))
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+            //MARK: 지갑 자동로그인
+            let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
+                let stb = UIStoryboard(name: "Main", bundle: nil)
+                let controller = stb.instantiateViewController(withIdentifier: "TabBarVC")
+                UIApplication.shared.keyWindow?.rootViewController = controller
+            }
         }
     }
     
@@ -79,6 +83,8 @@ extension LoginVC {
                     self.ud.setValue(value, forKey: "email")
                 } else if key == "uid"{
                     self.ud.setValue(value, forKey: "uid")
+                } else if key == "address"{
+                    self.ud.setValue(value, forKey: "address")
                 }
                 self.ud.synchronize()
             }
@@ -91,9 +97,12 @@ extension LoginVC {
             if user != nil{
                 let uid = Auth.auth().currentUser?.uid
                 self.userDataSave(uid: self.gsno(uid))
-                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-                UIApplication.shared.keyWindow?.rootViewController = viewController
+                let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
+                    let stb = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = stb.instantiateViewController(withIdentifier: "TabBarVC")
+                    UIApplication.shared.keyWindow?.rootViewController = controller
+                }
             }
             else{
                 self.simpleAlert(title: "로그인 오류", msg: "이메일 또는 비밀번호를 확인해주세요.")

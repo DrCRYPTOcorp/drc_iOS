@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import web3swift
+import BigInt
+import SwiftyJSON
+
 
 class MedicalWalletVC : UIViewController {
     
@@ -20,35 +24,126 @@ class MedicalWalletVC : UIViewController {
     @IBOutlet var noMedicalRecordLabel: UILabel!
     @IBOutlet var noVisitRecordLabel: UILabel!
     
-    var medicalRecordData = [String]()
+    var singleMedicalRecordData = [String]()
+    var totalMedicalRecordData = [[String]]()
+    var showMedicalRecordData = [[String]]()
     var visitRecordData = [String]()
+    
+    var userName : String?
+    var userAddress : String?
+
+    
+    let ud = UserDefaults.standard
     
     var name = ["서울대병원", "박성준신경외과", "최수호정형외과", "을지대병원", "연세세브란스병원"]
     var disease = ["허리 디스크", "감기", "목 디스크", "편도염", "인후염"]
     var day = ["2018-08-02", "2018-08-04", "2018-08-10", "2018-08-12", "2018-08-14"]
     
+    //MARK: Blockchain
+    let contractAddress = EthereumAddress("0x5c5b46bcf715ddb42e3b21fe43531914a5cb2f6c")
+    var web3Rinkeby:web3?
+    var bip32keystore:BIP32Keystore?
+    var keystoremanager:KeystoreManager?
+    var contract:web3.web3contract?
+    var tokenName:String?
+    
+    var userMedicalRecordCount = 0
+    
+    var dwidderABI = "[{\"constant\": true,\"inputs\": [{\"name\": \"\",\"type\": \"uint256\"}],\"name\": \"postIds\",\"outputs\": [{\"name\": \"\",\"type\": \"bytes32\"}],\"payable\": false,\"stateMutability\":\"view\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [{\"name\":\"postId\",\"type\": \"bytes32\"}],\"name\": \"vote\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getPostAt\",\"outputs\": [{\"name\": \"id\",\"type\": \"bytes32\"},{\"name\": \"author\",\"type\": \"address\"},{\"name\": \"message\",\"type\": \"string\"},{\"name\": \"votes\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\":\"view\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [{\"name\": \"message\",\"type\": \"string\"}],\"name\": \"create\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [],\"name\": \"proofOfPost\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"getPostCount\",\"outputs\": [{\"name\": \"\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"token\",\"outputs\": [{\"name\": \"\",\"type\": \"address\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"inputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"constructor\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": true,\"name\": \"id\",\"type\": \"bytes32\"},{\"indexed\": true,\"name\": \"author\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"message\",\"type\": \"string\"}],\"name\": \"Posting\",\"type\": \"event\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": true,\"name\": \"voter\",\"type\": \"address\"},{\"indexed\": true,\"name\": \"postId\",\"type\": \"bytes32\"},{\"indexed\": false,\"name\": \"votes\",\"type\": \"uint256\"}],\"name\": \"Voting\",\"type\": \"event\"}]"
+    
+    var accountABI = "[{\"constant\": false,\"inputs\": [{\"name\": \"index\",\"type\": \"uint256\"},{\"name\": \"patientAddress\",\"type\": \"address\"},{\"name\": \"diseaseName\",\"type\": \"string\"},{\"name\": \"doctorOpinion\",\"type\": \"string\"},{\"name\": \"note\",\"type\": \"string\"},{\"name\": \"hospitalName\",\"type\": \"string\"},{\"name\": \"hospitalPhoneNumber\",\"type\": \"string\"},{\"name\": \"doctorLisenceNumber\",\"type\": \"string\"},{\"name\": \"doctorName\",\"type\": \"string\"}],\"name\": \"appendMedicalRecord\",\"outputs\": [{\"name\": \"success\",\"type\": \"bool\"}],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": false,\"name\": \"sender\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"patientAddress\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"LogPatient\",\"type\": \"event\"},{\"inputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"constructor\"},{\"constant\": true,\"inputs\": [{\"name\": \"\",\"type\": \"address\"}],\"name\": \"addressStructs\",\"outputs\": [{\"name\": \"index\",\"type\": \"uint256\"},{\"name\": \"isAddress\",\"type\": \"bool\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"fetch\",\"type\": \"address\"},{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getHospitalStruct\",\"outputs\": [{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"patientAddress\",\"type\": \"address\"}],\"name\": \"getMedicalRecordCount\",\"outputs\": [{\"name\": \"count\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"fetch\",\"type\": \"address\"},{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getUserMedicalStruct\",\"outputs\": [{\"name\": \"\",\"type\": \"uint256\"},{\"name\": \"\",\"type\": \"bool\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"token\",\"outputs\": [{\"name\": \"\",\"type\": \"address\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"}]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userName = ud.string(forKey: "name")
         whiteImageView.isHidden = true
         medicalRecordCollectionView.delegate = self
         medicalRecordCollectionView.dataSource = self
         visitRecordCollectionView.delegate = self
         visitRecordCollectionView.dataSource = self
         
+        
         navigationBarSetting()
         searchBarSetting()
+        getBlockChainData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        //noData()
     }
     
 }
 
 extension MedicalWalletVC : UISearchBarDelegate {
     
+    func getBlockChainData(){
+        let accessToken : String = "7600d818c4084a56953378cdf14a15df"
+        web3Rinkeby = Web3.InfuraRinkebyWeb3(accessToken: accessToken)
+        let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let path = userDir+"/keystore/"
+        keystoremanager =  KeystoreManager.managerForPath(path, scanForHDwallets: true, suffix: "json")
+        self.web3Rinkeby?.addKeystoreManager(self.keystoremanager)
+        self.bip32keystore = self.keystoremanager?.bip32keystores[0]
+        
+        //MARK: 내 이더 불러오기
+        self.userAddress = self.bip32keystore?.addresses?.first?.address
+        var ethAdd = EthereumAddress(gsno(userAddress))
+        let balancebigint = web3Rinkeby?.eth.getBalance(address: ethAdd!).value
+        print("Ether Balance :\(String(describing: Web3.Utils.formatToEthereumUnits(balancebigint ?? 0)!))")
+        let gasPriceResult = web3Rinkeby?.eth.getGasPrice()
+        guard case .success(let gasPrice)? = gasPriceResult else {return}
+        var options = Web3Options()
+        options.gasPrice = gasPrice
+        options.from = ethAdd
+        
+        //MARK: 토큰 이름 불러오기
+        self.contract = self.web3Rinkeby?.contract(accountABI, at: self.contractAddress, abiVersion: 2)!
+        let getMedicalRecordCount = self.contract?.method("getMedicalRecordCount", parameters:[ethAdd]as[AnyObject],  options: options)
+        guard let resCount = getMedicalRecordCount?.call(options: options) else {return}
+        guard case .success(let resultCount) = resCount else {return}
+        let stringCount = String(describing: resultCount["0"]!)
+        let count = Int(stringCount)
+        for i in 0..<gino(count){
+            getUserMedicalFromBlockchain(ethAdd!, i, options: options)
+            getHospitalFromBlockchain(ethAdd!, i, options: options)
+            totalMedicalRecordData.append(singleMedicalRecordData)
+            singleMedicalRecordData.removeAll()
+        }
+        noData()
+        medicalRecordCollectionView.reloadData()
+        visitRecordCollectionView.reloadData()
+    }
+    
+    
+    func getUserMedicalFromBlockchain(_ ethAdd: EthereumAddress, _ index: Int, options: Web3Options){
+        let getUserMedicalStruct = self.contract?.method("getUserMedicalStruct", parameters:[ethAdd, index]as[AnyObject],  options: options)
+        guard let resUserMedical = getUserMedicalStruct?.call(options: options) else {return}
+        guard case .success(let resultUserMedical) = resUserMedical else {return}
+        let diseaseName = String(describing: resultUserMedical["2"]!)
+        let doctorOpinion = String(describing: resultUserMedical["3"]!)
+        let note = String(describing: resultUserMedical["4"]!)
+        singleMedicalRecordData.append(diseaseName)
+        singleMedicalRecordData.append(doctorOpinion)
+        singleMedicalRecordData.append(note)
+    }
+    
+    func getHospitalFromBlockchain(_ ethAdd: EthereumAddress, _ index: Int, options: Web3Options){
+        let getHospitalStruct = self.contract?.method("getHospitalStruct", parameters:[ethAdd, index]as[AnyObject],  options: options)
+        guard let resHospitalMedical = getHospitalStruct?.call(options: options) else {return}
+        guard case .success(let resultHospital) = resHospitalMedical else {return}
+        let hospitalName = String(describing: resultHospital["0"]!)
+        let hospitalPhoneNumber = String(describing: resultHospital["1"]!)
+        let doctorLicense = String(describing: resultHospital["2"]!)
+        let doctorName = String(describing: resultHospital["3"]!)
+        
+        singleMedicalRecordData.append(hospitalName)
+        singleMedicalRecordData.append(hospitalPhoneNumber)
+        singleMedicalRecordData.append(doctorLicense)
+        singleMedicalRecordData.append(doctorName)
+    }
+    
     func navigationBarSetting(){
+        self.title = gsno(userName) + "님"
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.01568627451, green: 0.7725490196, blue: 0.737254902, alpha: 1)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -136,15 +231,23 @@ extension MedicalWalletVC : UISearchBarDelegate {
 
     
     func noData(){
-        if medicalRecordData.count == 0{
+        if showMedicalRecordData.count == 0{
             medicalRecordCollectionView.isHidden = true
             noMedicalRecordLabel.isHidden = false
             medicalRecordSeeAllStackView.isHidden = true
+        } else{
+            medicalRecordCollectionView.isHidden = false
+            noMedicalRecordLabel.isHidden = true
+            medicalRecordSeeAllStackView.isHidden = false
         }
-        if visitRecordData.count == 0{
+        if totalMedicalRecordData.count == 0{
             visitRecordCollectionView.isHidden = true
             noVisitRecordLabel.isHidden = false
             visitRecordSeeAllStackView.isHidden = true
+        } else{
+            visitRecordCollectionView.isHidden = false
+            noVisitRecordLabel.isHidden = true
+            visitRecordSeeAllStackView.isHidden = false
         }
     }
 }
@@ -153,34 +256,39 @@ extension MedicalWalletVC : UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.medicalRecordCollectionView {
-            return day.count
+            return showMedicalRecordData.count
         }
         else {
-            return day.count
+            return totalMedicalRecordData.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index = totalMedicalRecordData[indexPath.row]
+        //0:병명,1:소견,2:비고,3:병원이름,4:전화번호,5:의사면허,6:의사이름
         if collectionView == self.medicalRecordCollectionView{
             let cell = medicalRecordCollectionView.dequeueReusableCell(withReuseIdentifier: "MedicalRecordCell", for: indexPath) as! MedicalRecordCell
-            cell.hospitalNameLabel.text = name[indexPath.row]
-            cell.diseaseNameLabel.text = disease[indexPath.row]
-            cell.issuedDateLabel.text = day[indexPath.row]
-            cell.documentImageView.image = #imageLiteral(resourceName: "icon")
-            
-            cell.layer.cornerRadius = 6
-            cell.layer.shadowColor = UIColor.gray.cgColor
-            cell.layer.shadowOffset = CGSize(width: -2.0, height: 2.0)
-            cell.layer.shadowRadius = 2.0
-            cell.layer.shadowOpacity = 0.5
-            cell.layer.masksToBounds = false
-            cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+            if showMedicalRecordData.count != 0{
+                let showIndex = showMedicalRecordData[indexPath.row]
+                cell.hospitalNameLabel.text = showIndex[3]
+                cell.diseaseNameLabel.text = showIndex[0]
+                cell.issuedDateLabel.text = day[indexPath.row]
+                cell.documentImageView.image = #imageLiteral(resourceName: "icon")
+                
+                cell.layer.cornerRadius = 6
+                cell.layer.shadowColor = UIColor.gray.cgColor
+                cell.layer.shadowOffset = CGSize(width: -2.0, height: 2.0)
+                cell.layer.shadowRadius = 2.0
+                cell.layer.shadowOpacity = 0.5
+                cell.layer.masksToBounds = false
+                cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+            }
             return cell
         }
         else {
             let cell = visitRecordCollectionView.dequeueReusableCell(withReuseIdentifier: "VisitRecordCell", for: indexPath) as! VisitRecordCell
-            cell.hospitalNameLabel.text = name[indexPath.row]
-            cell.diseaseNameLabel.text = disease[indexPath.row]
+            cell.hospitalNameLabel.text = index[3]
+            cell.diseaseNameLabel.text = index[0]
             cell.visitingDateLabel.text = day[indexPath.row]
             
             cell.layer.cornerRadius = 4

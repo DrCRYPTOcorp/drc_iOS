@@ -14,7 +14,6 @@ class AccountVC : UIViewController {
     
     @IBOutlet var accountTableView: UITableView!
     
-    let userCellNameArray : [String] = ["지갑주소", "내 정보 변경"]
     let supportCellNameArray : [String] =  ["공지사항", "개인정보 처리방침", "오픈소스 라이센스"]
     
     var userUid : String?
@@ -22,11 +21,13 @@ class AccountVC : UIViewController {
     var userName : String?
     var userGender : String?
     var userBirth : String?
+    var userAddress : String?
     
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationBarSetting()
         tableViewSetting()
     }
@@ -50,6 +51,7 @@ extension AccountVC {
         userGender = ud.string(forKey: "gender")
         userBirth = ud.string(forKey: "birth")
         userUid = ud.string(forKey: "uid")
+        userAddress = ud.string(forKey: "address")
     }
     
     @objc func logoutButtonAction(_ sender: Any) {
@@ -77,9 +79,9 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 1
         } else if section == 1 {
-            return userCellNameArray.count
+            return 2
         } else if section == 2 {
-            return supportCellNameArray.count
+            return 3
         } else {
             return 1
         }
@@ -109,7 +111,7 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "UserAccountCell", for: indexPath) as! UserAccountCell
             cell.selectionStyle = .none
-            cell.profileImageView.image = Identicon().icon(from: "0x9807142B04b0C378e2F750762cd2384040509a5A", size: CGSize(width: cell.profileImageView.frame.size.width, height: cell.profileImageView.frame.size.height))
+            cell.profileImageView.image = Identicon().icon(from: gsno(userAddress), size: CGSize(width: cell.profileImageView.frame.size.width, height: cell.profileImageView.frame.size.height))
             cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.width / 2
             cell.profileImageView.layer.masksToBounds = true
             cell.profileNameLabel.text = gsno(userName)
@@ -118,10 +120,11 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         case 1:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
             cell.selectionStyle = .none
-            cell.accountObjectLabel.text = userCellNameArray[indexPath.row]
             if indexPath.row == 0{
+                cell.accountObjectLabel.text = gsno(userAddress)
                 cell.rightActionButton.setImage(#imageLiteral(resourceName: "icCopy"), for: .normal)
             } else{
+                cell.accountObjectLabel.text = "내 정보 변경"
                 cell.rightActionButton.setImage(#imageLiteral(resourceName: "chevron"), for: .normal)
             }
             return cell

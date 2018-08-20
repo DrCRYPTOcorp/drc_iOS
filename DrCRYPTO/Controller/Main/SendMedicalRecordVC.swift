@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class SendMedicalRecordVC : UIViewController {
     
@@ -18,9 +19,13 @@ class SendMedicalRecordVC : UIViewController {
     @IBOutlet var costLabel: UILabel!
     @IBOutlet var payButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        hero.unwindToRootViewController()
+    }
+    
     
 }
