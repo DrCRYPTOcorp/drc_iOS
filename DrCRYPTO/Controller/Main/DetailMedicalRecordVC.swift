@@ -11,13 +11,21 @@ import Hero
 
 class DetailMedicalRecordVC : UIViewController {
     
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userGenderLabel: UILabel!
+    @IBOutlet var userBirthLabel: UILabel!
+    @IBOutlet var recordDateLabel: UILabel!
     @IBOutlet var medicalRecordTableView: UITableView!
     
+    let ud = UserDefaults.standard
     var medicalRecordObjectNameArray : [String] = ["병명", "소견", "비고", "의료 기관명", "전화번호", "의사 면허번호", "담당 의사"]
-    var medicalRecordData : [String] = ["123123", "23232asdasdasdasdasdasdasdasdasdasdasdasdasd3", "123123123123", "3434343434", "34343434", "asdasdasdasd", "asdasdkvkcvd"]
+    var medicalRecordData : [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameLabel.text = ud.string(forKey: "name")
+        userGenderLabel.text = ud.string(forKey: "gender")
+        userBirthLabel.text = ud.string(forKey: "birth")
         tableViewSetting()
     }
     
@@ -57,7 +65,7 @@ extension DetailMedicalRecordVC : UITableViewDelegate, UITableViewDataSource {
         let cell = medicalRecordTableView.dequeueReusableCell(withIdentifier: "DetailMedicalRecordCell", for: indexPath) as! DetailMedicalRecordCell
         
         cell.objectNameLabel.text = medicalRecordObjectNameArray[indexPath.row]
-        cell.descriptionLabel.text = medicalRecordData[indexPath.row]
+        cell.descriptionLabel.text = medicalRecordData![indexPath.row]
         
         return cell
     }

@@ -40,13 +40,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 DRC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTK-Rp-oeI">
-                                                    <rect key="frame" x="322.5" y="18.5" width="33.5" height="14"/>
+                                                    <rect key="frame" x="322.5" y="28.5" width="33.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-r0-fMZ">
-                                                    <rect key="frame" x="72" y="17" width="231" height="36.5"/>
+                                                    <rect key="frame" x="72" y="27" width="231" height="16.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-fF-xsL">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
@@ -71,8 +71,8 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 지갑 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-Pp-oDz">
-                                                            <rect key="frame" x="0.0" y="22.5" width="91.5" height="14"/>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 지갑 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-Pp-oDz">
+                                                            <rect key="frame" x="0.0" y="-27" width="91.5" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="NanumBarunGothicLight" family="NanumBarunGothic" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -81,13 +81,18 @@
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSend" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-mv-K7g">
                                                     <rect key="frame" x="24" y="9" width="36" height="52"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="bFK-qf-gR2"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nUx-mv-K7g" firstAttribute="centerY" secondItem="PeK-eg-pSt" secondAttribute="centerY" id="3AX-6L-Fai"/>
+                                                <constraint firstAttribute="bottom" secondItem="nUx-mv-K7g" secondAttribute="bottom" constant="9.5" id="DIw-7z-OqY"/>
                                                 <constraint firstItem="iTK-Rp-oeI" firstAttribute="centerY" secondItem="xrS-fF-xsL" secondAttribute="centerY" id="S0X-AQ-IlH"/>
                                                 <constraint firstItem="zTp-r0-fMZ" firstAttribute="centerY" secondItem="nUx-mv-K7g" secondAttribute="centerY" id="TGm-nM-Yzc"/>
                                                 <constraint firstItem="zTp-r0-fMZ" firstAttribute="centerX" secondItem="PeK-eg-pSt" secondAttribute="centerX" id="fgM-M7-oqp"/>
+                                                <constraint firstItem="nUx-mv-K7g" firstAttribute="top" secondItem="PeK-eg-pSt" secondAttribute="top" constant="9" id="fiU-2D-tta"/>
                                                 <constraint firstItem="nUx-mv-K7g" firstAttribute="leading" secondItem="PeK-eg-pSt" secondAttribute="leading" constant="24" id="o64-Xe-Nax"/>
                                                 <constraint firstItem="zTp-r0-fMZ" firstAttribute="leading" secondItem="nUx-mv-K7g" secondAttribute="trailing" constant="12" id="qNl-lX-9K2"/>
                                                 <constraint firstAttribute="trailing" secondItem="iTK-Rp-oeI" secondAttribute="trailing" constant="19" id="zqc-jU-TS1"/>

@@ -10,6 +10,12 @@ import UIKit
 import web3swift
 import BigInt
 import SwiftyJSON
+import FirebaseDatabase
+
+extension Notification.Name{
+    static let paidMedicalRecordNoti = Notification.Name("paidMedicalRecordNoti")
+
+}
 
 
 class MedicalWalletVC : UIViewController {
@@ -40,7 +46,7 @@ class MedicalWalletVC : UIViewController {
     var day = ["2018-08-02", "2018-08-04", "2018-08-10", "2018-08-12", "2018-08-14"]
     
     //MARK: Blockchain
-    let contractAddress = EthereumAddress("0x5c5b46bcf715ddb42e3b21fe43531914a5cb2f6c")
+    let contractAddress = EthereumAddress("0xe925b68b019c3367acef2925837c41ae11784ecd")
     var web3Rinkeby:web3?
     var bip32keystore:BIP32Keystore?
     var keystoremanager:KeystoreManager?
@@ -49,20 +55,19 @@ class MedicalWalletVC : UIViewController {
     
     var userMedicalRecordCount = 0
     
-    var dwidderABI = "[{\"constant\": true,\"inputs\": [{\"name\": \"\",\"type\": \"uint256\"}],\"name\": \"postIds\",\"outputs\": [{\"name\": \"\",\"type\": \"bytes32\"}],\"payable\": false,\"stateMutability\":\"view\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [{\"name\":\"postId\",\"type\": \"bytes32\"}],\"name\": \"vote\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getPostAt\",\"outputs\": [{\"name\": \"id\",\"type\": \"bytes32\"},{\"name\": \"author\",\"type\": \"address\"},{\"name\": \"message\",\"type\": \"string\"},{\"name\": \"votes\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\":\"view\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [{\"name\": \"message\",\"type\": \"string\"}],\"name\": \"create\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": false,\"inputs\": [],\"name\": \"proofOfPost\",\"outputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"getPostCount\",\"outputs\": [{\"name\": \"\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"token\",\"outputs\": [{\"name\": \"\",\"type\": \"address\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"inputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"constructor\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": true,\"name\": \"id\",\"type\": \"bytes32\"},{\"indexed\": true,\"name\": \"author\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"message\",\"type\": \"string\"}],\"name\": \"Posting\",\"type\": \"event\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": true,\"name\": \"voter\",\"type\": \"address\"},{\"indexed\": true,\"name\": \"postId\",\"type\": \"bytes32\"},{\"indexed\": false,\"name\": \"votes\",\"type\": \"uint256\"}],\"name\": \"Voting\",\"type\": \"event\"}]"
-    
     var accountABI = "[{\"constant\": false,\"inputs\": [{\"name\": \"index\",\"type\": \"uint256\"},{\"name\": \"patientAddress\",\"type\": \"address\"},{\"name\": \"diseaseName\",\"type\": \"string\"},{\"name\": \"doctorOpinion\",\"type\": \"string\"},{\"name\": \"note\",\"type\": \"string\"},{\"name\": \"hospitalName\",\"type\": \"string\"},{\"name\": \"hospitalPhoneNumber\",\"type\": \"string\"},{\"name\": \"doctorLisenceNumber\",\"type\": \"string\"},{\"name\": \"doctorName\",\"type\": \"string\"}],\"name\": \"appendMedicalRecord\",\"outputs\": [{\"name\": \"success\",\"type\": \"bool\"}],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"function\"},{\"anonymous\": false,\"inputs\": [{\"indexed\": false,\"name\": \"sender\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"patientAddress\",\"type\": \"address\"},{\"indexed\": false,\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"LogPatient\",\"type\": \"event\"},{\"inputs\": [],\"payable\": false,\"stateMutability\": \"nonpayable\",\"type\": \"constructor\"},{\"constant\": true,\"inputs\": [{\"name\": \"\",\"type\": \"address\"}],\"name\": \"addressStructs\",\"outputs\": [{\"name\": \"index\",\"type\": \"uint256\"},{\"name\": \"isAddress\",\"type\": \"bool\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"fetch\",\"type\": \"address\"},{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getHospitalStruct\",\"outputs\": [{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"patientAddress\",\"type\": \"address\"}],\"name\": \"getMedicalRecordCount\",\"outputs\": [{\"name\": \"count\",\"type\": \"uint256\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [{\"name\": \"fetch\",\"type\": \"address\"},{\"name\": \"index\",\"type\": \"uint256\"}],\"name\": \"getUserMedicalStruct\",\"outputs\": [{\"name\": \"\",\"type\": \"uint256\"},{\"name\": \"\",\"type\": \"bool\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"},{\"name\": \"\",\"type\": \"string\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"},{\"constant\": true,\"inputs\": [],\"name\": \"token\",\"outputs\": [{\"name\": \"\",\"type\": \"address\"}],\"payable\": false,\"stateMutability\": \"view\",\"type\": \"function\"}]"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userName = ud.string(forKey: "name")
+        self.title = gsno(userName) + "님"
         whiteImageView.isHidden = true
         medicalRecordCollectionView.delegate = self
         medicalRecordCollectionView.dataSource = self
         visitRecordCollectionView.delegate = self
         visitRecordCollectionView.dataSource = self
-        
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(paidMedicalRecordNoti), name: .paidMedicalRecordNoti, object: nil)
+        print(ud.string(forKey: "address"))
         navigationBarSetting()
         searchBarSetting()
         getBlockChainData()
@@ -72,9 +77,36 @@ class MedicalWalletVC : UIViewController {
         super.viewWillAppear(true)
     }
     
+//    func recordLoading(){
+//        var ref: DatabaseReference!
+//        ref = Database.database().reference()
+//
+//        ref.child("records").child(gsno(ud.string(forKey: "uid"))).observeSingleEvent(of: .value, with: { snapShot in
+//            let userRecord = snapShot.value as! [String]
+//            if userRecord != nil{
+//                print(userRecord)
+//            }
+//
+//        })
+//        medicalRecordCollectionView.reloadData()
+//    }
+    
+    @objc func paidMedicalRecordNoti(notification: NSNotification){
+        showMedicalRecordData.append(notification.userInfo!["index"] as! [String])
+        //MARK: Firebase Database User Data Save - UID 구분
+        Database.database().reference().child("records/\(gsno(ud.string(forKey: "uid")))").setValue(
+            notification.userInfo!["index"] as! [String]
+        )
+        print(showMedicalRecordData)
+        medicalRecordCollectionView.reloadData()
+        noData()
+    }
+    
 }
 
 extension MedicalWalletVC : UISearchBarDelegate {
+    
+    
     
     func getBlockChainData(){
         let accessToken : String = "7600d818c4084a56953378cdf14a15df"
@@ -89,12 +121,13 @@ extension MedicalWalletVC : UISearchBarDelegate {
         self.userAddress = self.bip32keystore?.addresses?.first?.address
         var ethAdd = EthereumAddress(gsno(userAddress))
         let balancebigint = web3Rinkeby?.eth.getBalance(address: ethAdd!).value
-        print("Ether Balance :\(String(describing: Web3.Utils.formatToEthereumUnits(balancebigint ?? 0)!))")
+        ud.setValue(String(describing: Web3.Utils.formatToEthereumUnits(balancebigint ?? 0)!), forKey: "DRC")
         let gasPriceResult = web3Rinkeby?.eth.getGasPrice()
         guard case .success(let gasPrice)? = gasPriceResult else {return}
         var options = Web3Options()
         options.gasPrice = gasPrice
         options.from = ethAdd
+        
         
         //MARK: 토큰 이름 불러오기
         self.contract = self.web3Rinkeby?.contract(accountABI, at: self.contractAddress, abiVersion: 2)!
@@ -143,7 +176,6 @@ extension MedicalWalletVC : UISearchBarDelegate {
     }
     
     func navigationBarSetting(){
-        self.title = gsno(userName) + "님"
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.01568627451, green: 0.7725490196, blue: 0.737254902, alpha: 1)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -303,15 +335,24 @@ extension MedicalWalletVC : UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let detailVC = storyboard?.instantiateViewController(
-            withIdentifier : "DetailMedicalRecordVC"
-            ) as? DetailMedicalRecordVC
-            else{return}
-        self.present(detailVC, animated: true, completion: nil)
+        let index = totalMedicalRecordData[indexPath.row]
+        if collectionView == medicalRecordCollectionView {
+            guard let detailVC = storyboard?.instantiateViewController(
+                withIdentifier : "DetailMedicalRecordVC"
+                ) as? DetailMedicalRecordVC
+                else{return}
+            detailVC.medicalRecordData = index
+            self.present(detailVC, animated: true, completion: nil)
+        } else {
+            guard let issueVC = storyboard?.instantiateViewController(
+                withIdentifier : "IssueMedicalRecordVC"
+                ) as? IssueMedicalRecordVC
+                else{return}
+            issueVC.diseaseName = index[0]
+            issueVC.hospitalName = index[3]
+            issueVC.paidMedicalRecordData = index
+            issueVC.indexPathRow = indexPath.row
+            self.present(issueVC, animated: true, completion: nil)
+        }
     }
-    
-
-    
-    
-    
 }

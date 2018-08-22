@@ -207,7 +207,8 @@ extension JoinVC : UIPickerViewDataSource, UIPickerViewDelegate {
                         "name": self.gsno(self.nameTextField.text),
                         "gender": self.gsno(self.genderTextField.text),
                         "birth": self.gsno(self.birthTextField.text),
-                        "address": self.gsno(sender.address)
+                        "address": self.gsno(sender.address),
+                        "password": self.gsno(self.confirmPasswordTextField.text)
                         ])
                     self.performSegue(withIdentifier: "unwindToSplash", sender: self)
                 }

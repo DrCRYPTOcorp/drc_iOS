@@ -26,6 +26,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     
     var check = true
     let ud = UserDefaults.standard
+    var userName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,20 +36,14 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         splashView()
         loginView()
         initAddTarget()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-            self.logoAnimation()
-        }
         
         //MARK : Firebase Login 검증
-        if let user = Auth.auth().currentUser {
+        if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
             userDataSave(uid: gsno(uid))
-            //MARK: 지갑 자동로그인
-            let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
-                let stb = UIStoryboard(name: "Main", bundle: nil)
-                let controller = stb.instantiateViewController(withIdentifier: "TabBarVC")
-                UIApplication.shared.keyWindow?.rootViewController = controller
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+                self.logoAnimation()
             }
         }
     }
@@ -73,20 +68,34 @@ extension LoginVC {
             let userDic = snapShot.value as? Dictionary<String,String>
             
             for (key, value) in userDic!{
-                if key == "name"{
-                    self.ud.setValue(value, forKey: "name")
-                } else if key == "gender"{
+                if key == "gender"{
                     self.ud.setValue(value, forKey: "gender")
-                } else if key == "birth"{
+                }
+                else if key == "birth"{
                     self.ud.setValue(value, forKey: "birth")
-                } else if key == "email"{
+                }
+                else if key == "email"{
                     self.ud.setValue(value, forKey: "email")
-                } else if key == "uid"{
+                }
+                else if key == "uid"{
                     self.ud.setValue(value, forKey: "uid")
-                } else if key == "address"{
+                }
+                else if key == "address"{
                     self.ud.setValue(value, forKey: "address")
                 }
-                self.ud.synchronize()
+                else if key == "name"{
+                    self.ud.setValue(value, forKey: "name")
+                }
+                else if key == "password"{
+                    self.ud.setValue(value, forKey: "password")
+                }
+            }
+            self.ud.synchronize()
+            let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
+                let stb = UIStoryboard(name: "Main", bundle: nil)
+                let controller = stb.instantiateViewController(withIdentifier: "TabBarVC")
+                UIApplication.shared.keyWindow?.rootViewController = controller
             }
         })
     }
@@ -97,12 +106,6 @@ extension LoginVC {
             if user != nil{
                 let uid = Auth.auth().currentUser?.uid
                 self.userDataSave(uid: self.gsno(uid))
-                let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
-                    let stb = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = stb.instantiateViewController(withIdentifier: "TabBarVC")
-                    UIApplication.shared.keyWindow?.rootViewController = controller
-                }
             }
             else{
                 self.simpleAlert(title: "로그인 오류", msg: "이메일 또는 비밀번호를 확인해주세요.")
