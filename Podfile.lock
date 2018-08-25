@@ -67,15 +67,16 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - PromiseKit (6.3.4):
-    - PromiseKit/CorePromise (= 6.3.4)
-    - PromiseKit/Foundation (= 6.3.4)
-    - PromiseKit/UIKit (= 6.3.4)
-  - PromiseKit/CorePromise (6.3.4)
-  - PromiseKit/Foundation (6.3.4):
+  - PromiseKit (6.4.0):
+    - PromiseKit/CorePromise (= 6.4.0)
+    - PromiseKit/Foundation (= 6.4.0)
+    - PromiseKit/UIKit (= 6.4.0)
+  - PromiseKit/CorePromise (6.4.0)
+  - PromiseKit/Foundation (6.4.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.3.4):
+  - PromiseKit/UIKit (6.4.0):
     - PromiseKit/CorePromise
+  - QRCodeReader.swift (8.2.0)
   - Result (3.2.4)
   - scrypt (1.5):
     - CryptoSwift (~> 0.11)
@@ -96,6 +97,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Hero
   - IGIdenticon
+  - QRCodeReader.swift
   - SwiftyJSON
   - web3swift
 
@@ -118,6 +120,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromiseKit
+    - QRCodeReader.swift
     - Result
     - scrypt
     - secp256k1_ios
@@ -142,7 +145,8 @@ SPEC CHECKSUMS:
   IGIdenticon: 0f8fa2c776e35d4cb204bedbc5005ef748b263d8
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
+  PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
+  QRCodeReader.swift: 003eb32f18a5a675b936ec82ba0ff368cddbff45
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   scrypt: 0da45be386be45f857d8545216148e86e753a9a1
   secp256k1_ios: ac9ef04e761f43c58012b28548afa91493761f17
@@ -150,6 +154,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   web3swift: 03f9c64f8597a8167d32f87cbc282cf1b300f7e5
 
-PODFILE CHECKSUM: 416d6150ab7393715253b79115dd087222d5f8dd
+PODFILE CHECKSUM: 296ae9d6a6e54497fe93db0787a40061c85f28c5
 
 COCOAPODS: 1.5.3

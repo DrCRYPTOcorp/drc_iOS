@@ -20,7 +20,11 @@ class TransactionCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        hospitalNameLabel.font = UIFont(name: "NanumBarunGothicBold", size: 14)
+        diseaseNameLabel.font = UIFont(name: "NanumBarunGothicBold", size: 14)
+        hospitalWalletAddressLabel.font = UIFont(name: "NanumBarunGothicLight", size: 12)
+        drcLabel.font = UIFont(name: "NanumBarunGothicBold", size: 12)
+        drcLabel.textColor = #colorLiteral(red: 0.9764705882, green: 0.6705882353, blue: 0.3019607843, alpha: 1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

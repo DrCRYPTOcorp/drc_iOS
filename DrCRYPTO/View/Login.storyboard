@@ -71,19 +71,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDZ-Nt-9Om">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7fw-Fj-17T" firstAttribute="leading" secondItem="ywa-bN-mY1" secondAttribute="leading" id="0hO-Qi-uhC"/>
                             <constraint firstItem="n8d-ey-lYV" firstAttribute="top" secondItem="P7n-7U-DZh" secondAttribute="bottom" constant="66" id="AM4-WH-3aM"/>
                             <constraint firstItem="7fw-Fj-17T" firstAttribute="trailing" secondItem="ywa-bN-mY1" secondAttribute="trailing" id="Anh-5q-9qA"/>
+                            <constraint firstItem="WDZ-Nt-9Om" firstAttribute="top" secondItem="4KQ-gn-W0G" secondAttribute="top" id="CSm-oA-xg6"/>
                             <constraint firstItem="P7n-7U-DZh" firstAttribute="centerY" secondItem="4KQ-gn-W0G" secondAttribute="centerY" constant="44.5" id="EcN-IO-OkD"/>
+                            <constraint firstItem="WDZ-Nt-9Om" firstAttribute="bottom" secondItem="ywa-bN-mY1" secondAttribute="bottom" id="Eqd-b4-RVC"/>
                             <constraint firstItem="hx5-gU-3cJ" firstAttribute="centerY" secondItem="4KQ-gn-W0G" secondAttribute="centerY" constant="-149.5" id="ExY-Ae-UHd"/>
                             <constraint firstItem="7fw-Fj-17T" firstAttribute="top" secondItem="4KQ-gn-W0G" secondAttribute="top" id="JBX-aN-WTg"/>
+                            <constraint firstItem="WDZ-Nt-9Om" firstAttribute="trailing" secondItem="ywa-bN-mY1" secondAttribute="trailing" id="NS1-Xl-XbO"/>
                             <constraint firstItem="hx5-gU-3cJ" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="QWX-J1-o5U"/>
                             <constraint firstItem="7fw-Fj-17T" firstAttribute="bottom" secondItem="ywa-bN-mY1" secondAttribute="bottom" id="TVR-ON-sev"/>
                             <constraint firstItem="P7n-7U-DZh" firstAttribute="leading" secondItem="ywa-bN-mY1" secondAttribute="leading" constant="44" id="TeF-nC-vk9"/>
                             <constraint firstItem="n8d-ey-lYV" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="aab-Ws-Isw"/>
+                            <constraint firstItem="WDZ-Nt-9Om" firstAttribute="leading" secondItem="ywa-bN-mY1" secondAttribute="leading" id="hw7-BE-nGt"/>
                             <constraint firstItem="P7n-7U-DZh" firstAttribute="centerX" secondItem="4KQ-gn-W0G" secondAttribute="centerX" id="ypb-g7-l1q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ywa-bN-mY1"/>
@@ -95,6 +103,7 @@
                         <outlet property="buttonStackView" destination="n8d-ey-lYV" id="x7J-8e-foT"/>
                         <outlet property="centerYConstraint" destination="EcN-IO-OkD" id="jKm-et-y9a"/>
                         <outlet property="emailTextField" destination="nbs-dE-wUW" id="wkC-rX-Tc8"/>
+                        <outlet property="grayViewButton" destination="WDZ-Nt-9Om" id="2fA-bH-T3e"/>
                         <outlet property="loginButton" destination="y23-ls-5t6" id="FcT-hg-37O"/>
                         <outlet property="loginStackView" destination="P7n-7U-DZh" id="3mg-h3-6oJ"/>
                         <outlet property="logoCenterYConstraint" destination="ExY-Ae-UHd" id="Ne4-fr-BXb"/>

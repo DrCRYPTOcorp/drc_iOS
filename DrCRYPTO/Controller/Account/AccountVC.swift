@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import IGIdenticon
+import web3swift
+import BigInt
 
 class AccountVC : UIViewController {
     
@@ -22,6 +24,8 @@ class AccountVC : UIViewController {
     var userGender : String?
     var userBirth : String?
     var userAddress : String?
+    var userEther : String?
+    var userDRC : String?
     
     let ud = UserDefaults.standard
     
@@ -34,6 +38,9 @@ class AccountVC : UIViewController {
 }
 
 extension AccountVC {
+    
+    func getMoneyData(){
+    }
     
     func navigationBarSetting(){
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumBarunGothicBold", size: 16)!]
@@ -52,6 +59,8 @@ extension AccountVC {
         userBirth = ud.string(forKey: "birth")
         userUid = ud.string(forKey: "uid")
         userAddress = ud.string(forKey: "address")
+        userEther = ud.string(forKey: "ETH")
+        userDRC = ud.string(forKey: "DRC")
     }
     
     @objc func logoutButtonAction(_ sender: Any) {
@@ -79,7 +88,7 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 2
+            return 3
         } else if section == 2 {
             return 3
         } else {
@@ -121,11 +130,21 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath) as! AccountCell
             cell.selectionStyle = .none
             if indexPath.row == 0{
+                cell.accountObjectLabel.text = "이더리움(ETH)"
+                cell.rightActionButton.isHidden = true
+                cell.moneyLabel.text = "\(gsno(ud.string(forKey: "ETH"))) ETH"
+                cell.moneyLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.8)
+            } else if indexPath.row == 1{
+                cell.accountObjectLabel.text = "토큰(DRC)"
+                cell.rightActionButton.isHidden = true
+                cell.moneyLabel.text = "\(gsno(ud.string(forKey: "DRC"))) DRC"
+                cell.moneyLabel.textColor = #colorLiteral(red: 0.01568627451, green: 0.7725490196, blue: 0.737254902, alpha: 1)
+                
+            } else {
+                cell.rightActionButton.isHidden = false
+                cell.moneyLabel.isHidden = true
                 cell.accountObjectLabel.text = gsno(userAddress)
                 cell.rightActionButton.setImage(#imageLiteral(resourceName: "icCopy"), for: .normal)
-            } else{
-                cell.accountObjectLabel.text = "내 정보 변경"
-                cell.rightActionButton.setImage(#imageLiteral(resourceName: "chevron"), for: .normal)
             }
             return cell
             
@@ -134,6 +153,7 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             cell.accountObjectLabel.text = supportCellNameArray[indexPath.row]
             cell.rightActionButton.setImage(#imageLiteral(resourceName: "chevron"), for: .normal)
+            cell.moneyLabel.isHidden = true
             return cell
         default:
             let cell = accountTableView.dequeueReusableCell(withIdentifier: "LogoutCell", for: indexPath) as! LogoutCell
@@ -148,14 +168,21 @@ extension AccountVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedCell : UITableViewCell = accountTableView.cellForRow(at: indexPath)!
+        let selectedCell : UITableViewCell = accountTableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.clear
         
         switch indexPath.section {
         case 0:
             break
         case 1:
-            break
+            if indexPath.row == 2{
+                let alert = UIAlertController(title: "지갑 주소 복사", message: gsno(userAddress), preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "확인", style: .cancel) { (UIAlertAction) in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                alert.addAction(okayAction)
+                present(alert, animated: true)
+            }
         case 2:
             //MARK: 공지사항
             if indexPath.row == 0{

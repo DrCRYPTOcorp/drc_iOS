@@ -17,28 +17,51 @@ class TransactionVC : UIViewController {
     var transactionData = [[String]]()
     let ud = UserDefaults.standard
     
-    var hospitalData = [String]()
-    var diseaseData = [String]()
+    var sendDiseaseName : String?
+    var sendHospitalName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarSetting()
         tableviewSetting()
+        recordLoading()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        ref.child("history").child(gsno(ud.string(forKey: "uid"))).observeSingleEvent(of: .value, with: { snapShot in
-            let userDic = snapShot.value as? [String]
-            self.transactionData = [userDic] as! [[String]]
-        })
-        dataSetting()
-        transactionTableView.reloadData()
+    //MARK: 결제완료 Noti 이벤트
+    @objc func updateTransactionNoti(notification: NSNotification){
+        recordLoading()
     }
 }
 
+
 extension TransactionVC {
+    
+    func recordLoading(){
+        transactionData = [[String]]()
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref.keepSynced(true)
+        ref.child("records").child(gsno(ud.string(forKey: "uid"))).observeSingleEvent(of: .value, with: { snapShot in
+            //MARK: 데이터 유효성 검사
+            guard snapShot.exists() else{
+                print("Data doesn't exist")
+                return
+            }
+            //MARK: 0:병명,1:소견,2:비고,3:병원이름,4:전화번호,5:의사면허,6:의사이름,7:방문시간
+            let userRecord = snapShot.value as! Dictionary<String,Dictionary<String,String>>
+            
+            for firstKey in userRecord{
+                var tempArray = [String]()
+                for secondKey in firstKey.value{
+                    tempArray.append(secondKey.value)
+                }
+                self.transactionData.append(tempArray)
+            }
+            self.transactionData = self.transactionData.sorted{ $0[7] > $1[7] }
+            self.transactionTableView.reloadData()
+            self.noData()
+        })
+    }
     
     func navigationBarSetting(){
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "NanumBarunGothicBold", size: 16)!]
@@ -52,7 +75,7 @@ extension TransactionVC {
         transactionTableView.allowsSelection = false
     }
     
-    func dataSetting(){
+    func noData(){
         if transactionData.count == 0{
             noTransactionImageView.isHidden = false
             transactionTableView.isHidden = true
@@ -73,8 +96,9 @@ extension TransactionVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = transactionTableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
         let index = transactionData[indexPath.row]
-        cell.hospitalNameLabel.text = index[0]
+        cell.hospitalNameLabel.text = index[6]
         cell.diseaseNameLabel.text = index[1]
+        cell.hospitalWalletAddressLabel.text = index[7]
         cell.statusImageView.image = #imageLiteral(resourceName: "icRequest")
         cell.drcLabel.text = "30 DRC"
         return cell

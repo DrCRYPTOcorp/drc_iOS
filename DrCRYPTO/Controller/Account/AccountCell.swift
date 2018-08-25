@@ -12,12 +12,13 @@ class AccountCell: UITableViewCell {
 
     @IBOutlet var accountObjectLabel: UILabel!
     @IBOutlet var rightActionButton: UIButton!
+    @IBOutlet var moneyLabel: UILabel!
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        moneyLabel.font = UIFont(name: "NanumBarunGothicBold", size: 14)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +26,5 @@ class AccountCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

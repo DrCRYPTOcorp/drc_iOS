@@ -116,29 +116,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x9807142B04b0C378e2F750762cd238404050" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5d-66-bMc">
-                                                    <rect key="frame" x="28" y="14" width="287" height="17"/>
+                                                    <rect key="frame" x="28" y="14" width="267" height="17"/>
                                                     <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs2-O8-Ac2">
                                                     <rect key="frame" x="325" y="7" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="zs2-O8-Ac2" secondAttribute="height" multiplier="1:1" id="n4a-3V-Yof"/>
-                                                    </constraints>
                                                     <state key="normal" image="icCopy"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1l-GY-JOd">
+                                                    <rect key="frame" x="305" y="11.5" width="50" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="s1l-GY-JOd" firstAttribute="centerY" secondItem="mHZ-YD-lYE" secondAttribute="centerY" id="6IO-vh-Wfe"/>
                                                 <constraint firstItem="zs2-O8-Ac2" firstAttribute="centerY" secondItem="mHZ-YD-lYE" secondAttribute="centerY" id="Dnh-HB-Khl"/>
                                                 <constraint firstItem="w5d-66-bMc" firstAttribute="centerY" secondItem="mHZ-YD-lYE" secondAttribute="centerY" id="Hje-Qp-o7p"/>
+                                                <constraint firstItem="s1l-GY-JOd" firstAttribute="leading" secondItem="w5d-66-bMc" secondAttribute="trailing" constant="10" id="hQ9-H3-wcL"/>
                                                 <constraint firstAttribute="trailing" secondItem="zs2-O8-Ac2" secondAttribute="trailing" constant="20" id="hxs-7E-SUh"/>
-                                                <constraint firstItem="zs2-O8-Ac2" firstAttribute="trailing" secondItem="w5d-66-bMc" secondAttribute="trailing" constant="40" id="k4c-Sv-lXB"/>
+                                                <constraint firstItem="zs2-O8-Ac2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w5d-66-bMc" secondAttribute="trailing" constant="60" id="k4c-Sv-lXB"/>
                                                 <constraint firstItem="w5d-66-bMc" firstAttribute="leading" secondItem="mHZ-YD-lYE" secondAttribute="leading" constant="28" id="o7w-7d-e4f"/>
+                                                <constraint firstItem="zs2-O8-Ac2" firstAttribute="trailing" secondItem="s1l-GY-JOd" secondAttribute="trailing" id="tcR-iD-4pU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="accountObjectLabel" destination="w5d-66-bMc" id="4IM-Kq-xHd"/>
+                                            <outlet property="moneyLabel" destination="s1l-GY-JOd" id="Rtf-d8-nDp"/>
                                             <outlet property="rightActionButton" destination="zs2-O8-Ac2" id="aQh-Bl-EmC"/>
                                         </connections>
                                     </tableViewCell>
@@ -313,10 +320,10 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. Dr.CRYPTO(이하 ‘회사’’)는 고객의 개인정보를 매우 중요시하며, 법령 및 방송통신위원회의 개인정보보호지침상 개인정보 보호규정을 준수하고 있습니다.
+                                        <string key="content">A. Dr.CRYPTO(이하 ‘회사’’)는 고객의 개인정보를 매우 중요시하며, 법령 및 방송통신위원회의 개인정보보호지침상 개인정보 보호규정을 준수하고 있습니다.
 B. 회사는 개인정보취급방침을 통하여 고객의 개인정보가 어떤 용도와 방식으로 이용되고 있으며 개인정보 보호를 위하여 어떤 조치가 취해지고 있는지 알려드립니다.
 C. 회사는 개인정보취급방침을 서비스 화면에 공개함으로써 고객이 언제나 쉽게 보고 확인할 수 있도록 조치하고 있습니다.
-D. 회사는 개인정보취급방침을 관련 법령 및 방송통신위원회의 개인정보보호지침의 변경 또는 내부 운영규정의 변경에 따라 개정할 수 있으며, 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 고객이 쉽게 알아볼 수 있도록 하고 있습니다.</mutableString>
+D. 회사는 개인정보취급방침을 관련 법령 및 방송통신위원회의 개인정보보호지침의 변경 또는 내부 운영규정의 변경에 따라 개정할 수 있으며, 개인정보취급방침을 개정하는 경우 버전번호 등을 부여하여 개정된 사항을 고객이 쉽게 알아볼 수 있도록 하고 있습니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -347,7 +354,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. 회사는 고객의 개인정보를 수집하는 경우 관련 법령에 따라 가입신청서 또는 이용약관 등을 통하여 그 수집범위 및 수집 이용 목적을 사전에 고지합니다.
+                                        <string key="content">A. 회사는 고객의 개인정보를 수집하는 경우 관련 법령에 따라 가입신청서 또는 이용약관 등을 통하여 그 수집범위 및 수집 이용 목적을 사전에 고지합니다.
 B. 회사가 수집하는 고객의 개인정보는 다음과 같습니다.
 1. 서비스 이용시 수집하는 개인정보
 이름, 성별, 나이, 휴대전화번호, 이메일, 프로필 사진, 서비스 이용내역, 성별, 스마트폰 고유번호, 통계데이터, 서비스 설정정보, 접속로그 등
@@ -355,7 +362,7 @@ B. 회사가 수집하는 고객의 개인정보는 다음과 같습니다.
 이메일, 구매내역 확인내용(구매일, 주문번호, 주문 내역 등), 본인이 아닌 타인에 의한 결제사실 확인을 위한 실명 및 가족관계 증명
 C. 회사는 다음과 같은 방법으로 개인정보를 수집합니다.
 - 서비스 내 입력, 서면양식, 전화, 팩스를 통한 회원가입, 상담게시판, 경품 행사 응모, 배송 요청, 생성정보수집 툴 등
-D. 회사는 법령의 규정 또는 고객의 동의 없이는 사상, 신념, 과거의 병력 등 고객의 권리 또는 이익이나 사생활을 뚜렷하게 침해할 우려가 있는 개인정보를 수집하지 않습니다.</mutableString>
+D. 회사는 법령의 규정 또는 고객의 동의 없이는 사상, 신념, 과거의 병력 등 고객의 권리 또는 이익이나 사생활을 뚜렷하게 침해할 우려가 있는 개인정보를 수집하지 않습니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -386,13 +393,13 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">회사가 고객의 개인정보를 수집 및 이용하는 목적은 다음과 같습니다.
+                                        <string key="content">회사가 고객의 개인정보를 수집 및 이용하는 목적은 다음과 같습니다.
 A. 서비스 제공에 관한 계약 이행 및 유료 서비스 제공에 따른 요금정산
 콘텐츠 제공, 유료 서비스 이용에 대한 과금, 본인인증
 B. 이용자관리
 개인식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 중복가입확인, 가입의사 확인, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 고지사항 전달
 C. 마케팅 및 광고에 활용
-신규 서비스 개발 및 맞춤 서비스 제공, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스 유효성 확인, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 및 광고성 정보와 참여기회 제공</mutableString>
+신규 서비스 개발 및 맞춤 서비스 제공, 통계학적 특성에 따른 서비스 제공 및 광고 게재, 서비스 유효성 확인, 접속 빈도 파악, 회원의 서비스 이용에 대한 통계, 이벤트 및 광고성 정보와 참여기회 제공</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -423,11 +430,11 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. 회사는 고객의 개인정보를 이용약관, 개인정보취급방침의 “개인정보 수집 및 이용 목적상 고지한 범위 내에서 이용 및 제공하며, 그 범위를 넘어서 이용하거나 제공하지 않습니다. 특히, 다음의 경우는 주의를 기울여 개인정보를 이용 및 제공할 것입니다.
+                                        <string key="content">A. 회사는 고객의 개인정보를 이용약관, 개인정보취급방침의 “개인정보 수집 및 이용 목적상 고지한 범위 내에서 이용 및 제공하며, 그 범위를 넘어서 이용하거나 제공하지 않습니다. 특히, 다음의 경우는 주의를 기울여 개인정보를 이용 및 제공할 것입니다.
 1. 서비스 내에서 본인의 프로필 정보 및 본인이 선택한 이성 평가는 다른 회원에게 공유됩니다.
 2. 매각•인수합병 등 회사의 서비스제공자로서의 권리와 의무가 완전 승계 또는 이전되는 경우 사전에 개인정보를 이전하려는 사실, 개인정보의 이전을 받는 자(이하 “영업양수자등”)의 성명(법인인 경우 법인의 명칭)•주소•전화번호 그 밖에 연락처, 고객이 개인정보의 이전을 원하지 아니하는 경우 그 동의를 철회할 수 있는 방법과 절차에 대해 상세하게 고지할 것이며 고객의 개인정보에 대한 동의 철회의 선택권을 부여합니다.
 B. 고객의 동의가 있거나, 고객의 동의가 없더라도 요금정산을 위하여 필요한 경우, 국세기본법, 지방세법, 통신비밀보호법, 금융실명거래 및 비밀보장에 관한 법률, 신용정보의 이용 및 보호에 관한 법률, 전기통신기본법, 전기통신사업법, 소비자기본법, 한국은행법, 형사소송법 등 관련 법령에 특별한 규정이 있는 경우에는, 제(1)항의 규정에도 불구하고 회사는 고객의 개인정보 수집 시에 고객에게 고지한 범위 또는 이용약관에 명시한 범위를 넘어서 이용하거나 제3자에게 제공할 수 있습니다. 다만, 관련 법령에 의한 경우에도 고객의 개인정보를 무조건 제공하는 것은 아니며 법령에 정해진 절차와 방법에 따라 제공합니다.
-C. 회사는 서비스의 제공에 관한 계약을 이행하기 위하여 필요한 개인정보로서 경제적•기술적인 사유로 통상적인 동의를 받는 것이 뚜렷하게 곤란한 경우에는 고객의 동의가 없더라도 개인정보를 수집•이용할 수 있습니다.</mutableString>
+C. 회사는 서비스의 제공에 관한 계약을 이행하기 위하여 필요한 개인정보로서 경제적•기술적인 사유로 통상적인 동의를 받는 것이 뚜렷하게 곤란한 경우에는 고객의 동의가 없더라도 개인정보를 수집•이용할 수 있습니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -458,7 +465,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. 회사는 이용자가 회사가 제공하는 서비스를 이용하는 동안 이용자의 개인정보를 보유합니다.
+                                        <string key="content">A. 회사는 이용자가 회사가 제공하는 서비스를 이용하는 동안 이용자의 개인정보를 보유합니다.
 B. 이용자의 개인정보는 개인정보의 수집목적 또는 제공받은 목적이 달성되면 파기됩니다. 이용자가 회원탈퇴를 하거나 개인정보 허위기재로 인해 회원 ID 삭제 처분을 받은 경우 수집된 개인정보는 삭제되며 어떠한 용도로도 이용할 수 없도록 처리됩니다. 다만, 이용 해지 후 도용 등의 피해가 발생할 우려가 있으므로 개인정보를 7일간 임시 보관하게 됩니다. 7일 후에는 회원 DB에서 완전히 삭제됩니다.
 C. 또한 명의도용 분쟁 발생시 본인확인을 위해 제출 받은 신분증 사본은 본인확인 후 즉각 폐기됩니다.
 D. 이용자의 개인정보는 개인정보의 수집 및 이용목적이 달성되면 지체 없이 파기되나, 다음 각호의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존하며, 그 외 다른 목적으로는 사용하지 않습니다.
@@ -469,7 +476,7 @@ D. 이용자의 개인정보는 개인정보의 수집 및 이용목적이 달�
 다. 소비자의 불만 또는 분쟁 처리에 관한 기록 : 3년
 라. 표시, 광고에 관한 기록 : 6개월
 마. 접속로그, 서비스 이용기록 : 3개월
-바. 본인확인에 관한 기록 : 6개월</mutableString>
+바. 본인확인에 관한 기록 : 6개월</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -532,14 +539,14 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. 고객은 언제든지 회사가 보유하는 개인정보, 개인정보의 이용•제공내역, 수집•이용•제공에 대한 동의내역을 열람하거나 정정할 수 있습니다. 해당 개인정보에 오류가 있거나 보존기간이 경과한 것으로 판명되는 등 정정•삭제를 할 필요가 있다고 인정되는 경우에는 회사는 지체 없이 이를 수정합니다.
+                                        <string key="content">A. 고객은 언제든지 회사가 보유하는 개인정보, 개인정보의 이용•제공내역, 수집•이용•제공에 대한 동의내역을 열람하거나 정정할 수 있습니다. 해당 개인정보에 오류가 있거나 보존기간이 경과한 것으로 판명되는 등 정정•삭제를 할 필요가 있다고 인정되는 경우에는 회사는 지체 없이 이를 수정합니다.
 B. 온라인 가입정보의 열람 및 정정을 하고자 하는 고객의 경우에는 사이버 고객센터 온라인 문의 또는 웹마스터에게 이메일로 연락하는 경우에도 회사는 지체 없이 필요한 조치를 취합니다.
 C. 회사는 대리인이 방문하여 열람증명을 요구하는 경우에는 적법한 위임을 받았는지 확인할 수 있는 위임장 및 본인의 인감증명서와 대리인의 신분증 등을 제출 받아 정확히 대리인 여부를 확인합니다.
 D. 고객이 개인정보의 오류에 대한 정정을 요청한 경우, 정정이 완료되기 전까지 개인정보를 이용 또는 제공하지 않습니다.
 E. 회사는 잘못된 개인정보를 이미 제3자에게 제공한 경우 그 정정 처리결과를 제3자에게 지체 없이 통지하여 정정하도록 합니다.
 F. 고객은 개인정보를 최신의 상태로 정확하게 입력하고 변동 사항이 있는 경우, 이를 회사에 통보하여야 하며, 스스로 부정확한 정보를 입력하거나, 회사에 통보하지 않아서 회사가 알 수 없는 고객정보의 변동으로 인한 책임은 고객 자신에게 귀속됩니다.
 G. 고객이 타인 정보의 도용이나 침해, 허위정보를 입력하는 경우 서비스 해지 및 회원자격이 상실될 수 있으며 법 등 관련 법령에 따라 처벌받을 수 있습니다.
-H. 고객이 개인정보의 열람•제공을 반복적으로 요구하는 등 업무에 지장을 줄 우려가 있거나 그 분량이 상당하여 비용이 드는 경우, 회사는 고객의 요구를 연기 또는 거절하거나 업무처리에 따른 실비(복사비 등)를 고객에게 청구할 수 있습니다.</mutableString>
+H. 고객이 개인정보의 열람•제공을 반복적으로 요구하는 등 업무에 지장을 줄 우려가 있거나 그 분량이 상당하여 비용이 드는 경우, 회사는 고객의 요구를 연기 또는 거절하거나 업무처리에 따른 실비(복사비 등)를 고객에게 청구할 수 있습니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -603,7 +610,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">A. 기술적 대책 회사는 개인정보를 취급함에 있어 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적 대책을 강구하고 있습니다.
+                                        <string key="content">A. 기술적 대책 회사는 개인정보를 취급함에 있어 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적 대책을 강구하고 있습니다.
 1. 접속기록의 위/변조 방지 조치를 취하고 있습니다.
 2. 개인정보는 그 종류에 따라 관련 법령이 요구하는 수준의 암호화 저장 또는 전송 시 암호화 기술의 적용하여 관리합니다.
 3. 백신프로그램을 이용하여 컴퓨터 바이러스에 의한 피해를 방지하기 위한 조치를 취하고 있으며, 백신프로그램을 주기적으로 업데이트하고 갑작스러운 바이러스 출현 시에 백신이 나오는 즉시 이를 제공함으로써 개인정보가 침해되는 것을 방지하고 있습니다.
@@ -618,7 +625,7 @@ B. 관리적 대책
 6. 개인정보와 일반 데이터는 혼합하여 보관하지 않고 분리하여 보관합니다.
 7. 전산실 및 자료 보관실 등을 특별 보호구역으로 설정하여 출입을 통제합니다.
 8. 회사는 고객의 실수나 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다. 고객 스스로가 본인의 개인정보를 보호하기 위해서 자신의 아이디와 패스워드를 적절하게 관리하고 스스로 책임을 져야 합니다.
-9. 회사는 내부 관리자의 실수나 기술관리상 사고로 인하여 개인정보의 도난, 유출, 변조, 훼손이 유발될 경우 적절한 대책과 보상을 강구합니다.</mutableString>
+9. 회사는 내부 관리자의 실수나 기술관리상 사고로 인하여 개인정보의 도난, 유출, 변조, 훼손이 유발될 경우 적절한 대책과 보상을 강구합니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -665,7 +672,7 @@ CgogA
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">[개인정보관리 책임자/담당자]
+                                        <string key="content">[개인정보관리 책임자/담당자]
 이름 : 박성준
 연락처 : 010-8804-0578
 이메일 : taylored@naver.com
@@ -678,7 +685,7 @@ B. 기타 개인정보에 관한 상담이 필요한 경우에는 아래 기관�
 
 부칙
 제1조 시행일
-본 취급방침은 2018년 8월 24일부터 시행합니다.</mutableString>
+본 취급방침은 2018년 8월 24일부터 시행합니다.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="NanumBarunGothic"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
@@ -716,7 +723,7 @@ Cg
         <scene sceneID="tTp-pN-ROs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2XJ-vF-CKz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="account_active" id="s4P-OR-ZYJ"/>
+                    <tabBarItem key="tabBarItem" title="내 계정" image="account_inactive" selectedImage="accountActive" id="s4P-OR-ZYJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pRO-Ly-xQl">
@@ -737,7 +744,7 @@ Cg
     </scenes>
     <resources>
         <image name="Chevron" width="14" height="9"/>
-        <image name="account_active" width="23" height="23"/>
+        <image name="accountActive" width="34" height="34"/>
         <image name="account_inactive" width="23" height="23"/>
         <image name="icCopy" width="30" height="30"/>
     </resources>

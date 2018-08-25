@@ -16,20 +16,18 @@ class TabBarVC : UITabBarController {
         //TabBar tint 값 제거 및 이미지 적용
 //        UITabBar.appearance().barTintColor = UIColor.init()
         let tabBar = self.tabBar
-        let walletImage = UIImage(named:"wallet_active")?.withRenderingMode(.alwaysOriginal)
-        let transactionImage = UIImage(named: "transaction_active")?.withRenderingMode(.alwaysOriginal)
-        let accountImage = UIImage(named: "account_active")?.withRenderingMode(.alwaysOriginal)
-        
-//        let walletInActiveImage = UIImage(named:"wallet_inactive")?.withRenderingMode(.alwaysOriginal)
-//        let transactionInActiveImage = UIImage(named: "transaction_inactive")?.withRenderingMode(.alwaysOriginal)
-//        let accountInActiveImage = UIImage(named: "account_inactive")?.withRenderingMode(.alwaysOriginal)
-        
+        let walletImage = UIImage(named:"walletActive")?.withRenderingMode(.alwaysOriginal)
+        let transactionImage = UIImage(named: "transactionActive")?.withRenderingMode(.alwaysOriginal)
+        let accountImage = UIImage(named: "accountActive")?.withRenderingMode(.alwaysOriginal)
+//
+////        let walletInActiveImage = UIImage(named:"wallet_inactive")?.withRenderingMode(.alwaysOriginal)
+////        let transactionInActiveImage = UIImage(named: "transaction_inactive")?.withRenderingMode(.alwaysOriginal)
+////        let accountInActiveImage = UIImage(named: "account_inactive")?.withRenderingMode(.alwaysOriginal)
+//
         (tabBar.items![0] ).selectedImage = walletImage
         (tabBar.items![1] ).selectedImage = transactionImage
         (tabBar.items![2] ).selectedImage = accountImage
-        
-
-        
+        (tabBar.items![0]).title = "의료 지갑"
     }
     
 }

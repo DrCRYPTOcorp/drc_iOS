@@ -21,6 +21,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet var buttonStackView: UIStackView!
     @IBOutlet var centerYConstraint: NSLayoutConstraint!
     @IBOutlet var logoCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet var grayViewButton: UIButton!
     
     @IBAction func unwindToSplash(segue:UIStoryboardSegue) { }
     
@@ -28,11 +29,14 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     let ud = UserDefaults.standard
     var userName : String?
     
+    var indicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap_mainview(_:)))
         tap.delegate = self
         self.view.addGestureRecognizer(tap)
+        grayViewButton.isHidden = true
         splashView()
         loginView()
         initAddTarget()
@@ -55,6 +59,13 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         registerForKeyboardNotifications()
+    }
+    
+    //MARK: Indicator Setting
+    func indicatorSetting(){
+        indicator.frame = CGRect(x: 0.0, y: 0.0, width: 40, height: 40)
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        indicator.center = CGPoint(x: grayViewButton.frame.size.width / 2, y: grayViewButton.frame.size.height / 2)
     }
 }
 
@@ -91,6 +102,7 @@ extension LoginVC {
                 }
             }
             self.ud.synchronize()
+            self.indicator.stopAnimating()
             let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             if (FileManager.default.fileExists(atPath:  userDir + "/keystore/key.json")){
                 let stb = UIStoryboard(name: "Main", bundle: nil)
@@ -101,6 +113,11 @@ extension LoginVC {
     }
     
     @objc func loginButtonAction(){
+        grayViewButton.isHidden = false
+        indicatorSetting()
+        grayViewButton.addSubview(indicator)
+        indicator.startAnimating()
+        
         //MARK: Firebase Login 인증
         Auth.auth().signIn(withEmail: gsno(emailTextField.text), password: gsno(passwordTextField.text)) { (user, error) in
             if user != nil{
@@ -108,6 +125,8 @@ extension LoginVC {
                 self.userDataSave(uid: self.gsno(uid))
             }
             else{
+                self.grayViewButton.isHidden = true
+                self.indicator.stopAnimating()
                 self.simpleAlert(title: "로그인 오류", msg: "이메일 또는 비밀번호를 확인해주세요.")
             }
         }

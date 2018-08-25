@@ -40,13 +40,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 DRC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTK-Rp-oeI">
-                                                    <rect key="frame" x="322.5" y="28.5" width="33.5" height="14"/>
+                                                    <rect key="frame" x="322.5" y="18.5" width="33.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="NanumBarunGothicBold" family="NanumBarunGothic" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-r0-fMZ">
-                                                    <rect key="frame" x="72" y="27" width="231" height="16.5"/>
+                                                    <rect key="frame" x="72" y="17" width="231" height="36.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xrS-fF-xsL">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="16.5"/>
@@ -71,8 +71,8 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 지갑 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-Pp-oDz">
-                                                            <rect key="frame" x="0.0" y="-27" width="91.5" height="0.0"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="의료기관 지갑 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSk-Pp-oDz">
+                                                            <rect key="frame" x="0.0" y="22.5" width="91.5" height="14"/>
                                                             <fontDescription key="fontDescription" name="NanumBarunGothicLight" family="NanumBarunGothic" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -137,7 +137,7 @@
         <scene sceneID="VsQ-kz-fHF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ldb-HB-rCZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="거래" image="transaction_inactive" selectedImage="transaction_active" id="ZzR-l2-8ce"/>
+                    <tabBarItem key="tabBarItem" title="거래" image="transaction_inactive" selectedImage="transactionActive" id="ZzR-l2-8ce"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ows-C4-KBv">
@@ -158,7 +158,7 @@
     <resources>
         <image name="icNoTransact" width="116" height="81"/>
         <image name="icSend" width="36" height="52"/>
-        <image name="transaction_active" width="29" height="25"/>
+        <image name="transactionActive" width="29" height="25"/>
         <image name="transaction_inactive" width="29" height="25"/>
     </resources>
 </document>

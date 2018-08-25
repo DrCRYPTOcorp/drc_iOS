@@ -12,6 +12,7 @@ target 'DrCRYPTO' do
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
     pod 'SwiftyJSON'
+    pod 'QRCodeReader.swift'
 
     # DAPP Pods
     pod 'web3swift'

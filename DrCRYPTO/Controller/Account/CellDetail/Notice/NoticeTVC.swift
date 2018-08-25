@@ -15,8 +15,14 @@ class NoticeTVC: UITableViewController {
         let firstContent = [ContentData(content: "2018년 8월 24일 Dr.CRYPTO 전격 출시")]
         let firstTitle = NoticeData(title: "Dr.CRYPTO 출시", contents: firstContent)
         
+        let secondContent = [ContentData(content: "DRC 1000개 에어드랍 이벤트")]
+        let secondTitle = NoticeData(title: "DRC 에어드랍", contents: secondContent)
         
-        return [firstTitle]
+        let thirdContent = [ContentData(content: "서울대병원, 을지대병원, 고려대병원, 인하대병원, 연세대병원, 순천향대병원, 한림성심대병원이 추가되었습니다.")]
+        let thirdTitle = NoticeData(title: "Dr.CRYPTO 대학병원 추가", contents: thirdContent)
+        
+        
+        return [firstTitle,secondTitle,thirdTitle]
     }
     
     var noticeData: [NoticeData?]?
