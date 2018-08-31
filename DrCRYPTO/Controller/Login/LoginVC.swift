@@ -45,6 +45,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
             userDataSave(uid: gsno(uid))
+
         } else {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
                 self.logoAnimation()
