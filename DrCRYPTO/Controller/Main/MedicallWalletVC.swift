@@ -41,7 +41,8 @@ class MedicalWalletVC : UIViewController {
     let ud = UserDefaults.standard
 
     //MARK: Blockchain
-    let contractAddress = EthereumAddress("0x0234ca218c4af802072950dffb8680a29922f3e7")
+//    let contractAddress = EthereumAddress("0x0234ca218c4af802072950dffb8680a29922f3e7")
+    let contractAddress = EthereumAddress("0xb807ec8c17282d0892029c54354a14e381942f46")
     var web3Rinkeby:web3?
     var bip32keystore:BIP32Keystore?
     var keystoremanager:KeystoreManager?
@@ -152,7 +153,7 @@ extension MedicalWalletVC : UISearchBarDelegate {
         options.from = ethAdd
         
         //MARK: DRC Balance GET
-        let contractAddress = EthereumAddress("0xb688b7fa446adcb0318938729fc012967bc9d665")! // BKX token on Ethereum mainnet
+        let contractAddress = EthereumAddress("0xdf88d798e9f9b916c25db739b939a27d8f80c0ad")!
         let contract = web3Rinkeby?.contract(Web3.Utils.erc20ABI, at: contractAddress, abiVersion: 2)! // utilize precompiled ERC20 ABI for your concenience
         guard let drcBalanceResult = contract?.method("balanceOf", parameters: [ethAdd] as [AnyObject], options: options)?.call(options: nil) else {return} // encode parameters for transaction
         guard case .success(let drcBalance) = drcBalanceResult, let drc = drcBalance["0"] else {return}

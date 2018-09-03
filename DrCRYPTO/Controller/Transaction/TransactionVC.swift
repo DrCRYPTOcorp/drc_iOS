@@ -27,6 +27,10 @@ class TransactionVC : UIViewController {
         recordLoading()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        recordLoading()
+    }
+    
     //MARK: 결제완료 Noti 이벤트
     @objc func updateTransactionNoti(notification: NSNotification){
         recordLoading()
@@ -44,7 +48,8 @@ extension TransactionVC {
         ref.child("records").child(gsno(ud.string(forKey: "uid"))).observeSingleEvent(of: .value, with: { snapShot in
             //MARK: 데이터 유효성 검사
             guard snapShot.exists() else{
-                print("Data doesn't exist")
+                self.noTransactionImageView.isHidden = false
+                self.transactionTableView.isHidden = true
                 return
             }
             //MARK: 0:병명,1:소견,2:비고,3:병원이름,4:전화번호,5:의사면허,6:의사이름,7:방문시간

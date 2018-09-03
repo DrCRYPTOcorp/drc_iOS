@@ -44,6 +44,7 @@ class LoginVC : UIViewController, UIGestureRecognizerDelegate {
         //MARK : Firebase Login 검증
         if Auth.auth().currentUser != nil {
             let uid = Auth.auth().currentUser?.uid
+
             userDataSave(uid: gsno(uid))
 
         } else {
@@ -75,7 +76,6 @@ extension LoginVC {
     func userDataSave(uid: String){
         var ref: DatabaseReference!
         ref = Database.database().reference()
-        
         ref.child("users").child(uid).observeSingleEvent(of: .value, with: { snapShot in
             let userDic = snapShot.value as? Dictionary<String,String>
             

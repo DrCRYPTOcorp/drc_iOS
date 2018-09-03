@@ -107,8 +107,8 @@ extension IssueMedicalRecordVC {
         var tokenTransferOptions = Web3Options.defaultOptions()
         tokenTransferOptions.gasPrice = 1000000000 * 20
         tokenTransferOptions.from = EthereumAddress(gsno(userAddress))
-        let testToken = web3Rinkeby?.contract(Web3.Utils.erc20ABI, at: EthereumAddress("0xb688b7fa446adcb0318938729fc012967bc9d665")!, abiVersion: 2)!
-        let intermediateForTokenTransfer = testToken?.method("transfer", parameters: [EthereumAddress("0x8eb78ef217596fb5b9b94fb88add9093c925b85e")!, BigUInt(30)] as [AnyObject], options: tokenTransferOptions)!
+        let testToken = web3Rinkeby?.contract(Web3.Utils.erc20ABI, at: EthereumAddress("0xdf88d798e9f9b916c25db739b939a27d8f80c0ad")!, abiVersion: 2)!
+        let intermediateForTokenTransfer = testToken?.method("transfer", parameters: [EthereumAddress("0x9807142b04b0c378e2f750762cd2384040509a5a")!, BigUInt(30)] as [AnyObject], options: tokenTransferOptions)!
         let gasEstimateResult = intermediateForTokenTransfer?.estimateGas(options: nil)
         
         //MARK: Rinkeby Gas Estimate
