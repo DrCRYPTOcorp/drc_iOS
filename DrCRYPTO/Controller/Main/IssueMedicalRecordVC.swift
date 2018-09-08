@@ -62,11 +62,15 @@ class IssueMedicalRecordVC: UIViewController {
 }
 
 extension IssueMedicalRecordVC {
-    func setting(){
+    fileprivate func extractedFunc() {
         doneView.layer.cornerRadius = 8
         grayViewButton.isHidden = true
         myAddressLabel.text = gsno(userAddress)
         costLabel.text = "30 DRC"
+    }
+    
+    func setting(){
+        extractedFunc()
         hospitalNameLabel.text = gsno(hospitalName)
         diseaseNameLabel.text = gsno(diseaseName)
         payButton.addTarget(self, action: #selector(payButtonAction), for: .touchUpInside)
