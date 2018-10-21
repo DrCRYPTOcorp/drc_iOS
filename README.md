@@ -15,23 +15,20 @@
 * 개인 의료 지갑 생성
 	* 회원가입시 KeystoreManager와 FileManager를 활용하여 유저 디바이스 내에 진단서를 저장, 관리 할 개인 지갑 생성
 ~~~
-            let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            let keystoreManager = KeystoreManager.managerForPath(userDir + "/keystore")
-            var ks: BIP32Keystore?
-            if (keystoreManager?.addresses?.count == 0) {
-                let password = gsno(confirmPasswordTextField.text)
-                let mnemonic = try! BIP39.generateMnemonics(bitsOfEntropy: 256)!
-                let keystore = try! BIP32Keystore(mnemonics: mnemonic, password: password, mnemonicsPassword: String((password).reversed()))
-                print("keystore",keystore!)
-                ks = keystore
-                //   ks = try EthereumKeystoreV3(password: pass ?? "")
-                let keydata = try JSONEncoder().encode(ks?.keystoreParams)
-                FileManager.default.createFile(atPath: userDir + "/keystore"+"/key.json", contents: keydata, attributes: nil)
-                print(userDir)
-                
-            } else {
-                ks = keystoreManager?.walletForAddress((keystoreManager?.addresses![0])!) as? BIP32Keystore
-            }
+let userDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+let keystoreManager = KeystoreManager.managerForPath(userDir + "/keystore")
+var ks: BIP32Keystore?
+
+if (keystoreManager?.addresses?.count == 0) {
+    let password = gsno(confirmPasswordTextField.text)
+    let mnemonic = try! BIP39.generateMnemonics(bitsOfEntropy: 256)!
+    let keystore = try! BIP32Keystore(mnemonics: mnemonic, password: password, mnemonicsPassword: String((password).reversed()))
+    ks = keystore
+    let keydata = try JSONEncoder().encode(ks?.keystoreParams)
+    FileManager.default.createFile(atPath: userDir + "/keystore"+"/key.json", contents: keydata, attributes: nil)      
+} else {
+    ks = keystoreManager?.walletForAddress((keystoreManager?.addresses![0])!) as? BIP32Keystore
+}
 ~~~
 
 
